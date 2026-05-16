@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from action_interfaces/srv/CheckLimits.srv
+// generated code does not contain a copyright notice
+
+
+module action_interfaces {
+  module srv {
+    struct CheckLimits_Request {
+      float shoulder_angle;
+
+      float elbow_angle;
+    };
+    struct CheckLimits_Response {
+      boolean is_safe;
+
+      string message;
+    };
+  };
+};

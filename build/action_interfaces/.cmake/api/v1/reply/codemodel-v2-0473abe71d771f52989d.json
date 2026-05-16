@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-6a3cd4cab4373531f2fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "action_interfaces__py",
+					"jsonFile" : "directory-action_interfaces__py-9cdd0f78cb98e340ad20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/ibrahim/RobotArm/build/action_interfaces/action_interfaces__py",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "action_interfaces__rs",
+					"jsonFile" : "directory-action_interfaces__rs-609cc8c5f8e1490c2d94.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/ibrahim/RobotArm/build/action_interfaces/action_interfaces__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "action_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces-df28c69f2d2e3feb6fc1.json",
+					"name" : "action_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__cpp-20f72d7c69f04f84799c.json",
+					"name" : "action_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "action_interfaces__py::@6f7f3c43704ab29dbf20",
+					"jsonFile" : "target-action_interfaces__py-204f8ab8f53b9bf52b49.json",
+					"name" : "action_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_generator_c-c8b855756741080e1555.json",
+					"name" : "action_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_generator_py-7064afba142e0eff1801.json",
+					"name" : "action_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_c-d6f8a998f9229cc17564.json",
+					"name" : "action_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_c__pyext-77afee0fde23f4cc9018.json",
+					"name" : "action_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_cpp-2a0cfba3b25e9cb79dd5.json",
+					"name" : "action_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_fastrtps_c-a4539bab16b06ed56565.json",
+					"name" : "action_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_fastrtps_c__pyext-8486fe1c41da0ec47d62.json",
+					"name" : "action_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_fastrtps_cpp-3224c1240aecb1ba74ae.json",
+					"name" : "action_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_introspection_c-66882ea29f16a91a54f7.json",
+					"name" : "action_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_introspection_c__pyext-f8242b90b2a2f1077be7.json",
+					"name" : "action_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces__rosidl_typesupport_introspection_cpp-44971a5f627468d15892.json",
+					"name" : "action_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "action_interfaces__rs::@26aa7e457aa0163e8143",
+					"jsonFile" : "target-action_interfaces__rs-cf2d7f89e20370cac2cd.json",
+					"name" : "action_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "action_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_interfaces_uninstall-e33c0d91b0706f9649c8.json",
+					"name" : "action_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_action_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_action_interfaces_egg-3356a8589c7c59aa39e9.json",
+					"name" : "ament_cmake_python_build_action_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_action_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_action_interfaces-93d811bdf3e76e17f1b7.json",
+					"name" : "ament_cmake_python_copy_action_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-09bc7f5970762530e835.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ibrahim/RobotArm/build/action_interfaces",
+		"source" : "/home/ibrahim/RobotArm/src/action_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

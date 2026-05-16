@@ -1,0 +1,14 @@
+
+
+float32 shoulder_angle_goal
+float32 elbow_angle_goal
+
+---
+
+float32 shoulder_angle_rs
+float32 elbow_angle_rs
+
+---
+
+float32 shoulder_angle_fb
+float32 elbow_angle_fb

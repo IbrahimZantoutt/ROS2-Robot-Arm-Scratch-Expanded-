@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from action_interfaces/action/MoveArm.action
+// generated code does not contain a copyright notice
+
+
+module action_interfaces {
+  module action {
+    struct MoveArm_Goal {
+      float shoulder_angle_goal;
+
+      float elbow_angle_goal;
+    };
+    struct MoveArm_Result {
+      float shoulder_angle_rs;
+
+      float elbow_angle_rs;
+    };
+    struct MoveArm_Feedback {
+      float shoulder_angle_fb;
+
+      float elbow_angle_fb;
+    };
+  };
+};

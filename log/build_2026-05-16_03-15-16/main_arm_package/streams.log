@@ -1,0 +1,95 @@
+[0.113s] Invoking command in '/home/ibrahim/RobotArm/build/main_arm_package': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ibrahim/RobotArm/src/main_arm_package -DCMAKE_INSTALL_PREFIX=/home/ibrahim/RobotArm/install/main_arm_package
+[0.277s] -- The C compiler identification is GNU 11.4.0
+[0.848s] -- The CXX compiler identification is GNU 11.4.0
+[1.282s] -- Detecting C compiler ABI info
+[1.464s] -- Detecting C compiler ABI info - done
+[1.470s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.470s] -- Detecting C compile features
+[1.470s] -- Detecting C compile features - done
+[1.472s] -- Detecting CXX compiler ABI info
+[1.654s] -- Detecting CXX compiler ABI info - done
+[1.660s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.660s] -- Detecting CXX compile features
+[1.661s] -- Detecting CXX compile features - done
+[1.665s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.807s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.913s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[2.108s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.116s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.128s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.142s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.159s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.214s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.220s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.808s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[5.457s] -- Found FastRTPS: /opt/ros/humble/include  
+[8.650s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.661s] -- Looking for pthread.h
+[8.839s] -- Looking for pthread.h - found
+[8.839s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[9.018s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[9.019s] -- Found Threads: TRUE  
+[9.073s] -- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)
+[9.104s] -- Found action_interfaces: 0.0.0 (/home/ibrahim/RobotArm/install/action_interfaces/share/action_interfaces/cmake)
+[9.117s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[9.145s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.235s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[9.235s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ibrahim/RobotArm/src/main_arm_package/include>
+[9.235s] -- Configured cppcheck exclude dirs and/or files: 
+[9.237s] -- Added test 'flake8' to check Python code syntax and style conventions
+[9.238s] -- Added test 'lint_cmake' to check CMake code style
+[9.239s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[9.241s] -- Added test 'uncrustify' to check C / C++ code style
+[9.241s] -- Configured uncrustify additional arguments: 
+[9.242s] -- Added test 'xmllint' to check XML markup files
+[9.244s] -- Configuring done
+[9.279s] -- Generating done
+[9.291s] -- Build files have been written to: /home/ibrahim/RobotArm/build/main_arm_package
+[9.305s] Invoked command in '/home/ibrahim/RobotArm/build/main_arm_package' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ibrahim/RobotArm/src/main_arm_package -DCMAKE_INSTALL_PREFIX=/home/ibrahim/RobotArm/install/main_arm_package
+[9.307s] Invoking command in '/home/ibrahim/RobotArm/build/main_arm_package': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/RobotArm/build/main_arm_package -- -j16 -l16
+[9.372s] [ 37%] [32mBuilding CXX object CMakeFiles/ArmMonitor.dir/src/ArmMonitor.cpp.o[0m
+[9.372s] [ 37%] [32mBuilding CXX object CMakeFiles/ArmMover.dir/src/ArmMover.cpp.o[0m
+[9.372s] [ 37%] [32mBuilding CXX object CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o[0m
+[9.372s] [ 50%] [32mBuilding CXX object CMakeFiles/ArmController.dir/src/ArmController.cpp.o[0m
+[14.724s] [ 62%] [32m[1mLinking CXX executable ArmClient[0m
+[15.051s] [ 62%] Built target ArmClient
+[18.737s] [ 75%] [32m[1mLinking CXX executable ArmMonitor[0m
+[19.031s] [ 87%] [32m[1mLinking CXX executable ArmController[0m
+[19.286s] [ 87%] Built target ArmMonitor
+[19.485s] [100%] [32m[1mLinking CXX executable ArmMover[0m
+[19.540s] [100%] Built target ArmController
+[19.979s] [100%] Built target ArmMover
+[19.993s] Invoked command in '/home/ibrahim/RobotArm/build/main_arm_package' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ibrahim/RobotArm/build/main_arm_package -- -j16 -l16
+[19.995s] Invoking command in '/home/ibrahim/RobotArm/build/main_arm_package': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ibrahim/RobotArm/build/main_arm_package
+[20.004s] -- Install configuration: ""
+[20.006s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/lib/main_arm_package/ArmController
+[20.013s] -- Set runtime path of "/home/ibrahim/RobotArm/install/main_arm_package/lib/main_arm_package/ArmController" to ""
+[20.013s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/lib/main_arm_package/ArmMonitor
+[20.022s] -- Set runtime path of "/home/ibrahim/RobotArm/install/main_arm_package/lib/main_arm_package/ArmMonitor" to ""
+[20.022s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/lib/main_arm_package/ArmMover
+[20.031s] -- Set runtime path of "/home/ibrahim/RobotArm/install/main_arm_package/lib/main_arm_package/ArmMover" to ""
+[20.031s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/lib/main_arm_package/ArmClient
+[20.033s] -- Set runtime path of "/home/ibrahim/RobotArm/install/main_arm_package/lib/main_arm_package/ArmClient" to ""
+[20.033s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/launch
+[20.034s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/launch/display.launch.py
+[20.034s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/launch/launch.py
+[20.035s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/urdf
+[20.035s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/urdf/arm.urdf
+[20.036s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/rviz
+[20.036s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/rviz/arm.rviz
+[20.038s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/ament_index/resource_index/package_run_dependencies/main_arm_package
+[20.038s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/ament_index/resource_index/parent_prefix_path/main_arm_package
+[20.039s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/environment/ament_prefix_path.sh
+[20.039s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/environment/ament_prefix_path.dsv
+[20.040s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/environment/path.sh
+[20.040s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/environment/path.dsv
+[20.040s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/local_setup.bash
+[20.040s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/local_setup.sh
+[20.041s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/local_setup.zsh
+[20.041s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/local_setup.dsv
+[20.041s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/package.dsv
+[20.042s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/ament_index/resource_index/packages/main_arm_package
+[20.043s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/cmake/main_arm_packageConfig.cmake
+[20.043s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/cmake/main_arm_packageConfig-version.cmake
+[20.043s] -- Installing: /home/ibrahim/RobotArm/install/main_arm_package/share/main_arm_package/package.xml
+[20.047s] Invoked command in '/home/ibrahim/RobotArm/build/main_arm_package' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ibrahim/RobotArm/build/main_arm_package
