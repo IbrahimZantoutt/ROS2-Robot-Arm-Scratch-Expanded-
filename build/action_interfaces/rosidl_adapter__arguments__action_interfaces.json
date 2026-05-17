@@ -1,9 +1,9 @@
 {
   "package_name": "action_interfaces",
   "non_idl_tuples": [
-    "/home/ibrahim/RobotArm/src/action_interfaces:msg/ArmState.msg",
-    "/home/ibrahim/RobotArm/src/action_interfaces:msg/ArmCommand.msg",
-    "/home/ibrahim/RobotArm/src/action_interfaces:srv/CheckLimits.srv",
-    "/home/ibrahim/RobotArm/src/action_interfaces:action/MoveArm.action"
+    "/home/ibrahim/RobotArmExpanded/src/action_interfaces:msg/ArmState.msg",
+    "/home/ibrahim/RobotArmExpanded/src/action_interfaces:msg/ArmCommand.msg",
+    "/home/ibrahim/RobotArmExpanded/src/action_interfaces:srv/CheckLimits.srv",
+    "/home/ibrahim/RobotArmExpanded/src/action_interfaces:action/MoveArm.action"
   ]
 }

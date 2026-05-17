@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ibrahim/RobotArm/src/main_arm_package
+CMAKE_SOURCE_DIR = /home/ibrahim/RobotArmExpanded/src/main_arm_package
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ibrahim/RobotArm/build/main_arm_package
+CMAKE_BINARY_DIR = /home/ibrahim/RobotArmExpanded/build/main_arm_package
 
 # Utility rule file for main_arm_package_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/main_arm_package_uninstall.dir/compiler_depend.make
 include CMakeFiles/main_arm_package_uninstall.dir/progress.make
 
 CMakeFiles/main_arm_package_uninstall:
-	/usr/bin/cmake -P /home/ibrahim/RobotArm/build/main_arm_package/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ibrahim/RobotArmExpanded/build/main_arm_package/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 main_arm_package_uninstall: CMakeFiles/main_arm_package_uninstall
 main_arm_package_uninstall: CMakeFiles/main_arm_package_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/main_arm_package_uninstall.dir/clean:
 .PHONY : CMakeFiles/main_arm_package_uninstall.dir/clean
 
 CMakeFiles/main_arm_package_uninstall.dir/depend:
-	cd /home/ibrahim/RobotArm/build/main_arm_package && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArm/src/main_arm_package /home/ibrahim/RobotArm/src/main_arm_package /home/ibrahim/RobotArm/build/main_arm_package /home/ibrahim/RobotArm/build/main_arm_package /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles/main_arm_package_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ibrahim/RobotArmExpanded/build/main_arm_package && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArmExpanded/src/main_arm_package /home/ibrahim/RobotArmExpanded/src/main_arm_package /home/ibrahim/RobotArmExpanded/build/main_arm_package /home/ibrahim/RobotArmExpanded/build/main_arm_package /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/main_arm_package_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main_arm_package_uninstall.dir/depend
 

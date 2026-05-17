@@ -9,6 +9,7 @@ class ArmMonitor: public rclcpp::Node{
             arm_state_subscription_ = this->create_subscription<action_interfaces::msg::ArmState>("arm_state", 10, std::bind(&ArmMonitor::handleArmState, this, std::placeholders::_1));
             this->declare_parameter("shoulder_threshold", std::vector<double>{-90.0, 90.0});
             this->declare_parameter("elbow_threshold", std::vector<double>{0.0, 135.0});
+            this->declare_parameter("wrist_threshold", std::vector<double>{-90.0, 90.0});
 
             arm_check_server = this->create_service<action_interfaces::srv::CheckLimits>(
                 "check_limits",
@@ -19,9 +20,11 @@ class ArmMonitor: public rclcpp::Node{
         void handleCheckArm(const std::shared_ptr<action_interfaces::srv::CheckLimits::Request> request, std::shared_ptr<action_interfaces::srv::CheckLimits::Response> response){
             auto ShdA = request->shoulder_angle;
             auto ElbA = request->elbow_angle; 
+            auto WstA = request->wrist_angle; 
 
             std::vector<double> shoulder_threshold = this->get_parameter("shoulder_threshold").as_double_array();
             std::vector<double> elbow_threshold = this->get_parameter("elbow_threshold").as_double_array();
+            std::vector<double> wrist_threshold = this->get_parameter("elbow_threshold").as_double_array();
 
             if((ShdA >= shoulder_threshold[0] && ShdA <= shoulder_threshold[1]) && (ElbA >= elbow_threshold[0] && ElbA <= elbow_threshold[1])){
                 RCLCPP_INFO(this->get_logger(), "Arm angles within limits: Shoulder: %f deg  Elbow: %f deg", ShdA, ElbA);

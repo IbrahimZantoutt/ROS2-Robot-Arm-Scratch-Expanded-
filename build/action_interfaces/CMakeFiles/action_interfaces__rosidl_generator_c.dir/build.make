@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ibrahim/RobotArm/src/action_interfaces
+CMAKE_SOURCE_DIR = /home/ibrahim/RobotArmExpanded/src/action_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ibrahim/RobotArm/build/action_interfaces
+CMAKE_BINARY_DIR = /home/ibrahim/RobotArmExpanded/build/action_interfaces
 
 # Include any dependencies generated for this target.
 include CMakeFiles/action_interfaces__rosidl_generator_c.dir/depend.make
@@ -93,8 +93,8 @@ rosidl_generator_c/action_interfaces/msg/arm_state.h: /opt/ros/humble/share/acti
 rosidl_generator_c/action_interfaces/msg/arm_state.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/action_interfaces/msg/arm_state.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 rosidl_generator_c/action_interfaces/msg/arm_state.h: /opt/ros/humble/share/unique_identifier_msgs/msg/UUID.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ibrahim/RobotArm/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.h: rosidl_generator_c/action_interfaces/msg/arm_state.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.h
@@ -156,58 +156,58 @@ rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c: rosidl
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o: CMakeFiles/action_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o: rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o: CMakeFiles/action_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArm/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o -MF CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o.d -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o -c /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o -MF CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o.d -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.o -c /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c > CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c > CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.i
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.c.s
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o: CMakeFiles/action_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o: rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o: CMakeFiles/action_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArm/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o -MF CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o.d -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o -c /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o -MF CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o.d -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.o -c /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c > CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c > CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.i
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.c.s
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o: CMakeFiles/action_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o: rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o: CMakeFiles/action_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArm/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o -MF CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o.d -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o -c /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o -MF CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o.d -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.o -c /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c > CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c > CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.i
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.c.s
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o: CMakeFiles/action_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o: rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o: CMakeFiles/action_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArm/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o -MF CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o.d -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o -c /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o -MF CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o.d -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.o -c /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c > CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c > CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.i
 
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArm/build/action_interfaces/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c -o CMakeFiles/action_interfaces__rosidl_generator_c.dir/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.c.s
 
 # Object files for target action_interfaces__rosidl_generator_c
 action_interfaces__rosidl_generator_c_OBJECTS = \
@@ -230,7 +230,7 @@ libaction_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libunique_ident
 libaction_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libaction_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libaction_interfaces__rosidl_generator_c.so: CMakeFiles/action_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/RobotArm/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libaction_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libaction_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/action_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -261,6 +261,6 @@ CMakeFiles/action_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.h
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/action_interfaces/srv/detail/check_limits__struct.h
 CMakeFiles/action_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/action_interfaces/srv/detail/check_limits__type_support.h
-	cd /home/ibrahim/RobotArm/build/action_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArm/src/action_interfaces /home/ibrahim/RobotArm/src/action_interfaces /home/ibrahim/RobotArm/build/action_interfaces /home/ibrahim/RobotArm/build/action_interfaces /home/ibrahim/RobotArm/build/action_interfaces/CMakeFiles/action_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ibrahim/RobotArmExpanded/build/action_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArmExpanded/src/action_interfaces /home/ibrahim/RobotArmExpanded/src/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles/action_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/action_interfaces__rosidl_generator_c.dir/depend
 

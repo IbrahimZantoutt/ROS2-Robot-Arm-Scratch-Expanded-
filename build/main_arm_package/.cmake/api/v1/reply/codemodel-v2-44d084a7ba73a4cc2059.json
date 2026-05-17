@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-93f7fbdae9047c84eb58.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "main_arm_package",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ArmClient::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArmClient-9330c93436a1a1898673.json",
+					"name" : "ArmClient",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArmController::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArmController-a3e8762943ec2d9f2dd2.json",
+					"name" : "ArmController",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArmMonitor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArmMonitor-5cae243bf9f968cbf2ba.json",
+					"name" : "ArmMonitor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArmMover::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArmMover-a1f3b3dac0ade4ec354c.json",
+					"name" : "ArmMover",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_arm_package_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_arm_package_uninstall-e91a6cc498085e42cccd.json",
+					"name" : "main_arm_package_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-5658cacd4810dc7ab0e8.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ibrahim/RobotArmExpanded/build/main_arm_package",
+		"source" : "/home/ibrahim/RobotArmExpanded/src/main_arm_package"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ibrahim/RobotArm/src/main_arm_package
+CMAKE_SOURCE_DIR = /home/ibrahim/RobotArmExpanded/src/main_arm_package
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ibrahim/RobotArm/build/main_arm_package
+CMAKE_BINARY_DIR = /home/ibrahim/RobotArmExpanded/build/main_arm_package
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -89,14 +89,14 @@ clean: CMakeFiles/ArmClient.dir/clean
 CMakeFiles/uninstall.dir/all: CMakeFiles/main_arm_package_uninstall.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
 .PHONY : CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -115,14 +115,14 @@ CMakeFiles/uninstall.dir/clean:
 CMakeFiles/main_arm_package_uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_arm_package_uninstall.dir/build.make CMakeFiles/main_arm_package_uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_arm_package_uninstall.dir/build.make CMakeFiles/main_arm_package_uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles --progress-num= "Built target main_arm_package_uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num= "Built target main_arm_package_uninstall"
 .PHONY : CMakeFiles/main_arm_package_uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main_arm_package_uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main_arm_package_uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
 .PHONY : CMakeFiles/main_arm_package_uninstall.dir/rule
 
 # Convenience name for target.
@@ -141,14 +141,14 @@ CMakeFiles/main_arm_package_uninstall.dir/clean:
 CMakeFiles/ArmController.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmController.dir/build.make CMakeFiles/ArmController.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmController.dir/build.make CMakeFiles/ArmController.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles --progress-num=3,4 "Built target ArmController"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num=3,4 "Built target ArmController"
 .PHONY : CMakeFiles/ArmController.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ArmController.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ArmController.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
 .PHONY : CMakeFiles/ArmController.dir/rule
 
 # Convenience name for target.
@@ -167,14 +167,14 @@ CMakeFiles/ArmController.dir/clean:
 CMakeFiles/ArmMonitor.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmMonitor.dir/build.make CMakeFiles/ArmMonitor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmMonitor.dir/build.make CMakeFiles/ArmMonitor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles --progress-num=5,6 "Built target ArmMonitor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num=5,6 "Built target ArmMonitor"
 .PHONY : CMakeFiles/ArmMonitor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ArmMonitor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ArmMonitor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
 .PHONY : CMakeFiles/ArmMonitor.dir/rule
 
 # Convenience name for target.
@@ -193,14 +193,14 @@ CMakeFiles/ArmMonitor.dir/clean:
 CMakeFiles/ArmMover.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmMover.dir/build.make CMakeFiles/ArmMover.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmMover.dir/build.make CMakeFiles/ArmMover.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles --progress-num=7,8 "Built target ArmMover"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num=7,8 "Built target ArmMover"
 .PHONY : CMakeFiles/ArmMover.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ArmMover.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ArmMover.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
 .PHONY : CMakeFiles/ArmMover.dir/rule
 
 # Convenience name for target.
@@ -219,14 +219,14 @@ CMakeFiles/ArmMover.dir/clean:
 CMakeFiles/ArmClient.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmClient.dir/build.make CMakeFiles/ArmClient.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmClient.dir/build.make CMakeFiles/ArmClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles --progress-num=1,2 "Built target ArmClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num=1,2 "Built target ArmClient"
 .PHONY : CMakeFiles/ArmClient.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ArmClient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ArmClient.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
 .PHONY : CMakeFiles/ArmClient.dir/rule
 
 # Convenience name for target.

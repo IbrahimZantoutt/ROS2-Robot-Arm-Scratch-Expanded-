@@ -1,8 +1,8 @@
-# Install script for directory: /home/ibrahim/RobotArm/build/action_interfaces/action_interfaces__rs
+# Install script for directory: /home/ibrahim/RobotArmExpanded/build/action_interfaces/action_interfaces__rs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ibrahim/RobotArm/install/action_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/ibrahim/RobotArmExpanded/install/action_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

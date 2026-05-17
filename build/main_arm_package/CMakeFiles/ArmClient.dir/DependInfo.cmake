@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ibrahim/RobotArm/src/main_arm_package/src/ArmClient.cpp" "CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o" "gcc" "CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o.d"
+  "/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp" "CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o" "gcc" "CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o.d"
   )
 
 # Targets to which this target links.

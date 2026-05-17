@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ibrahim/RobotArm/src/main_arm_package
+CMAKE_SOURCE_DIR = /home/ibrahim/RobotArmExpanded/src/main_arm_package
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ibrahim/RobotArm/build/main_arm_package
+CMAKE_BINARY_DIR = /home/ibrahim/RobotArmExpanded/build/main_arm_package
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ArmController.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/ArmController.dir/progress.make
 include CMakeFiles/ArmController.dir/flags.make
 
 CMakeFiles/ArmController.dir/src/ArmController.cpp.o: CMakeFiles/ArmController.dir/flags.make
-CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArm/src/main_arm_package/src/ArmController.cpp
+CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp
 CMakeFiles/ArmController.dir/src/ArmController.cpp.o: CMakeFiles/ArmController.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ArmController.dir/src/ArmController.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ArmController.dir/src/ArmController.cpp.o -MF CMakeFiles/ArmController.dir/src/ArmController.cpp.o.d -o CMakeFiles/ArmController.dir/src/ArmController.cpp.o -c /home/ibrahim/RobotArm/src/main_arm_package/src/ArmController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ArmController.dir/src/ArmController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ArmController.dir/src/ArmController.cpp.o -MF CMakeFiles/ArmController.dir/src/ArmController.cpp.o.d -o CMakeFiles/ArmController.dir/src/ArmController.cpp.o -c /home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp
 
 CMakeFiles/ArmController.dir/src/ArmController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ArmController.dir/src/ArmController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ibrahim/RobotArm/src/main_arm_package/src/ArmController.cpp > CMakeFiles/ArmController.dir/src/ArmController.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp > CMakeFiles/ArmController.dir/src/ArmController.cpp.i
 
 CMakeFiles/ArmController.dir/src/ArmController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ArmController.dir/src/ArmController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ibrahim/RobotArm/src/main_arm_package/src/ArmController.cpp -o CMakeFiles/ArmController.dir/src/ArmController.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp -o CMakeFiles/ArmController.dir/src/ArmController.cpp.s
 
 # Object files for target ArmController
 ArmController_OBJECTS = \
@@ -93,12 +93,12 @@ ArmController_EXTERNAL_OBJECTS =
 ArmController: CMakeFiles/ArmController.dir/src/ArmController.cpp.o
 ArmController: CMakeFiles/ArmController.dir/build.make
 ArmController: /opt/ros/humble/lib/librclcpp.so
-ArmController: /home/ibrahim/RobotArm/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_fastrtps_c.so
-ArmController: /home/ibrahim/RobotArm/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_introspection_c.so
-ArmController: /home/ibrahim/RobotArm/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_fastrtps_cpp.so
-ArmController: /home/ibrahim/RobotArm/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_introspection_cpp.so
-ArmController: /home/ibrahim/RobotArm/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_cpp.so
-ArmController: /home/ibrahim/RobotArm/install/action_interfaces/lib/libaction_interfaces__rosidl_generator_py.so
+ArmController: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_fastrtps_c.so
+ArmController: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_introspection_c.so
+ArmController: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_fastrtps_cpp.so
+ArmController: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_introspection_cpp.so
+ArmController: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_cpp.so
+ArmController: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_generator_py.so
 ArmController: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 ArmController: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 ArmController: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
@@ -147,8 +147,8 @@ ArmController: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_introspect
 ArmController: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
 ArmController: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_cpp.so
 ArmController: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
-ArmController: /home/ibrahim/RobotArm/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_c.so
-ArmController: /home/ibrahim/RobotArm/install/action_interfaces/lib/libaction_interfaces__rosidl_generator_c.so
+ArmController: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_c.so
+ArmController: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_generator_c.so
 ArmController: /opt/ros/humble/lib/libaction_msgs__rosidl_generator_py.so
 ArmController: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_c.so
 ArmController: /opt/ros/humble/lib/libaction_msgs__rosidl_generator_c.so
@@ -195,7 +195,7 @@ ArmController: /opt/ros/humble/lib/librcpputils.so
 ArmController: /opt/ros/humble/lib/librosidl_runtime_c.so
 ArmController: /opt/ros/humble/lib/librcutils.so
 ArmController: CMakeFiles/ArmController.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ArmController"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ArmController"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ArmController.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -207,6 +207,6 @@ CMakeFiles/ArmController.dir/clean:
 .PHONY : CMakeFiles/ArmController.dir/clean
 
 CMakeFiles/ArmController.dir/depend:
-	cd /home/ibrahim/RobotArm/build/main_arm_package && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArm/src/main_arm_package /home/ibrahim/RobotArm/src/main_arm_package /home/ibrahim/RobotArm/build/main_arm_package /home/ibrahim/RobotArm/build/main_arm_package /home/ibrahim/RobotArm/build/main_arm_package/CMakeFiles/ArmController.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ibrahim/RobotArmExpanded/build/main_arm_package && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArmExpanded/src/main_arm_package /home/ibrahim/RobotArmExpanded/src/main_arm_package /home/ibrahim/RobotArmExpanded/build/main_arm_package /home/ibrahim/RobotArmExpanded/build/main_arm_package /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/ArmController.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ArmController.dir/depend
 

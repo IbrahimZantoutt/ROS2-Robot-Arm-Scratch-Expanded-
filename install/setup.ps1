@@ -28,6 +28,7 @@ _colcon_prefix_chain_powershell_source_script "/home/ibrahim/ros2_ws/install/loc
 _colcon_prefix_chain_powershell_source_script "/home/ibrahim/RobotMonitor/install/local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/ibrahim/RobotNav/install/local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/ibrahim/TF2Sample/install/local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/ibrahim/RobotArm/install/local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)

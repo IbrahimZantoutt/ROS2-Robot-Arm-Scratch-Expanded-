@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ibrahim/RobotArm/src/action_interfaces
+CMAKE_SOURCE_DIR = /home/ibrahim/RobotArmExpanded/src/action_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ibrahim/RobotArm/build/action_interfaces
+CMAKE_BINARY_DIR = /home/ibrahim/RobotArmExpanded/build/action_interfaces
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/ibrahim/RobotArm/build/action_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArm/src/action_interfaces /home/ibrahim/RobotArm/src/action_interfaces /home/ibrahim/RobotArm/build/action_interfaces /home/ibrahim/RobotArm/build/action_interfaces /home/ibrahim/RobotArm/build/action_interfaces/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ibrahim/RobotArmExpanded/build/action_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArmExpanded/src/action_interfaces /home/ibrahim/RobotArmExpanded/src/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 
