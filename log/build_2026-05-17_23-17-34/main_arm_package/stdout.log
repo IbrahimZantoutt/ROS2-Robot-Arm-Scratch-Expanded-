@@ -1,0 +1,31 @@
+[ 62%] Built target ArmMonitor
+[ 75%] Built target ArmClient
+[ 62%] Built target ArmController
+[100%] Built target ArmMover
+-- Install configuration: ""
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmController
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmMonitor
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmMover
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmClient
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch/display.launch.py
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch/launch.py
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/urdf
+-- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/urdf/arm.urdf
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/rviz
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/rviz/arm.rviz
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/package_run_dependencies/main_arm_package
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/parent_prefix_path/main_arm_package
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/ament_prefix_path.sh
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/path.sh
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/path.dsv
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.bash
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.sh
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.zsh
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.dsv
+-- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/package.dsv
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/packages/main_arm_package
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/cmake/main_arm_packageConfig.cmake
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/cmake/main_arm_packageConfig-version.cmake
+-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/package.xml

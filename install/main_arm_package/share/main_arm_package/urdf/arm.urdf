@@ -14,28 +14,6 @@
         </collision>
     </link>
 
-    <link name="main_arm">
-        <visual>
-            <origin xyz="0 0 0.15" rpy="0 0 0"/>
-            <geometry>
-                <cylinder radius="0.03" length="0.3"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin xyz="0 0 0.15" rpy="0 0 0"/>
-            <geometry>
-                <cylinder radius="0.03" length="0.3"/>
-            </geometry>
-        </collision>
-    </link>
-
-    <joint name="body_arm_joint" type="continuous">
-        <parent link="robot_base"/>
-        <child link="main_arm"/>
-        <origin xyz="0 0 0.05" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-    </joint>
-
     <link name="shoulder_link">
         <visual>
             <geometry>
@@ -50,9 +28,9 @@
     </link>
 
     <joint name="shoulder_main_joint" type="revolute">
-        <parent link="main_arm"/>
+        <parent link="robot_base"/>
         <child link="shoulder_link"/>
-        <origin xyz="0 0 0.3" rpy="0 0 0"/>
+        <origin xyz="0 0 0.06" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
         <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
     </joint>
@@ -61,13 +39,13 @@
         <visual>
             <origin xyz="0 0 0.15" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="0.03" length="0.3"/>
+                <cylinder radius="0.03" length="0.4"/>
             </geometry>
         </visual>
         <collision>
             <origin xyz="0 0 0.15" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="0.03" length="0.3"/>
+                <cylinder radius="0.03" length="0.4"/>
             </geometry>
         </collision>
     </link>
@@ -75,7 +53,7 @@
     <joint name="shoulder_arm_joint" type="continuous">
         <parent link="shoulder_link"/>
         <child link="shoulder_arm"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0.04" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -92,33 +70,76 @@
         </collision>
     </link>
 
-    <joint name="elbow_shoulder_joint" type="revolute">
+    <joint name="elbow_main_joint" type="revolute">
         <parent link="shoulder_arm"/>
         <child link="elbow_link"/>
-        <origin xyz="0 0 0.3" rpy="0 0 0"/>
+        <origin xyz="0 0 0.35" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
         <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
     </joint>
 
-    <link name="tip_arm">
+    <link name="elbow_arm">
+        <visual>
+            <origin xyz="0 0 0.15" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.03" length="0.35"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.15" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.03" length="0.35"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="elbow_arm_joint" type="continuous">
+        <parent link="elbow_link"/>
+        <child link="elbow_arm"/>
+        <origin xyz="0 0 0.035" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="wrist_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.035"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.035"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="wrist_main_joint" type="revolute">
+        <parent link="elbow_arm"/>
+        <child link="wrist_link"/>
+        <origin xyz="0 0 0.32" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+    </joint>
+
+    <link name="wrist_arm">
         <visual>
             <origin xyz="0 0 0.1" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="0.025" length="0.2"/>
+                <cylinder radius="0.015" length="0.15"/>
             </geometry>
         </visual>
         <collision>
             <origin xyz="0 0 0.1" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="0.025" length="0.2"/>
+                <cylinder radius="0.010" length="0.10"/>
             </geometry>
         </collision>
     </link>
 
-    <joint name="tip_arm_joint" type="continuous">
-        <parent link="elbow_link"/>
-        <child link="tip_arm"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+    <joint name="wrist_arm_joint" type="continuous">
+        <parent link="wrist_link"/>
+        <child link="wrist_arm"/>
+        <origin xyz="0 0 0.005" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
     </joint>
 

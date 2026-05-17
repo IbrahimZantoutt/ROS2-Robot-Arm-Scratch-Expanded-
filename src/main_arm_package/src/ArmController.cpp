@@ -41,9 +41,8 @@ class ArmController: public rclcpp::Node{
 
       auto js = sensor_msgs::msg::JointState();
       js.header.stamp = this->get_clock()->now();
-      js.name = {"body_arm_joint", "shoulder_main_joint", "shoulder_arm_joint", "elbow_shoulder_joint", "tip_arm_joint"};
-      // js.position = {0.0, shoulder_angle_ * M_PI / 180.0, 0.0, elbow_angle_ * M_PI / 180.0, 0.0, wrist_angle_ * M_PI / 180.0, 0.0};
-      js.position = {0.0, shoulder_angle_ * M_PI / 180.0, 0.0, elbow_angle_ * M_PI / 180.0, 0.0};
+      js.name = {"shoulder_main_joint", "shoulder_arm_joint", "elbow_main_joint", "elbow_arm_joint", "wrist_main_joint", "wrist_arm_joint"};
+      js.position = {shoulder_angle_ * M_PI / 180.0, 0.0, elbow_angle_ * M_PI / 180.0, 0.0, wrist_angle_ * M_PI / 180.0, 0.0};
       joint_state_publisher_->publish(js);
     }
 
