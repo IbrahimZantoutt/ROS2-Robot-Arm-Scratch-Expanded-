@@ -38,6 +38,11 @@ pub struct ArmState {
 
     // This member is not documented.
     #[allow(missing_docs)]
+    pub wrist_angle: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
     pub status: rosidl_runtime_rs::String,
 
 }
@@ -118,6 +123,11 @@ pub struct ArmCommand {
     // This member is not documented.
     #[allow(missing_docs)]
     pub elbow_angle_cmd: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub wrist_angle_cmd: f32,
 
 }
 

@@ -1,0 +1,24 @@
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:[m[K In constructor ‘[01m[KArmClient::ArmClient(float, float, float)[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:14:66:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[Krclcpp::Client<action_interfaces::srv::CheckLimits>::SharedFutureAndRequestId::SharedFutureAndRequestId()[m[K’
+   14 |        ArmClient(float a1, float a2, float a3): Node("arm_client"[01;31m[K)[m[K{
+      |                                                                  [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_base_interface.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/client.hpp:33[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:36[m[K,
+                 from [01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:431:10:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Client<action_interfaces::srv::CheckLimits>::SharedFutureAndRequestId::SharedFutureAndRequestId()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+  431 |   struct [01;36m[KSharedFutureAndRequestId[m[K
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:431:10:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::detail::FutureAndRequestId<std::shared_future<std::shared_ptr<action_interfaces::srv::CheckLimits_Response_<std::allocator<void> > > > >::FutureAndRequestId()[m[K’
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:105:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::detail::FutureAndRequestId<FutureT>::FutureAndRequestId(rclcpp::detail::FutureAndRequestId<FutureT>&&) [with FutureT = std::shared_future<std::shared_ptr<action_interfaces::srv::CheckLimits_Response_<std::allocator<void> > > >][m[K’
+  105 |   [01;36m[KFutureAndRequestId[m[K(FutureAndRequestId && other) noexcept = default;
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:105:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:63:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::detail::FutureAndRequestId<FutureT>::FutureAndRequestId(FutureT, int64_t) [with FutureT = std::shared_future<std::shared_ptr<action_interfaces::srv::CheckLimits_Response_<std::allocator<void> > > >; int64_t = long int][m[K’
+   63 |   [01;36m[KFutureAndRequestId[m[K(FutureT impl, int64_t req_id)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:63:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+gmake[2]: *** [CMakeFiles/ArmClient.dir/build.make:76: CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/ArmClient.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

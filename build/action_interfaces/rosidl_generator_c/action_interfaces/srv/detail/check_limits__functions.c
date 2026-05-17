@@ -18,6 +18,7 @@ action_interfaces__srv__CheckLimits_Request__init(action_interfaces__srv__CheckL
   }
   // shoulder_angle
   // elbow_angle
+  // wrist_angle
   return true;
 }
 
@@ -29,6 +30,7 @@ action_interfaces__srv__CheckLimits_Request__fini(action_interfaces__srv__CheckL
   }
   // shoulder_angle
   // elbow_angle
+  // wrist_angle
 }
 
 bool
@@ -43,6 +45,10 @@ action_interfaces__srv__CheckLimits_Request__are_equal(const action_interfaces__
   }
   // elbow_angle
   if (lhs->elbow_angle != rhs->elbow_angle) {
+    return false;
+  }
+  // wrist_angle
+  if (lhs->wrist_angle != rhs->wrist_angle) {
     return false;
   }
   return true;
@@ -60,6 +66,8 @@ action_interfaces__srv__CheckLimits_Request__copy(
   output->shoulder_angle = input->shoulder_angle;
   // elbow_angle
   output->elbow_angle = input->elbow_angle;
+  // wrist_angle
+  output->wrist_angle = input->wrist_angle;
   return true;
 }
 

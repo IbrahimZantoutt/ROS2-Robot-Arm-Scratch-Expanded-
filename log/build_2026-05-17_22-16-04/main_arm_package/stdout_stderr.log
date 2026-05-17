@@ -1,0 +1,27 @@
+[35m[1mConsolidate compiler generated dependencies of target ArmController[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmMover[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmMonitor[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmClient[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/ArmMover.dir/src/ArmMover.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/ArmController.dir/src/ArmController.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ArmMonitor.dir/src/ArmMonitor.cpp.o[0m
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmMonitor.cpp:[m[K In member function ‘[01m[Kvoid ArmMonitor::handleArmState(action_interfaces::msg::ArmState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmMonitor.cpp:50:25:[m[K [01;31m[Kerror: [m[K‘[01m[Krequest[m[K’ was not declared in this scope
+   50 |             auto WstA = [01;31m[Krequest[m[K->wrist_angle;
+      |                         [01;31m[K^~~~~~~[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmMover.cpp:[m[K In member function ‘[01m[Kvoid ArmMover::handleArmState(action_interfaces::msg::ArmState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmMover.cpp:132:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kangle_mutex[m[K’ was not declared in this scope; did you mean ‘[01m[Kangle_mutex_[m[K’?
+  132 |             std::lock_guard<std::mutex> lock([01;31m[Kangle_mutex[m[K);
+      |                                              [01;31m[K^~~~~~~~~~~[m[K
+      |                                              [32m[Kangle_mutex_[m[K
+[ 62%] [32m[1mLinking CXX executable ArmClient[0m
+[ 62%] Built target ArmClient
+gmake[2]: *** [CMakeFiles/ArmMonitor.dir/build.make:76: CMakeFiles/ArmMonitor.dir/src/ArmMonitor.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/ArmMonitor.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/ArmMover.dir/build.make:76: CMakeFiles/ArmMover.dir/src/ArmMover.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/ArmMover.dir/all] Error 2
+[ 75%] [32m[1mLinking CXX executable ArmController[0m
+[ 75%] Built target ArmController
+gmake: *** [Makefile:146: all] Error 2

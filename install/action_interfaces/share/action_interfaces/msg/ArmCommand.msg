@@ -1,2 +1,3 @@
 float32 shoulder_angle_cmd
 float32 elbow_angle_cmd
+float32 wrist_angle_cmd

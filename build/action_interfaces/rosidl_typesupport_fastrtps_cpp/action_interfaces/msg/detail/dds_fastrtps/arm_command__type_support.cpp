@@ -36,6 +36,8 @@ cdr_serialize(
   cdr << ros_message.shoulder_angle_cmd;
   // Member: elbow_angle_cmd
   cdr << ros_message.elbow_angle_cmd;
+  // Member: wrist_angle_cmd
+  cdr << ros_message.wrist_angle_cmd;
   return true;
 }
 
@@ -50,6 +52,9 @@ cdr_deserialize(
 
   // Member: elbow_angle_cmd
   cdr >> ros_message.elbow_angle_cmd;
+
+  // Member: wrist_angle_cmd
+  cdr >> ros_message.wrist_angle_cmd;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -76,6 +81,12 @@ get_serialized_size(
   // Member: elbow_angle_cmd
   {
     size_t item_size = sizeof(ros_message.elbow_angle_cmd);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: wrist_angle_cmd
+  {
+    size_t item_size = sizeof(ros_message.wrist_angle_cmd);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -121,6 +132,15 @@ max_serialized_size_ArmCommand(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Member: wrist_angle_cmd
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -129,7 +149,7 @@ max_serialized_size_ArmCommand(
     using DataType = action_interfaces::msg::ArmCommand;
     is_plain =
       (
-      offsetof(DataType, elbow_angle_cmd) +
+      offsetof(DataType, wrist_angle_cmd) +
       last_member_size
       ) == ret_val;
   }

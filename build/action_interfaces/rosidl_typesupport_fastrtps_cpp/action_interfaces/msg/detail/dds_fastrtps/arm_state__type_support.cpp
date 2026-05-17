@@ -36,6 +36,8 @@ cdr_serialize(
   cdr << ros_message.shoulder_angle;
   // Member: elbow_angle
   cdr << ros_message.elbow_angle;
+  // Member: wrist_angle
+  cdr << ros_message.wrist_angle;
   // Member: status
   cdr << ros_message.status;
   return true;
@@ -52,6 +54,9 @@ cdr_deserialize(
 
   // Member: elbow_angle
   cdr >> ros_message.elbow_angle;
+
+  // Member: wrist_angle
+  cdr >> ros_message.wrist_angle;
 
   // Member: status
   cdr >> ros_message.status;
@@ -81,6 +86,12 @@ get_serialized_size(
   // Member: elbow_angle
   {
     size_t item_size = sizeof(ros_message.elbow_angle);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: wrist_angle
+  {
+    size_t item_size = sizeof(ros_message.wrist_angle);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -122,6 +133,15 @@ max_serialized_size_ArmState(
   }
 
   // Member: elbow_angle
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: wrist_angle
   {
     size_t array_size = 1;
 

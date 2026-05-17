@@ -23,6 +23,7 @@ action_interfaces__msg__ArmState__init(action_interfaces__msg__ArmState * msg)
   }
   // shoulder_angle
   // elbow_angle
+  // wrist_angle
   // status
   if (!rosidl_runtime_c__String__init(&msg->status)) {
     action_interfaces__msg__ArmState__fini(msg);
@@ -39,6 +40,7 @@ action_interfaces__msg__ArmState__fini(action_interfaces__msg__ArmState * msg)
   }
   // shoulder_angle
   // elbow_angle
+  // wrist_angle
   // status
   rosidl_runtime_c__String__fini(&msg->status);
 }
@@ -55,6 +57,10 @@ action_interfaces__msg__ArmState__are_equal(const action_interfaces__msg__ArmSta
   }
   // elbow_angle
   if (lhs->elbow_angle != rhs->elbow_angle) {
+    return false;
+  }
+  // wrist_angle
+  if (lhs->wrist_angle != rhs->wrist_angle) {
     return false;
   }
   // status
@@ -78,6 +84,8 @@ action_interfaces__msg__ArmState__copy(
   output->shoulder_angle = input->shoulder_angle;
   // elbow_angle
   output->elbow_angle = input->elbow_angle;
+  // wrist_angle
+  output->wrist_angle = input->wrist_angle;
   // status
   if (!rosidl_runtime_c__String__copy(
       &(input->status), &(output->status)))

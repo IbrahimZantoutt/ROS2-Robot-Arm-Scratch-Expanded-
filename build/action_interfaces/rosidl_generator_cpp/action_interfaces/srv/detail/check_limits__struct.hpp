@@ -41,6 +41,7 @@ struct CheckLimits_Request_
     {
       this->shoulder_angle = 0.0f;
       this->elbow_angle = 0.0f;
+      this->wrist_angle = 0.0f;
     }
   }
 
@@ -52,6 +53,7 @@ struct CheckLimits_Request_
     {
       this->shoulder_angle = 0.0f;
       this->elbow_angle = 0.0f;
+      this->wrist_angle = 0.0f;
     }
   }
 
@@ -62,6 +64,9 @@ struct CheckLimits_Request_
   using _elbow_angle_type =
     float;
   _elbow_angle_type elbow_angle;
+  using _wrist_angle_type =
+    float;
+  _wrist_angle_type wrist_angle;
 
   // setters for named parameter idiom
   Type & set__shoulder_angle(
@@ -74,6 +79,12 @@ struct CheckLimits_Request_
     const float & _arg)
   {
     this->elbow_angle = _arg;
+    return *this;
+  }
+  Type & set__wrist_angle(
+    const float & _arg)
+  {
+    this->wrist_angle = _arg;
     return *this;
   }
 
@@ -123,6 +134,9 @@ struct CheckLimits_Request_
       return false;
     }
     if (this->elbow_angle != other.elbow_angle) {
+      return false;
+    }
+    if (this->wrist_angle != other.wrist_angle) {
       return false;
     }
     return true;

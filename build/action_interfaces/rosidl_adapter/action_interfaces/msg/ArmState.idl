@@ -10,6 +10,8 @@ module action_interfaces {
 
       float elbow_angle;
 
+      float wrist_angle;
+
       string status;
     };
   };

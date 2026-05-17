@@ -1,0 +1,16 @@
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:[m[K In member function ‘[01m[Kvoid ArmClient::callMoveSequence()[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:73:10:[m[K [01;31m[Kerror: [m[Kambiguous overload for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Krclcpp::Client<action_interfaces::srv::CheckLimits>::SharedFuture[m[K’ {aka ‘[01m[Kstd::shared_future<std::shared_ptr<action_interfaces::srv::CheckLimits_Response_<std::allocator<void> > > >[m[K’} and ‘[01m[Krclcpp::Client<action_interfaces::srv::CheckLimits>::SharedFutureAndRequestId[m[K’)
+   73 |         }[01;31m[K)[m[K;
+      |          [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/client.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:36[m[K,
+                 from [01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:1[m[K:
+[01m[K/usr/include/c++/11/future:927:22:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::shared_future<_Res>& std::shared_future<_Res>::operator=(const std::shared_future<_Res>&) [with _Res = std::shared_ptr<action_interfaces::srv::CheckLimits_Response_<std::allocator<void> > >][m[K’
+  927 |       shared_future& [01;36m[Koperator[m[K=(const shared_future& __sf) noexcept
+      |                      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/future:933:22:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::shared_future<_Res>& std::shared_future<_Res>::operator=(std::shared_future<_Res>&&) [with _Res = std::shared_ptr<action_interfaces::srv::CheckLimits_Response_<std::allocator<void> > >][m[K’
+  933 |       shared_future& [01;36m[Koperator[m[K=(shared_future&& __sf) noexcept
+      |                      [01;36m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/ArmClient.dir/build.make:76: CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/ArmClient.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

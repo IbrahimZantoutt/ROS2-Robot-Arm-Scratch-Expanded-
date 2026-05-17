@@ -59,6 +59,11 @@ static bool _CheckLimits_Request__cdr_serialize(
     cdr << ros_message->elbow_angle;
   }
 
+  // Field name: wrist_angle
+  {
+    cdr << ros_message->wrist_angle;
+  }
+
   return true;
 }
 
@@ -79,6 +84,11 @@ static bool _CheckLimits_Request__cdr_deserialize(
   // Field name: elbow_angle
   {
     cdr >> ros_message->elbow_angle;
+  }
+
+  // Field name: wrist_angle
+  {
+    cdr >> ros_message->wrist_angle;
   }
 
   return true;
@@ -107,6 +117,12 @@ size_t get_serialized_size_action_interfaces__srv__CheckLimits_Request(
   // field.name elbow_angle
   {
     size_t item_size = sizeof(ros_message->elbow_angle);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name wrist_angle
+  {
+    size_t item_size = sizeof(ros_message->wrist_angle);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -155,6 +171,14 @@ size_t max_serialized_size_action_interfaces__srv__CheckLimits_Request(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // member: wrist_angle
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -164,7 +188,7 @@ size_t max_serialized_size_action_interfaces__srv__CheckLimits_Request(
     using DataType = action_interfaces__srv__CheckLimits_Request;
     is_plain =
       (
-      offsetof(DataType, elbow_angle) +
+      offsetof(DataType, wrist_angle) +
       last_member_size
       ) == ret_val;
   }

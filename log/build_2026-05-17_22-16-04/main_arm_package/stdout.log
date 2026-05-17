@@ -1,0 +1,12 @@
+[35m[1mConsolidate compiler generated dependencies of target ArmController[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmMover[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmMonitor[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmClient[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/ArmMover.dir/src/ArmMover.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/ArmController.dir/src/ArmController.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ArmMonitor.dir/src/ArmMonitor.cpp.o[0m
+[ 62%] [32m[1mLinking CXX executable ArmClient[0m
+[ 62%] Built target ArmClient
+[ 75%] [32m[1mLinking CXX executable ArmController[0m
+[ 75%] Built target ArmController

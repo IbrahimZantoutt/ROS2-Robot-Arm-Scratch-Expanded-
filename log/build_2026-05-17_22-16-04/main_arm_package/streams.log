@@ -1,0 +1,29 @@
+[0.139s] Invoking command in '/home/ibrahim/RobotArmExpanded/build/main_arm_package': AMENT_PREFIX_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ibrahim/RobotArmExpanded/build/main_arm_package -- -j16 -l16
+[0.208s] [35m[1mConsolidate compiler generated dependencies of target ArmController[0m
+[0.208s] [35m[1mConsolidate compiler generated dependencies of target ArmMover[0m
+[0.208s] [35m[1mConsolidate compiler generated dependencies of target ArmMonitor[0m
+[0.209s] [35m[1mConsolidate compiler generated dependencies of target ArmClient[0m
+[0.238s] [ 25%] [32mBuilding CXX object CMakeFiles/ArmMover.dir/src/ArmMover.cpp.o[0m
+[0.238s] [ 25%] [32mBuilding CXX object CMakeFiles/ArmController.dir/src/ArmController.cpp.o[0m
+[0.238s] [ 37%] [32mBuilding CXX object CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o[0m
+[0.238s] [ 50%] [32mBuilding CXX object CMakeFiles/ArmMonitor.dir/src/ArmMonitor.cpp.o[0m
+[3.710s] [01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmMonitor.cpp:[m[K In member function ‘[01m[Kvoid ArmMonitor::handleArmState(action_interfaces::msg::ArmState_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.711s] [01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmMonitor.cpp:50:25:[m[K [01;31m[Kerror: [m[K‘[01m[Krequest[m[K’ was not declared in this scope
+[3.711s]    50 |             auto WstA = [01;31m[Krequest[m[K->wrist_angle;
+[3.711s]       |                         [01;31m[K^~~~~~~[m[K
+[3.955s] [01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmMover.cpp:[m[K In member function ‘[01m[Kvoid ArmMover::handleArmState(action_interfaces::msg::ArmState_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.955s] [01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmMover.cpp:132:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kangle_mutex[m[K’ was not declared in this scope; did you mean ‘[01m[Kangle_mutex_[m[K’?
+[3.955s]   132 |             std::lock_guard<std::mutex> lock([01;31m[Kangle_mutex[m[K);
+[3.955s]       |                                              [01;31m[K^~~~~~~~~~~[m[K
+[3.956s]       |                                              [32m[Kangle_mutex_[m[K
+[6.301s] [ 62%] [32m[1mLinking CXX executable ArmClient[0m
+[6.809s] [ 62%] Built target ArmClient
+[6.961s] gmake[2]: *** [CMakeFiles/ArmMonitor.dir/build.make:76: CMakeFiles/ArmMonitor.dir/src/ArmMonitor.cpp.o] Error 1
+[6.961s] gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/ArmMonitor.dir/all] Error 2
+[6.961s] gmake[1]: *** Waiting for unfinished jobs....
+[7.519s] gmake[2]: *** [CMakeFiles/ArmMover.dir/build.make:76: CMakeFiles/ArmMover.dir/src/ArmMover.cpp.o] Error 1
+[7.519s] gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/ArmMover.dir/all] Error 2
+[10.903s] [ 75%] [32m[1mLinking CXX executable ArmController[0m
+[11.707s] [ 75%] Built target ArmController
+[11.710s] gmake: *** [Makefile:146: all] Error 2
+[11.713s] Invoked command in '/home/ibrahim/RobotArmExpanded/build/main_arm_package' returned '2': AMENT_PREFIX_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ibrahim/RobotArmExpanded/build/main_arm_package -- -j16 -l16

@@ -19,6 +19,7 @@ action_interfaces__msg__ArmCommand__init(action_interfaces__msg__ArmCommand * ms
   }
   // shoulder_angle_cmd
   // elbow_angle_cmd
+  // wrist_angle_cmd
   return true;
 }
 
@@ -30,6 +31,7 @@ action_interfaces__msg__ArmCommand__fini(action_interfaces__msg__ArmCommand * ms
   }
   // shoulder_angle_cmd
   // elbow_angle_cmd
+  // wrist_angle_cmd
 }
 
 bool
@@ -44,6 +46,10 @@ action_interfaces__msg__ArmCommand__are_equal(const action_interfaces__msg__ArmC
   }
   // elbow_angle_cmd
   if (lhs->elbow_angle_cmd != rhs->elbow_angle_cmd) {
+    return false;
+  }
+  // wrist_angle_cmd
+  if (lhs->wrist_angle_cmd != rhs->wrist_angle_cmd) {
     return false;
   }
   return true;
@@ -61,6 +67,8 @@ action_interfaces__msg__ArmCommand__copy(
   output->shoulder_angle_cmd = input->shoulder_angle_cmd;
   // elbow_angle_cmd
   output->elbow_angle_cmd = input->elbow_angle_cmd;
+  // wrist_angle_cmd
+  output->wrist_angle_cmd = input->wrist_angle_cmd;
   return true;
 }
 

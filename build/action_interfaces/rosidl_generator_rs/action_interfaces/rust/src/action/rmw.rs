@@ -37,6 +37,11 @@ pub struct MoveArm_Goal {
     #[allow(missing_docs)]
     pub elbow_angle_goal: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub wrist_angle_goal: f32,
+
 }
 
 
@@ -117,6 +122,11 @@ pub struct MoveArm_Result {
     #[allow(missing_docs)]
     pub elbow_angle_rs: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub wrist_angle_rs: f32,
+
 }
 
 
@@ -196,6 +206,11 @@ pub struct MoveArm_Feedback {
     // This member is not documented.
     #[allow(missing_docs)]
     pub elbow_angle_fb: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub wrist_angle_fb: f32,
 
 }
 

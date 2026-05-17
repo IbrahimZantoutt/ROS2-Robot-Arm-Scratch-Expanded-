@@ -21,16 +21,32 @@ namespace srv
 namespace builder
 {
 
+class Init_CheckLimits_Request_wrist_angle
+{
+public:
+  explicit Init_CheckLimits_Request_wrist_angle(::action_interfaces::srv::CheckLimits_Request & msg)
+  : msg_(msg)
+  {}
+  ::action_interfaces::srv::CheckLimits_Request wrist_angle(::action_interfaces::srv::CheckLimits_Request::_wrist_angle_type arg)
+  {
+    msg_.wrist_angle = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::action_interfaces::srv::CheckLimits_Request msg_;
+};
+
 class Init_CheckLimits_Request_elbow_angle
 {
 public:
   explicit Init_CheckLimits_Request_elbow_angle(::action_interfaces::srv::CheckLimits_Request & msg)
   : msg_(msg)
   {}
-  ::action_interfaces::srv::CheckLimits_Request elbow_angle(::action_interfaces::srv::CheckLimits_Request::_elbow_angle_type arg)
+  Init_CheckLimits_Request_wrist_angle elbow_angle(::action_interfaces::srv::CheckLimits_Request::_elbow_angle_type arg)
   {
     msg_.elbow_angle = std::move(arg);
-    return std::move(msg_);
+    return Init_CheckLimits_Request_wrist_angle(msg_);
   }
 
 private:

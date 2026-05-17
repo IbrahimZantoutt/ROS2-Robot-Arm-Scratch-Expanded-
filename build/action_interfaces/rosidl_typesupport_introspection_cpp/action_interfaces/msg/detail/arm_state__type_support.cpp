@@ -37,7 +37,7 @@ void ArmState_fini_function(void * message_memory)
   typed_message->~ArmState();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ArmState_message_member_array[3] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ArmState_message_member_array[4] = {
   {
     "shoulder_angle",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -73,6 +73,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ArmState_mess
     nullptr  // resize(index) function pointer
   },
   {
+    "wrist_angle",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(action_interfaces::msg::ArmState, wrist_angle),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
     "status",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
@@ -94,7 +111,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ArmState_mess
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ArmState_message_members = {
   "action_interfaces::msg",  // message namespace
   "ArmState",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(action_interfaces::msg::ArmState),
   ArmState_message_member_array,  // message members
   ArmState_init_function,  // function to initialize message memory (memory has to be allocated)

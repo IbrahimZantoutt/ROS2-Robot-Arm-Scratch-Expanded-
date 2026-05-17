@@ -36,6 +36,13 @@ inline void to_flow_style_yaml(
   {
     out << "elbow_angle_cmd: ";
     rosidl_generator_traits::value_to_yaml(msg.elbow_angle_cmd, out);
+    out << ", ";
+  }
+
+  // member: wrist_angle_cmd
+  {
+    out << "wrist_angle_cmd: ";
+    rosidl_generator_traits::value_to_yaml(msg.wrist_angle_cmd, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -61,6 +68,16 @@ inline void to_block_style_yaml(
     }
     out << "elbow_angle_cmd: ";
     rosidl_generator_traits::value_to_yaml(msg.elbow_angle_cmd, out);
+    out << "\n";
+  }
+
+  // member: wrist_angle_cmd
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "wrist_angle_cmd: ";
+    rosidl_generator_traits::value_to_yaml(msg.wrist_angle_cmd, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

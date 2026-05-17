@@ -59,16 +59,19 @@ class ArmState(metaclass=Metaclass_ArmState):
     __slots__ = [
         '_shoulder_angle',
         '_elbow_angle',
+        '_wrist_angle',
         '_status',
     ]
 
     _fields_and_field_types = {
         'shoulder_angle': 'float',
         'elbow_angle': 'float',
+        'wrist_angle': 'float',
         'status': 'string',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
@@ -80,6 +83,7 @@ class ArmState(metaclass=Metaclass_ArmState):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.shoulder_angle = kwargs.get('shoulder_angle', float())
         self.elbow_angle = kwargs.get('elbow_angle', float())
+        self.wrist_angle = kwargs.get('wrist_angle', float())
         self.status = kwargs.get('status', str())
 
     def __repr__(self):
@@ -114,6 +118,8 @@ class ArmState(metaclass=Metaclass_ArmState):
         if self.shoulder_angle != other.shoulder_angle:
             return False
         if self.elbow_angle != other.elbow_angle:
+            return False
+        if self.wrist_angle != other.wrist_angle:
             return False
         if self.status != other.status:
             return False
@@ -153,6 +159,21 @@ class ArmState(metaclass=Metaclass_ArmState):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'elbow_angle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._elbow_angle = value
+
+    @builtins.property
+    def wrist_angle(self):
+        """Message field 'wrist_angle'."""
+        return self._wrist_angle
+
+    @wrist_angle.setter
+    def wrist_angle(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'wrist_angle' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'wrist_angle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._wrist_angle = value
 
     @builtins.property
     def status(self):

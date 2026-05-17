@@ -24,13 +24,13 @@ class ArmMonitor: public rclcpp::Node{
 
             std::vector<double> shoulder_threshold = this->get_parameter("shoulder_threshold").as_double_array();
             std::vector<double> elbow_threshold = this->get_parameter("elbow_threshold").as_double_array();
-            std::vector<double> wrist_threshold = this->get_parameter("elbow_threshold").as_double_array();
+            std::vector<double> wrist_threshold = this->get_parameter("wrist_threshold").as_double_array();
 
-            if((ShdA >= shoulder_threshold[0] && ShdA <= shoulder_threshold[1]) && (ElbA >= elbow_threshold[0] && ElbA <= elbow_threshold[1])){
-                RCLCPP_INFO(this->get_logger(), "Arm angles within limits: Shoulder: %f deg  Elbow: %f deg", ShdA, ElbA);
+            if((ShdA >= shoulder_threshold[0] && ShdA <= shoulder_threshold[1]) && (ElbA >= elbow_threshold[0] && ElbA <= elbow_threshold[1])  && (WstA >= wrist_threshold[0] && WstA <= wrist_threshold[1])){
+                RCLCPP_INFO(this->get_logger(), "Arm angles within limits: Shoulder: %f deg  Elbow: %f  deg Wrist: %f deg", ShdA, ElbA, WstA);
                 response->is_safe = true;
             } else {
-                RCLCPP_WARN(this->get_logger(), "Arm angles out of bounds: Shoulder: %f deg  Elbow: %f deg", ShdA, ElbA);
+                RCLCPP_WARN(this->get_logger(), "Arm angles out of bounds: Shoulder: %f deg  Elbow: %f  deg  Wrist: %f deg", ShdA, ElbA, WstA);
                 response->is_safe = false;
             }
             
@@ -42,16 +42,20 @@ class ArmMonitor: public rclcpp::Node{
 
         float current_shoulder_angle_;
         float current_elbow_angle_;
+        float current_wrist_angle_;
         
         void handleArmState(const action_interfaces::msg::ArmState::SharedPtr msg){
             auto ShdA = msg->shoulder_angle;
-            auto ElbA = msg->elbow_angle; 
+            auto ElbA = msg->elbow_angle;
+            auto WstA = msg->wrist_angle;  
 
             current_shoulder_angle_ = ShdA;
             current_elbow_angle_ = ElbA;
+            current_wrist_angle_= WstA;
 
             std::vector<double> shoulder_threshold = this->get_parameter("shoulder_threshold").as_double_array();
             std::vector<double> elbow_threshold = this->get_parameter("elbow_threshold").as_double_array();
+            std::vector<double> wrist_threshold = this->get_parameter("wrist_threshold").as_double_array();
 
             if(ShdA < shoulder_threshold[0]  || ShdA > shoulder_threshold[1]){
                 RCLCPP_WARN(this->get_logger(), "Shoulder angle out of bounds: %f", ShdA);
@@ -59,7 +63,9 @@ class ArmMonitor: public rclcpp::Node{
             if(ElbA < elbow_threshold[0]  || ElbA > elbow_threshold[1]){
                 RCLCPP_WARN(this->get_logger(), "Elbow angle out of bounds: %f", ElbA);
             }
-
+            if(WstA < wrist_threshold[0]  || WstA > wrist_threshold[1]){
+                RCLCPP_WARN(this->get_logger(), "Wrist angle out of bounds: %f", WstA);
+            }
         }
 };
 

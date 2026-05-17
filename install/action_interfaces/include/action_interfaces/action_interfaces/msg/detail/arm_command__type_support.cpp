@@ -37,7 +37,7 @@ void ArmCommand_fini_function(void * message_memory)
   typed_message->~ArmCommand();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ArmCommand_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ArmCommand_message_member_array[3] = {
   {
     "shoulder_angle_cmd",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -71,13 +71,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ArmCommand_me
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "wrist_angle_cmd",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(action_interfaces::msg::ArmCommand, wrist_angle_cmd),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ArmCommand_message_members = {
   "action_interfaces::msg",  // message namespace
   "ArmCommand",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(action_interfaces::msg::ArmCommand),
   ArmCommand_message_member_array,  // message members
   ArmCommand_init_function,  // function to initialize message memory (memory has to be allocated)

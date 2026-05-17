@@ -9,6 +9,8 @@ module action_interfaces {
       float shoulder_angle;
 
       float elbow_angle;
+
+      float wrist_angle;
     };
     struct CheckLimits_Response {
       boolean is_safe;

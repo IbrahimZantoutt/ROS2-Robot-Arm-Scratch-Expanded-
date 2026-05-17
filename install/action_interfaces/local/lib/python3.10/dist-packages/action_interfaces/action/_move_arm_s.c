@@ -68,6 +68,15 @@ bool action_interfaces__action__move_arm__goal__convert_from_py(PyObject * _pyms
     ros_message->elbow_angle_goal = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // wrist_angle_goal
+    PyObject * field = PyObject_GetAttrString(_pymsg, "wrist_angle_goal");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->wrist_angle_goal = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -106,6 +115,17 @@ PyObject * action_interfaces__action__move_arm__goal__convert_to_py(void * raw_r
     field = PyFloat_FromDouble(ros_message->elbow_angle_goal);
     {
       int rc = PyObject_SetAttrString(_pymessage, "elbow_angle_goal", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // wrist_angle_goal
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->wrist_angle_goal);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "wrist_angle_goal", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -183,6 +203,15 @@ bool action_interfaces__action__move_arm__result__convert_from_py(PyObject * _py
     ros_message->elbow_angle_rs = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // wrist_angle_rs
+    PyObject * field = PyObject_GetAttrString(_pymsg, "wrist_angle_rs");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->wrist_angle_rs = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -221,6 +250,17 @@ PyObject * action_interfaces__action__move_arm__result__convert_to_py(void * raw
     field = PyFloat_FromDouble(ros_message->elbow_angle_rs);
     {
       int rc = PyObject_SetAttrString(_pymessage, "elbow_angle_rs", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // wrist_angle_rs
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->wrist_angle_rs);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "wrist_angle_rs", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -298,6 +338,15 @@ bool action_interfaces__action__move_arm__feedback__convert_from_py(PyObject * _
     ros_message->elbow_angle_fb = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // wrist_angle_fb
+    PyObject * field = PyObject_GetAttrString(_pymsg, "wrist_angle_fb");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->wrist_angle_fb = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -336,6 +385,17 @@ PyObject * action_interfaces__action__move_arm__feedback__convert_to_py(void * r
     field = PyFloat_FromDouble(ros_message->elbow_angle_fb);
     {
       int rc = PyObject_SetAttrString(_pymessage, "elbow_angle_fb", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // wrist_angle_fb
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->wrist_angle_fb);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "wrist_angle_fb", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
