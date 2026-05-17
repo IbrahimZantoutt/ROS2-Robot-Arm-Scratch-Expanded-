@@ -23,6 +23,7 @@ typedef struct action_interfaces__action__MoveArm_Goal
   float shoulder_angle_goal;
   float elbow_angle_goal;
   float wrist_angle_goal;
+  float spin_angle_goal;
 } action_interfaces__action__MoveArm_Goal;
 
 // Struct for a sequence of action_interfaces__action__MoveArm_Goal.
@@ -44,6 +45,7 @@ typedef struct action_interfaces__action__MoveArm_Result
   float shoulder_angle_rs;
   float elbow_angle_rs;
   float wrist_angle_rs;
+  float spin_angle_rs;
 } action_interfaces__action__MoveArm_Result;
 
 // Struct for a sequence of action_interfaces__action__MoveArm_Result.
@@ -65,6 +67,7 @@ typedef struct action_interfaces__action__MoveArm_Feedback
   float shoulder_angle_fb;
   float elbow_angle_fb;
   float wrist_angle_fb;
+  float spin_angle_fb;
 } action_interfaces__action__MoveArm_Feedback;
 
 // Struct for a sequence of action_interfaces__action__MoveArm_Feedback.

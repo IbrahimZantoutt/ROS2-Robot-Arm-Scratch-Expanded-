@@ -42,6 +42,7 @@ struct ArmState_
       this->shoulder_angle = 0.0f;
       this->elbow_angle = 0.0f;
       this->wrist_angle = 0.0f;
+      this->spin_angle = 0.0f;
       this->status = "";
     }
   }
@@ -55,6 +56,7 @@ struct ArmState_
       this->shoulder_angle = 0.0f;
       this->elbow_angle = 0.0f;
       this->wrist_angle = 0.0f;
+      this->spin_angle = 0.0f;
       this->status = "";
     }
   }
@@ -69,6 +71,9 @@ struct ArmState_
   using _wrist_angle_type =
     float;
   _wrist_angle_type wrist_angle;
+  using _spin_angle_type =
+    float;
+  _spin_angle_type spin_angle;
   using _status_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _status_type status;
@@ -90,6 +95,12 @@ struct ArmState_
     const float & _arg)
   {
     this->wrist_angle = _arg;
+    return *this;
+  }
+  Type & set__spin_angle(
+    const float & _arg)
+  {
+    this->spin_angle = _arg;
     return *this;
   }
   Type & set__status(
@@ -148,6 +159,9 @@ struct ArmState_
       return false;
     }
     if (this->wrist_angle != other.wrist_angle) {
+      return false;
+    }
+    if (this->spin_angle != other.spin_angle) {
       return false;
     }
     if (this->status != other.status) {

@@ -42,6 +42,7 @@ struct ArmCommand_
       this->shoulder_angle_cmd = 0.0f;
       this->elbow_angle_cmd = 0.0f;
       this->wrist_angle_cmd = 0.0f;
+      this->spin_angle_cmd = 0.0f;
     }
   }
 
@@ -54,6 +55,7 @@ struct ArmCommand_
       this->shoulder_angle_cmd = 0.0f;
       this->elbow_angle_cmd = 0.0f;
       this->wrist_angle_cmd = 0.0f;
+      this->spin_angle_cmd = 0.0f;
     }
   }
 
@@ -67,6 +69,9 @@ struct ArmCommand_
   using _wrist_angle_cmd_type =
     float;
   _wrist_angle_cmd_type wrist_angle_cmd;
+  using _spin_angle_cmd_type =
+    float;
+  _spin_angle_cmd_type spin_angle_cmd;
 
   // setters for named parameter idiom
   Type & set__shoulder_angle_cmd(
@@ -85,6 +90,12 @@ struct ArmCommand_
     const float & _arg)
   {
     this->wrist_angle_cmd = _arg;
+    return *this;
+  }
+  Type & set__spin_angle_cmd(
+    const float & _arg)
+  {
+    this->spin_angle_cmd = _arg;
     return *this;
   }
 
@@ -137,6 +148,9 @@ struct ArmCommand_
       return false;
     }
     if (this->wrist_angle_cmd != other.wrist_angle_cmd) {
+      return false;
+    }
+    if (this->spin_angle_cmd != other.spin_angle_cmd) {
       return false;
     }
     return true;

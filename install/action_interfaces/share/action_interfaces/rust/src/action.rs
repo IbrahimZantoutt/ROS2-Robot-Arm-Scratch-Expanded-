@@ -28,6 +28,11 @@ pub struct MoveArm_Goal {
     #[allow(missing_docs)]
     pub wrist_angle_goal: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub spin_angle_goal: f32,
+
 }
 
 
@@ -47,11 +52,13 @@ impl rosidl_runtime_rs::Message for MoveArm_Goal {
         shoulder_angle_goal: msg.shoulder_angle_goal,
         elbow_angle_goal: msg.elbow_angle_goal,
         wrist_angle_goal: msg.wrist_angle_goal,
+        spin_angle_goal: msg.spin_angle_goal,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       shoulder_angle_goal: msg.shoulder_angle_goal,
       elbow_angle_goal: msg.elbow_angle_goal,
       wrist_angle_goal: msg.wrist_angle_goal,
+      spin_angle_goal: msg.spin_angle_goal,
       })
     }
   }
@@ -61,6 +68,7 @@ impl rosidl_runtime_rs::Message for MoveArm_Goal {
       shoulder_angle_goal: msg.shoulder_angle_goal,
       elbow_angle_goal: msg.elbow_angle_goal,
       wrist_angle_goal: msg.wrist_angle_goal,
+      spin_angle_goal: msg.spin_angle_goal,
     }
   }
 }
@@ -90,6 +98,11 @@ pub struct MoveArm_Result {
     #[allow(missing_docs)]
     pub wrist_angle_rs: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub spin_angle_rs: f32,
+
 }
 
 
@@ -109,11 +122,13 @@ impl rosidl_runtime_rs::Message for MoveArm_Result {
         shoulder_angle_rs: msg.shoulder_angle_rs,
         elbow_angle_rs: msg.elbow_angle_rs,
         wrist_angle_rs: msg.wrist_angle_rs,
+        spin_angle_rs: msg.spin_angle_rs,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       shoulder_angle_rs: msg.shoulder_angle_rs,
       elbow_angle_rs: msg.elbow_angle_rs,
       wrist_angle_rs: msg.wrist_angle_rs,
+      spin_angle_rs: msg.spin_angle_rs,
       })
     }
   }
@@ -123,6 +138,7 @@ impl rosidl_runtime_rs::Message for MoveArm_Result {
       shoulder_angle_rs: msg.shoulder_angle_rs,
       elbow_angle_rs: msg.elbow_angle_rs,
       wrist_angle_rs: msg.wrist_angle_rs,
+      spin_angle_rs: msg.spin_angle_rs,
     }
   }
 }
@@ -152,6 +168,11 @@ pub struct MoveArm_Feedback {
     #[allow(missing_docs)]
     pub wrist_angle_fb: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub spin_angle_fb: f32,
+
 }
 
 
@@ -171,11 +192,13 @@ impl rosidl_runtime_rs::Message for MoveArm_Feedback {
         shoulder_angle_fb: msg.shoulder_angle_fb,
         elbow_angle_fb: msg.elbow_angle_fb,
         wrist_angle_fb: msg.wrist_angle_fb,
+        spin_angle_fb: msg.spin_angle_fb,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       shoulder_angle_fb: msg.shoulder_angle_fb,
       elbow_angle_fb: msg.elbow_angle_fb,
       wrist_angle_fb: msg.wrist_angle_fb,
+      spin_angle_fb: msg.spin_angle_fb,
       })
     }
   }
@@ -185,6 +208,7 @@ impl rosidl_runtime_rs::Message for MoveArm_Feedback {
       shoulder_angle_fb: msg.shoulder_angle_fb,
       elbow_angle_fb: msg.elbow_angle_fb,
       wrist_angle_fb: msg.wrist_angle_fb,
+      spin_angle_fb: msg.spin_angle_fb,
     }
   }
 }

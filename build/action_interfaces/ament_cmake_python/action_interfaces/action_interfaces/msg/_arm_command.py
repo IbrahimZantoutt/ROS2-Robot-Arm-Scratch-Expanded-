@@ -60,15 +60,18 @@ class ArmCommand(metaclass=Metaclass_ArmCommand):
         '_shoulder_angle_cmd',
         '_elbow_angle_cmd',
         '_wrist_angle_cmd',
+        '_spin_angle_cmd',
     ]
 
     _fields_and_field_types = {
         'shoulder_angle_cmd': 'float',
         'elbow_angle_cmd': 'float',
         'wrist_angle_cmd': 'float',
+        'spin_angle_cmd': 'float',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -81,6 +84,7 @@ class ArmCommand(metaclass=Metaclass_ArmCommand):
         self.shoulder_angle_cmd = kwargs.get('shoulder_angle_cmd', float())
         self.elbow_angle_cmd = kwargs.get('elbow_angle_cmd', float())
         self.wrist_angle_cmd = kwargs.get('wrist_angle_cmd', float())
+        self.spin_angle_cmd = kwargs.get('spin_angle_cmd', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -116,6 +120,8 @@ class ArmCommand(metaclass=Metaclass_ArmCommand):
         if self.elbow_angle_cmd != other.elbow_angle_cmd:
             return False
         if self.wrist_angle_cmd != other.wrist_angle_cmd:
+            return False
+        if self.spin_angle_cmd != other.spin_angle_cmd:
             return False
         return True
 
@@ -168,3 +174,18 @@ class ArmCommand(metaclass=Metaclass_ArmCommand):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'wrist_angle_cmd' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._wrist_angle_cmd = value
+
+    @builtins.property
+    def spin_angle_cmd(self):
+        """Message field 'spin_angle_cmd'."""
+        return self._spin_angle_cmd
+
+    @spin_angle_cmd.setter
+    def spin_angle_cmd(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'spin_angle_cmd' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'spin_angle_cmd' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._spin_angle_cmd = value

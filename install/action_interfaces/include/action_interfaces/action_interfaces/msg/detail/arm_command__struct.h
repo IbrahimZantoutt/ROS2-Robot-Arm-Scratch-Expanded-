@@ -23,6 +23,7 @@ typedef struct action_interfaces__msg__ArmCommand
   float shoulder_angle_cmd;
   float elbow_angle_cmd;
   float wrist_angle_cmd;
+  float spin_angle_cmd;
 } action_interfaces__msg__ArmCommand;
 
 // Struct for a sequence of action_interfaces__msg__ArmCommand.

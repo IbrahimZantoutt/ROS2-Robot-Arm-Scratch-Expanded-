@@ -23,6 +23,7 @@ typedef struct action_interfaces__srv__CheckLimits_Request
   float shoulder_angle;
   float elbow_angle;
   float wrist_angle;
+  float spin_angle;
 } action_interfaces__srv__CheckLimits_Request;
 
 // Struct for a sequence of action_interfaces__srv__CheckLimits_Request.

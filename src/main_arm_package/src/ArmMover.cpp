@@ -28,7 +28,7 @@ class ArmMover: public rclcpp::Node{
         }
 
         rclcpp_action::GoalResponse handleGoal(const rclcpp_action::GoalUUID& uuid,std::shared_ptr<const MoveArm::Goal> goal){
-            RCLCPP_INFO(this->get_logger(), "Received goal request with target Shoulder: %f deg  Elbow: %f deg", goal->shoulder_angle_goal, goal->elbow_angle_goal);
+            RCLCPP_INFO(this->get_logger(), "Received goal request with target Shoulder: %f deg  Elbow: %f deg  Wrist: %f deg  Spin: %f deg", goal->shoulder_angle_goal, goal->elbow_angle_goal, goal->wrist_angle_goal, goal->spin_angle_goal);
             (void)uuid;
             return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
         }
@@ -49,16 +49,18 @@ class ArmMover: public rclcpp::Node{
             float goalSA = goal_handle->get_goal()->shoulder_angle_goal;
             float goalEA = goal_handle->get_goal()->elbow_angle_goal;
             float goalWA = goal_handle->get_goal()->wrist_angle_goal;
+            float goalSpA = goal_handle->get_goal()->spin_angle_goal;
 
-            float shoulder, elbow, wrist;
+            float shoulder, elbow, wrist, spin;
             {
                 std::lock_guard<std::mutex> lock(angle_mutex_);
                 shoulder = current_angle_shoulder_;
                 elbow = current_angle_elbow_;
                 wrist = current_angle_wrist_;
+                spin = current_angle_spin_;
             }
             
-            while(std::abs(shoulder - goalSA) > 0.01 || std::abs(elbow - goalEA) > 0.01 || std::abs(wrist - goalWA) > 0.01){
+            while(std::abs(shoulder - goalSA) > 0.01 || std::abs(elbow - goalEA) > 0.01 || std::abs(wrist - goalWA) > 0.01 || std::abs(spin - goalSpA) > 0.01){
                 if(goal_handle->is_canceling()){
                     goal_handle->canceled(result);
                     RCLCPP_INFO(this->get_logger(), "Goal canceled");
@@ -99,15 +101,28 @@ class ArmMover: public rclcpp::Node{
                     command_msg.wrist_angle_cmd = wrist;
                 }
 
+                if(std::abs(spin - goalSpA) > 0.01){
+                    if(spin < goalSpA){
+                        command_msg.spin_angle_cmd = spin + 1.0;
+                    } else {
+                        command_msg.spin_angle_cmd = spin - 1.0;
+                    }
+                }
+                else{
+                    command_msg.spin_angle_cmd = spin;
+                }
+
                 arm_command_publisher_->publish(command_msg);
 
                 shoulder = command_msg.shoulder_angle_cmd;
                 elbow   = command_msg.elbow_angle_cmd;
                 wrist   = command_msg.wrist_angle_cmd;
+                spin   = command_msg.spin_angle_cmd;
 
                 feedback->shoulder_angle_fb = shoulder;
                 feedback->elbow_angle_fb = elbow;
                 feedback->wrist_angle_fb = wrist;
+                feedback->spin_angle_fb = spin;
                 goal_handle->publish_feedback(feedback);
 
                 rclcpp::sleep_for(std::chrono::milliseconds(100));
@@ -115,6 +130,7 @@ class ArmMover: public rclcpp::Node{
             result->shoulder_angle_rs = current_angle_shoulder_;
             result->elbow_angle_rs = current_angle_elbow_;
             result->wrist_angle_rs = current_angle_wrist_;
+            result->spin_angle_rs = current_angle_spin_;
             goal_handle->succeed(result);
             RCLCPP_INFO(this->get_logger(), "Goal succeeded");
         }
@@ -131,12 +147,14 @@ class ArmMover: public rclcpp::Node{
         float current_angle_shoulder_;
         float current_angle_elbow_;
         float current_angle_wrist_;
+        float current_angle_spin_;
 
         void handleArmState(const action_interfaces::msg::ArmState::SharedPtr msg){
             std::lock_guard<std::mutex> lock(angle_mutex_);
             current_angle_shoulder_ = msg->shoulder_angle;
             current_angle_elbow_ = msg->elbow_angle;
             current_angle_wrist_ = msg->wrist_angle;
+            current_angle_spin_ = msg->spin_angle;
         }
 };
 

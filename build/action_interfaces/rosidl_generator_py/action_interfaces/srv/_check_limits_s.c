@@ -77,6 +77,15 @@ bool action_interfaces__srv__check_limits__request__convert_from_py(PyObject * _
     ros_message->wrist_angle = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // spin_angle
+    PyObject * field = PyObject_GetAttrString(_pymsg, "spin_angle");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->spin_angle = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -126,6 +135,17 @@ PyObject * action_interfaces__srv__check_limits__request__convert_to_py(void * r
     field = PyFloat_FromDouble(ros_message->wrist_angle);
     {
       int rc = PyObject_SetAttrString(_pymessage, "wrist_angle", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // spin_angle
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->spin_angle);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "spin_angle", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

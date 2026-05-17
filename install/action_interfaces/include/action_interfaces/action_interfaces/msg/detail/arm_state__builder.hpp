@@ -37,16 +37,32 @@ private:
   ::action_interfaces::msg::ArmState msg_;
 };
 
+class Init_ArmState_spin_angle
+{
+public:
+  explicit Init_ArmState_spin_angle(::action_interfaces::msg::ArmState & msg)
+  : msg_(msg)
+  {}
+  Init_ArmState_status spin_angle(::action_interfaces::msg::ArmState::_spin_angle_type arg)
+  {
+    msg_.spin_angle = std::move(arg);
+    return Init_ArmState_status(msg_);
+  }
+
+private:
+  ::action_interfaces::msg::ArmState msg_;
+};
+
 class Init_ArmState_wrist_angle
 {
 public:
   explicit Init_ArmState_wrist_angle(::action_interfaces::msg::ArmState & msg)
   : msg_(msg)
   {}
-  Init_ArmState_status wrist_angle(::action_interfaces::msg::ArmState::_wrist_angle_type arg)
+  Init_ArmState_spin_angle wrist_angle(::action_interfaces::msg::ArmState::_wrist_angle_type arg)
   {
     msg_.wrist_angle = std::move(arg);
-    return Init_ArmState_status(msg_);
+    return Init_ArmState_spin_angle(msg_);
   }
 
 private:

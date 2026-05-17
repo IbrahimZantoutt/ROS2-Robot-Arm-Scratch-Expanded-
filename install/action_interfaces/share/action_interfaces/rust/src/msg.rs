@@ -29,6 +29,11 @@ pub struct ArmState {
 
     // This member is not documented.
     #[allow(missing_docs)]
+    pub spin_angle: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
     pub status: std::string::String,
 
 }
@@ -50,12 +55,14 @@ impl rosidl_runtime_rs::Message for ArmState {
         shoulder_angle: msg.shoulder_angle,
         elbow_angle: msg.elbow_angle,
         wrist_angle: msg.wrist_angle,
+        spin_angle: msg.spin_angle,
         status: msg.status.as_str().into(),
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       shoulder_angle: msg.shoulder_angle,
       elbow_angle: msg.elbow_angle,
       wrist_angle: msg.wrist_angle,
+      spin_angle: msg.spin_angle,
         status: msg.status.as_str().into(),
       })
     }
@@ -66,6 +73,7 @@ impl rosidl_runtime_rs::Message for ArmState {
       shoulder_angle: msg.shoulder_angle,
       elbow_angle: msg.elbow_angle,
       wrist_angle: msg.wrist_angle,
+      spin_angle: msg.spin_angle,
       status: msg.status.to_string(),
     }
   }
@@ -95,6 +103,11 @@ pub struct ArmCommand {
     #[allow(missing_docs)]
     pub wrist_angle_cmd: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub spin_angle_cmd: f32,
+
 }
 
 
@@ -114,11 +127,13 @@ impl rosidl_runtime_rs::Message for ArmCommand {
         shoulder_angle_cmd: msg.shoulder_angle_cmd,
         elbow_angle_cmd: msg.elbow_angle_cmd,
         wrist_angle_cmd: msg.wrist_angle_cmd,
+        spin_angle_cmd: msg.spin_angle_cmd,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       shoulder_angle_cmd: msg.shoulder_angle_cmd,
       elbow_angle_cmd: msg.elbow_angle_cmd,
       wrist_angle_cmd: msg.wrist_angle_cmd,
+      spin_angle_cmd: msg.spin_angle_cmd,
       })
     }
   }
@@ -128,6 +143,7 @@ impl rosidl_runtime_rs::Message for ArmCommand {
       shoulder_angle_cmd: msg.shoulder_angle_cmd,
       elbow_angle_cmd: msg.elbow_angle_cmd,
       wrist_angle_cmd: msg.wrist_angle_cmd,
+      spin_angle_cmd: msg.spin_angle_cmd,
     }
   }
 }

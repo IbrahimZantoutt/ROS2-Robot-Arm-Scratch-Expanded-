@@ -46,6 +46,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: spin_angle
+  {
+    out << "spin_angle: ";
+    rosidl_generator_traits::value_to_yaml(msg.spin_angle, out);
+    out << ", ";
+  }
+
   // member: status
   {
     out << "status: ";
@@ -85,6 +92,16 @@ inline void to_block_style_yaml(
     }
     out << "wrist_angle: ";
     rosidl_generator_traits::value_to_yaml(msg.wrist_angle, out);
+    out << "\n";
+  }
+
+  // member: spin_angle
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "spin_angle: ";
+    rosidl_generator_traits::value_to_yaml(msg.spin_angle, out);
     out << "\n";
   }
 

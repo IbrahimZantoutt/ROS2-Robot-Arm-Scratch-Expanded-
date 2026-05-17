@@ -37,7 +37,7 @@ void MoveArm_Goal_fini_function(void * message_memory)
   typed_message->~MoveArm_Goal();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Goal_message_member_array[3] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Goal_message_member_array[4] = {
   {
     "shoulder_angle_goal",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -88,13 +88,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Goal_
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "spin_angle_goal",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(action_interfaces::action::MoveArm_Goal, spin_angle_goal),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers MoveArm_Goal_message_members = {
   "action_interfaces::action",  // message namespace
   "MoveArm_Goal",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(action_interfaces::action::MoveArm_Goal),
   MoveArm_Goal_message_member_array,  // message members
   MoveArm_Goal_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -190,7 +207,7 @@ void MoveArm_Result_fini_function(void * message_memory)
   typed_message->~MoveArm_Result();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Result_message_member_array[3] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Result_message_member_array[4] = {
   {
     "shoulder_angle_rs",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -241,13 +258,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Resul
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "spin_angle_rs",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(action_interfaces::action::MoveArm_Result, spin_angle_rs),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers MoveArm_Result_message_members = {
   "action_interfaces::action",  // message namespace
   "MoveArm_Result",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(action_interfaces::action::MoveArm_Result),
   MoveArm_Result_message_member_array,  // message members
   MoveArm_Result_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -343,7 +377,7 @@ void MoveArm_Feedback_fini_function(void * message_memory)
   typed_message->~MoveArm_Feedback();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Feedback_message_member_array[3] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Feedback_message_member_array[4] = {
   {
     "shoulder_angle_fb",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -394,13 +428,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Feedb
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "spin_angle_fb",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(action_interfaces::action::MoveArm_Feedback, spin_angle_fb),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers MoveArm_Feedback_message_members = {
   "action_interfaces::action",  // message namespace
   "MoveArm_Feedback",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(action_interfaces::action::MoveArm_Feedback),
   MoveArm_Feedback_message_member_array,  // message members
   MoveArm_Feedback_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -12,6 +12,8 @@ module action_interfaces {
 
       float wrist_angle;
 
+      float spin_angle;
+
       string status;
     };
   };

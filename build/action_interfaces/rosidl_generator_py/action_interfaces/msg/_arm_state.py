@@ -60,6 +60,7 @@ class ArmState(metaclass=Metaclass_ArmState):
         '_shoulder_angle',
         '_elbow_angle',
         '_wrist_angle',
+        '_spin_angle',
         '_status',
     ]
 
@@ -67,10 +68,12 @@ class ArmState(metaclass=Metaclass_ArmState):
         'shoulder_angle': 'float',
         'elbow_angle': 'float',
         'wrist_angle': 'float',
+        'spin_angle': 'float',
         'status': 'string',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -84,6 +87,7 @@ class ArmState(metaclass=Metaclass_ArmState):
         self.shoulder_angle = kwargs.get('shoulder_angle', float())
         self.elbow_angle = kwargs.get('elbow_angle', float())
         self.wrist_angle = kwargs.get('wrist_angle', float())
+        self.spin_angle = kwargs.get('spin_angle', float())
         self.status = kwargs.get('status', str())
 
     def __repr__(self):
@@ -120,6 +124,8 @@ class ArmState(metaclass=Metaclass_ArmState):
         if self.elbow_angle != other.elbow_angle:
             return False
         if self.wrist_angle != other.wrist_angle:
+            return False
+        if self.spin_angle != other.spin_angle:
             return False
         if self.status != other.status:
             return False
@@ -174,6 +180,21 @@ class ArmState(metaclass=Metaclass_ArmState):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'wrist_angle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._wrist_angle = value
+
+    @builtins.property
+    def spin_angle(self):
+        """Message field 'spin_angle'."""
+        return self._spin_angle
+
+    @spin_angle.setter
+    def spin_angle(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'spin_angle' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'spin_angle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._spin_angle = value
 
     @builtins.property
     def status(self):

@@ -11,6 +11,8 @@ module action_interfaces {
       float elbow_angle_goal;
 
       float wrist_angle_goal;
+
+      float spin_angle_goal;
     };
     struct MoveArm_Result {
       float shoulder_angle_rs;
@@ -18,6 +20,8 @@ module action_interfaces {
       float elbow_angle_rs;
 
       float wrist_angle_rs;
+
+      float spin_angle_rs;
     };
     struct MoveArm_Feedback {
       float shoulder_angle_fb;
@@ -25,6 +29,8 @@ module action_interfaces {
       float elbow_angle_fb;
 
       float wrist_angle_fb;
+
+      float spin_angle_fb;
     };
   };
 };

@@ -42,6 +42,7 @@ struct MoveArm_Goal_
       this->shoulder_angle_goal = 0.0f;
       this->elbow_angle_goal = 0.0f;
       this->wrist_angle_goal = 0.0f;
+      this->spin_angle_goal = 0.0f;
     }
   }
 
@@ -54,6 +55,7 @@ struct MoveArm_Goal_
       this->shoulder_angle_goal = 0.0f;
       this->elbow_angle_goal = 0.0f;
       this->wrist_angle_goal = 0.0f;
+      this->spin_angle_goal = 0.0f;
     }
   }
 
@@ -67,6 +69,9 @@ struct MoveArm_Goal_
   using _wrist_angle_goal_type =
     float;
   _wrist_angle_goal_type wrist_angle_goal;
+  using _spin_angle_goal_type =
+    float;
+  _spin_angle_goal_type spin_angle_goal;
 
   // setters for named parameter idiom
   Type & set__shoulder_angle_goal(
@@ -85,6 +90,12 @@ struct MoveArm_Goal_
     const float & _arg)
   {
     this->wrist_angle_goal = _arg;
+    return *this;
+  }
+  Type & set__spin_angle_goal(
+    const float & _arg)
+  {
+    this->spin_angle_goal = _arg;
     return *this;
   }
 
@@ -139,6 +150,9 @@ struct MoveArm_Goal_
     if (this->wrist_angle_goal != other.wrist_angle_goal) {
       return false;
     }
+    if (this->spin_angle_goal != other.spin_angle_goal) {
+      return false;
+    }
     return true;
   }
   bool operator!=(const MoveArm_Goal_ & other) const
@@ -184,6 +198,7 @@ struct MoveArm_Result_
       this->shoulder_angle_rs = 0.0f;
       this->elbow_angle_rs = 0.0f;
       this->wrist_angle_rs = 0.0f;
+      this->spin_angle_rs = 0.0f;
     }
   }
 
@@ -196,6 +211,7 @@ struct MoveArm_Result_
       this->shoulder_angle_rs = 0.0f;
       this->elbow_angle_rs = 0.0f;
       this->wrist_angle_rs = 0.0f;
+      this->spin_angle_rs = 0.0f;
     }
   }
 
@@ -209,6 +225,9 @@ struct MoveArm_Result_
   using _wrist_angle_rs_type =
     float;
   _wrist_angle_rs_type wrist_angle_rs;
+  using _spin_angle_rs_type =
+    float;
+  _spin_angle_rs_type spin_angle_rs;
 
   // setters for named parameter idiom
   Type & set__shoulder_angle_rs(
@@ -227,6 +246,12 @@ struct MoveArm_Result_
     const float & _arg)
   {
     this->wrist_angle_rs = _arg;
+    return *this;
+  }
+  Type & set__spin_angle_rs(
+    const float & _arg)
+  {
+    this->spin_angle_rs = _arg;
     return *this;
   }
 
@@ -281,6 +306,9 @@ struct MoveArm_Result_
     if (this->wrist_angle_rs != other.wrist_angle_rs) {
       return false;
     }
+    if (this->spin_angle_rs != other.spin_angle_rs) {
+      return false;
+    }
     return true;
   }
   bool operator!=(const MoveArm_Result_ & other) const
@@ -326,6 +354,7 @@ struct MoveArm_Feedback_
       this->shoulder_angle_fb = 0.0f;
       this->elbow_angle_fb = 0.0f;
       this->wrist_angle_fb = 0.0f;
+      this->spin_angle_fb = 0.0f;
     }
   }
 
@@ -338,6 +367,7 @@ struct MoveArm_Feedback_
       this->shoulder_angle_fb = 0.0f;
       this->elbow_angle_fb = 0.0f;
       this->wrist_angle_fb = 0.0f;
+      this->spin_angle_fb = 0.0f;
     }
   }
 
@@ -351,6 +381,9 @@ struct MoveArm_Feedback_
   using _wrist_angle_fb_type =
     float;
   _wrist_angle_fb_type wrist_angle_fb;
+  using _spin_angle_fb_type =
+    float;
+  _spin_angle_fb_type spin_angle_fb;
 
   // setters for named parameter idiom
   Type & set__shoulder_angle_fb(
@@ -369,6 +402,12 @@ struct MoveArm_Feedback_
     const float & _arg)
   {
     this->wrist_angle_fb = _arg;
+    return *this;
+  }
+  Type & set__spin_angle_fb(
+    const float & _arg)
+  {
+    this->spin_angle_fb = _arg;
     return *this;
   }
 
@@ -421,6 +460,9 @@ struct MoveArm_Feedback_
       return false;
     }
     if (this->wrist_angle_fb != other.wrist_angle_fb) {
+      return false;
+    }
+    if (this->spin_angle_fb != other.spin_angle_fb) {
       return false;
     }
     return true;

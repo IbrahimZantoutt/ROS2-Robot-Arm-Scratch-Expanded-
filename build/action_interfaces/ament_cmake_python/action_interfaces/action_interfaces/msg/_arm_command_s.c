@@ -77,6 +77,15 @@ bool action_interfaces__msg__arm_command__convert_from_py(PyObject * _pymsg, voi
     ros_message->wrist_angle_cmd = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // spin_angle_cmd
+    PyObject * field = PyObject_GetAttrString(_pymsg, "spin_angle_cmd");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->spin_angle_cmd = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -126,6 +135,17 @@ PyObject * action_interfaces__msg__arm_command__convert_to_py(void * raw_ros_mes
     field = PyFloat_FromDouble(ros_message->wrist_angle_cmd);
     {
       int rc = PyObject_SetAttrString(_pymessage, "wrist_angle_cmd", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // spin_angle_cmd
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->spin_angle_cmd);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "spin_angle_cmd", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

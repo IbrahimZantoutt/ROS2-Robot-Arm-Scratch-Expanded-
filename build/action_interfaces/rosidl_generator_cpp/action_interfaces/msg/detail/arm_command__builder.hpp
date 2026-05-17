@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_ArmCommand_spin_angle_cmd
+{
+public:
+  explicit Init_ArmCommand_spin_angle_cmd(::action_interfaces::msg::ArmCommand & msg)
+  : msg_(msg)
+  {}
+  ::action_interfaces::msg::ArmCommand spin_angle_cmd(::action_interfaces::msg::ArmCommand::_spin_angle_cmd_type arg)
+  {
+    msg_.spin_angle_cmd = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::action_interfaces::msg::ArmCommand msg_;
+};
+
 class Init_ArmCommand_wrist_angle_cmd
 {
 public:
   explicit Init_ArmCommand_wrist_angle_cmd(::action_interfaces::msg::ArmCommand & msg)
   : msg_(msg)
   {}
-  ::action_interfaces::msg::ArmCommand wrist_angle_cmd(::action_interfaces::msg::ArmCommand::_wrist_angle_cmd_type arg)
+  Init_ArmCommand_spin_angle_cmd wrist_angle_cmd(::action_interfaces::msg::ArmCommand::_wrist_angle_cmd_type arg)
   {
     msg_.wrist_angle_cmd = std::move(arg);
-    return std::move(msg_);
+    return Init_ArmCommand_spin_angle_cmd(msg_);
   }
 
 private:

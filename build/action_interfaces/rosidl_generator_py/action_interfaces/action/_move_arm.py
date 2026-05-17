@@ -60,15 +60,18 @@ class MoveArm_Goal(metaclass=Metaclass_MoveArm_Goal):
         '_shoulder_angle_goal',
         '_elbow_angle_goal',
         '_wrist_angle_goal',
+        '_spin_angle_goal',
     ]
 
     _fields_and_field_types = {
         'shoulder_angle_goal': 'float',
         'elbow_angle_goal': 'float',
         'wrist_angle_goal': 'float',
+        'spin_angle_goal': 'float',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -81,6 +84,7 @@ class MoveArm_Goal(metaclass=Metaclass_MoveArm_Goal):
         self.shoulder_angle_goal = kwargs.get('shoulder_angle_goal', float())
         self.elbow_angle_goal = kwargs.get('elbow_angle_goal', float())
         self.wrist_angle_goal = kwargs.get('wrist_angle_goal', float())
+        self.spin_angle_goal = kwargs.get('spin_angle_goal', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -116,6 +120,8 @@ class MoveArm_Goal(metaclass=Metaclass_MoveArm_Goal):
         if self.elbow_angle_goal != other.elbow_angle_goal:
             return False
         if self.wrist_angle_goal != other.wrist_angle_goal:
+            return False
+        if self.spin_angle_goal != other.spin_angle_goal:
             return False
         return True
 
@@ -168,6 +174,21 @@ class MoveArm_Goal(metaclass=Metaclass_MoveArm_Goal):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'wrist_angle_goal' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._wrist_angle_goal = value
+
+    @builtins.property
+    def spin_angle_goal(self):
+        """Message field 'spin_angle_goal'."""
+        return self._spin_angle_goal
+
+    @spin_angle_goal.setter
+    def spin_angle_goal(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'spin_angle_goal' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'spin_angle_goal' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._spin_angle_goal = value
 
 
 # Import statements for member types
@@ -230,15 +251,18 @@ class MoveArm_Result(metaclass=Metaclass_MoveArm_Result):
         '_shoulder_angle_rs',
         '_elbow_angle_rs',
         '_wrist_angle_rs',
+        '_spin_angle_rs',
     ]
 
     _fields_and_field_types = {
         'shoulder_angle_rs': 'float',
         'elbow_angle_rs': 'float',
         'wrist_angle_rs': 'float',
+        'spin_angle_rs': 'float',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -251,6 +275,7 @@ class MoveArm_Result(metaclass=Metaclass_MoveArm_Result):
         self.shoulder_angle_rs = kwargs.get('shoulder_angle_rs', float())
         self.elbow_angle_rs = kwargs.get('elbow_angle_rs', float())
         self.wrist_angle_rs = kwargs.get('wrist_angle_rs', float())
+        self.spin_angle_rs = kwargs.get('spin_angle_rs', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -286,6 +311,8 @@ class MoveArm_Result(metaclass=Metaclass_MoveArm_Result):
         if self.elbow_angle_rs != other.elbow_angle_rs:
             return False
         if self.wrist_angle_rs != other.wrist_angle_rs:
+            return False
+        if self.spin_angle_rs != other.spin_angle_rs:
             return False
         return True
 
@@ -338,6 +365,21 @@ class MoveArm_Result(metaclass=Metaclass_MoveArm_Result):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'wrist_angle_rs' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._wrist_angle_rs = value
+
+    @builtins.property
+    def spin_angle_rs(self):
+        """Message field 'spin_angle_rs'."""
+        return self._spin_angle_rs
+
+    @spin_angle_rs.setter
+    def spin_angle_rs(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'spin_angle_rs' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'spin_angle_rs' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._spin_angle_rs = value
 
 
 # Import statements for member types
@@ -400,15 +442,18 @@ class MoveArm_Feedback(metaclass=Metaclass_MoveArm_Feedback):
         '_shoulder_angle_fb',
         '_elbow_angle_fb',
         '_wrist_angle_fb',
+        '_spin_angle_fb',
     ]
 
     _fields_and_field_types = {
         'shoulder_angle_fb': 'float',
         'elbow_angle_fb': 'float',
         'wrist_angle_fb': 'float',
+        'spin_angle_fb': 'float',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -421,6 +466,7 @@ class MoveArm_Feedback(metaclass=Metaclass_MoveArm_Feedback):
         self.shoulder_angle_fb = kwargs.get('shoulder_angle_fb', float())
         self.elbow_angle_fb = kwargs.get('elbow_angle_fb', float())
         self.wrist_angle_fb = kwargs.get('wrist_angle_fb', float())
+        self.spin_angle_fb = kwargs.get('spin_angle_fb', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -456,6 +502,8 @@ class MoveArm_Feedback(metaclass=Metaclass_MoveArm_Feedback):
         if self.elbow_angle_fb != other.elbow_angle_fb:
             return False
         if self.wrist_angle_fb != other.wrist_angle_fb:
+            return False
+        if self.spin_angle_fb != other.spin_angle_fb:
             return False
         return True
 
@@ -508,6 +556,21 @@ class MoveArm_Feedback(metaclass=Metaclass_MoveArm_Feedback):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'wrist_angle_fb' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._wrist_angle_fb = value
+
+    @builtins.property
+    def spin_angle_fb(self):
+        """Message field 'spin_angle_fb'."""
+        return self._spin_angle_fb
+
+    @spin_angle_fb.setter
+    def spin_angle_fb(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'spin_angle_fb' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'spin_angle_fb' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._spin_angle_fb = value
 
 
 # Import statements for member types

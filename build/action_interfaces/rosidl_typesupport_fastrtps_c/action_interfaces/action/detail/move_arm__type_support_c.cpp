@@ -64,6 +64,11 @@ static bool _MoveArm_Goal__cdr_serialize(
     cdr << ros_message->wrist_angle_goal;
   }
 
+  // Field name: spin_angle_goal
+  {
+    cdr << ros_message->spin_angle_goal;
+  }
+
   return true;
 }
 
@@ -89,6 +94,11 @@ static bool _MoveArm_Goal__cdr_deserialize(
   // Field name: wrist_angle_goal
   {
     cdr >> ros_message->wrist_angle_goal;
+  }
+
+  // Field name: spin_angle_goal
+  {
+    cdr >> ros_message->spin_angle_goal;
   }
 
   return true;
@@ -123,6 +133,12 @@ size_t get_serialized_size_action_interfaces__action__MoveArm_Goal(
   // field.name wrist_angle_goal
   {
     size_t item_size = sizeof(ros_message->wrist_angle_goal);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name spin_angle_goal
+  {
+    size_t item_size = sizeof(ros_message->spin_angle_goal);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -179,6 +195,14 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Goal(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // member: spin_angle_goal
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -188,7 +212,7 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Goal(
     using DataType = action_interfaces__action__MoveArm_Goal;
     is_plain =
       (
-      offsetof(DataType, wrist_angle_goal) +
+      offsetof(DataType, spin_angle_goal) +
       last_member_size
       ) == ret_val;
   }
@@ -306,6 +330,11 @@ static bool _MoveArm_Result__cdr_serialize(
     cdr << ros_message->wrist_angle_rs;
   }
 
+  // Field name: spin_angle_rs
+  {
+    cdr << ros_message->spin_angle_rs;
+  }
+
   return true;
 }
 
@@ -331,6 +360,11 @@ static bool _MoveArm_Result__cdr_deserialize(
   // Field name: wrist_angle_rs
   {
     cdr >> ros_message->wrist_angle_rs;
+  }
+
+  // Field name: spin_angle_rs
+  {
+    cdr >> ros_message->spin_angle_rs;
   }
 
   return true;
@@ -365,6 +399,12 @@ size_t get_serialized_size_action_interfaces__action__MoveArm_Result(
   // field.name wrist_angle_rs
   {
     size_t item_size = sizeof(ros_message->wrist_angle_rs);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name spin_angle_rs
+  {
+    size_t item_size = sizeof(ros_message->spin_angle_rs);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -421,6 +461,14 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Result(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // member: spin_angle_rs
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -430,7 +478,7 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Result(
     using DataType = action_interfaces__action__MoveArm_Result;
     is_plain =
       (
-      offsetof(DataType, wrist_angle_rs) +
+      offsetof(DataType, spin_angle_rs) +
       last_member_size
       ) == ret_val;
   }
@@ -548,6 +596,11 @@ static bool _MoveArm_Feedback__cdr_serialize(
     cdr << ros_message->wrist_angle_fb;
   }
 
+  // Field name: spin_angle_fb
+  {
+    cdr << ros_message->spin_angle_fb;
+  }
+
   return true;
 }
 
@@ -573,6 +626,11 @@ static bool _MoveArm_Feedback__cdr_deserialize(
   // Field name: wrist_angle_fb
   {
     cdr >> ros_message->wrist_angle_fb;
+  }
+
+  // Field name: spin_angle_fb
+  {
+    cdr >> ros_message->spin_angle_fb;
   }
 
   return true;
@@ -607,6 +665,12 @@ size_t get_serialized_size_action_interfaces__action__MoveArm_Feedback(
   // field.name wrist_angle_fb
   {
     size_t item_size = sizeof(ros_message->wrist_angle_fb);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name spin_angle_fb
+  {
+    size_t item_size = sizeof(ros_message->spin_angle_fb);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -663,6 +727,14 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Feedback(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // member: spin_angle_fb
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -672,7 +744,7 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Feedback(
     using DataType = action_interfaces__action__MoveArm_Feedback;
     is_plain =
       (
-      offsetof(DataType, wrist_angle_fb) +
+      offsetof(DataType, spin_angle_fb) +
       last_member_size
       ) == ret_val;
   }

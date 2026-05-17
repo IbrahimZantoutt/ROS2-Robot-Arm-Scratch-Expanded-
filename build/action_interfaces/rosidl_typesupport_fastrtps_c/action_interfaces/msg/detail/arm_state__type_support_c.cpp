@@ -66,6 +66,11 @@ static bool _ArmState__cdr_serialize(
     cdr << ros_message->wrist_angle;
   }
 
+  // Field name: spin_angle
+  {
+    cdr << ros_message->spin_angle;
+  }
+
   // Field name: status
   {
     const rosidl_runtime_c__String * str = &ros_message->status;
@@ -105,6 +110,11 @@ static bool _ArmState__cdr_deserialize(
   // Field name: wrist_angle
   {
     cdr >> ros_message->wrist_angle;
+  }
+
+  // Field name: spin_angle
+  {
+    cdr >> ros_message->spin_angle;
   }
 
   // Field name: status
@@ -158,6 +168,12 @@ size_t get_serialized_size_action_interfaces__msg__ArmState(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name spin_angle
+  {
+    size_t item_size = sizeof(ros_message->spin_angle);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name status
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -208,6 +224,14 @@ size_t max_serialized_size_action_interfaces__msg__ArmState(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // member: wrist_angle
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: spin_angle
   {
     size_t array_size = 1;
 

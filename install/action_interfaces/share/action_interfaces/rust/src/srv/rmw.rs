@@ -42,6 +42,11 @@ pub struct CheckLimits_Request {
     #[allow(missing_docs)]
     pub wrist_angle: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub spin_angle: f32,
+
 }
 
 

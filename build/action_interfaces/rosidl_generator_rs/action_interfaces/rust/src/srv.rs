@@ -28,6 +28,11 @@ pub struct CheckLimits_Request {
     #[allow(missing_docs)]
     pub wrist_angle: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub spin_angle: f32,
+
 }
 
 
@@ -47,11 +52,13 @@ impl rosidl_runtime_rs::Message for CheckLimits_Request {
         shoulder_angle: msg.shoulder_angle,
         elbow_angle: msg.elbow_angle,
         wrist_angle: msg.wrist_angle,
+        spin_angle: msg.spin_angle,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       shoulder_angle: msg.shoulder_angle,
       elbow_angle: msg.elbow_angle,
       wrist_angle: msg.wrist_angle,
+      spin_angle: msg.spin_angle,
       })
     }
   }
@@ -61,6 +68,7 @@ impl rosidl_runtime_rs::Message for CheckLimits_Request {
       shoulder_angle: msg.shoulder_angle,
       elbow_angle: msg.elbow_angle,
       wrist_angle: msg.wrist_angle,
+      spin_angle: msg.spin_angle,
     }
   }
 }

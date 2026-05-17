@@ -27,6 +27,7 @@ typedef struct action_interfaces__msg__ArmState
   float shoulder_angle;
   float elbow_angle;
   float wrist_angle;
+  float spin_angle;
   rosidl_runtime_c__String status;
 } action_interfaces__msg__ArmState;
 

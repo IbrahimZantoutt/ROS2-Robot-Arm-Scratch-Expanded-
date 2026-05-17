@@ -10,6 +10,7 @@ class ArmMonitor: public rclcpp::Node{
             this->declare_parameter("shoulder_threshold", std::vector<double>{-90.0, 90.0});
             this->declare_parameter("elbow_threshold", std::vector<double>{0.0, 135.0});
             this->declare_parameter("wrist_threshold", std::vector<double>{-90.0, 90.0});
+            this->declare_parameter("spin_threshold", std::vector<double>{0.0, 360.0});
 
             arm_check_server = this->create_service<action_interfaces::srv::CheckLimits>(
                 "check_limits",
@@ -21,16 +22,18 @@ class ArmMonitor: public rclcpp::Node{
             auto ShdA = request->shoulder_angle;
             auto ElbA = request->elbow_angle; 
             auto WstA = request->wrist_angle; 
+            auto SpnA = request->spin_angle; 
 
             std::vector<double> shoulder_threshold = this->get_parameter("shoulder_threshold").as_double_array();
             std::vector<double> elbow_threshold = this->get_parameter("elbow_threshold").as_double_array();
             std::vector<double> wrist_threshold = this->get_parameter("wrist_threshold").as_double_array();
+            std::vector<double> spin_threshold = this->get_parameter("spin_threshold").as_double_array();
 
-            if((ShdA >= shoulder_threshold[0] && ShdA <= shoulder_threshold[1]) && (ElbA >= elbow_threshold[0] && ElbA <= elbow_threshold[1])  && (WstA >= wrist_threshold[0] && WstA <= wrist_threshold[1])){
-                RCLCPP_INFO(this->get_logger(), "Arm angles within limits: Shoulder: %f deg  Elbow: %f  deg Wrist: %f deg", ShdA, ElbA, WstA);
+            if((ShdA >= shoulder_threshold[0] && ShdA <= shoulder_threshold[1]) && (ElbA >= elbow_threshold[0] && ElbA <= elbow_threshold[1])  && (WstA >= wrist_threshold[0] && WstA <= wrist_threshold[1]) && (SpnA >= spin_threshold[0] && SpnA <= spin_threshold[1])){
+                RCLCPP_INFO(this->get_logger(), "Arm angles within limits: Shoulder: %f deg  Elbow: %f  deg Wrist: %f deg   Spin: %f deg", ShdA, ElbA, WstA, SpnA);
                 response->is_safe = true;
             } else {
-                RCLCPP_WARN(this->get_logger(), "Arm angles out of bounds: Shoulder: %f deg  Elbow: %f  deg  Wrist: %f deg", ShdA, ElbA, WstA);
+                RCLCPP_WARN(this->get_logger(), "Arm angles out of bounds: Shoulder: %f deg  Elbow: %f  deg  Wrist: %f deg   Spin: %f deg", ShdA, ElbA, WstA, SpnA);
                 response->is_safe = false;
             }
             
@@ -43,19 +46,23 @@ class ArmMonitor: public rclcpp::Node{
         float current_shoulder_angle_;
         float current_elbow_angle_;
         float current_wrist_angle_;
+        float current_spin_angle_;
         
         void handleArmState(const action_interfaces::msg::ArmState::SharedPtr msg){
             auto ShdA = msg->shoulder_angle;
             auto ElbA = msg->elbow_angle;
             auto WstA = msg->wrist_angle;  
+            auto SpnA = msg->spin_angle;  
 
             current_shoulder_angle_ = ShdA;
             current_elbow_angle_ = ElbA;
             current_wrist_angle_= WstA;
+            current_spin_angle_= SpnA;
 
             std::vector<double> shoulder_threshold = this->get_parameter("shoulder_threshold").as_double_array();
             std::vector<double> elbow_threshold = this->get_parameter("elbow_threshold").as_double_array();
             std::vector<double> wrist_threshold = this->get_parameter("wrist_threshold").as_double_array();
+            std::vector<double> spin_threshold = this->get_parameter("spin_threshold").as_double_array();
 
             if(ShdA < shoulder_threshold[0]  || ShdA > shoulder_threshold[1]){
                 RCLCPP_WARN(this->get_logger(), "Shoulder angle out of bounds: %f", ShdA);
@@ -65,6 +72,9 @@ class ArmMonitor: public rclcpp::Node{
             }
             if(WstA < wrist_threshold[0]  || WstA > wrist_threshold[1]){
                 RCLCPP_WARN(this->get_logger(), "Wrist angle out of bounds: %f", WstA);
+            }
+            if(SpnA < spin_threshold[0]  || SpnA > spin_threshold[1]){
+                RCLCPP_WARN(this->get_logger(), "Spin angle out of bounds: %f", SpnA);
             }
         }
 };

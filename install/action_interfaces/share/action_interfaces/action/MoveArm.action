@@ -3,15 +3,18 @@
 float32 shoulder_angle_goal
 float32 elbow_angle_goal
 float32 wrist_angle_goal
+float32 spin_angle_goal
 
 ---
 
 float32 shoulder_angle_rs
 float32 elbow_angle_rs
 float32 wrist_angle_rs
+float32 spin_angle_rs
 
 ---
 
 float32 shoulder_angle_fb
 float32 elbow_angle_fb
 float32 wrist_angle_fb
+float32 spin_angle_fb

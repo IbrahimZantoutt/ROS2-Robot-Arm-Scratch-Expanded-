@@ -21,16 +21,32 @@ namespace action
 namespace builder
 {
 
+class Init_MoveArm_Goal_spin_angle_goal
+{
+public:
+  explicit Init_MoveArm_Goal_spin_angle_goal(::action_interfaces::action::MoveArm_Goal & msg)
+  : msg_(msg)
+  {}
+  ::action_interfaces::action::MoveArm_Goal spin_angle_goal(::action_interfaces::action::MoveArm_Goal::_spin_angle_goal_type arg)
+  {
+    msg_.spin_angle_goal = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::action_interfaces::action::MoveArm_Goal msg_;
+};
+
 class Init_MoveArm_Goal_wrist_angle_goal
 {
 public:
   explicit Init_MoveArm_Goal_wrist_angle_goal(::action_interfaces::action::MoveArm_Goal & msg)
   : msg_(msg)
   {}
-  ::action_interfaces::action::MoveArm_Goal wrist_angle_goal(::action_interfaces::action::MoveArm_Goal::_wrist_angle_goal_type arg)
+  Init_MoveArm_Goal_spin_angle_goal wrist_angle_goal(::action_interfaces::action::MoveArm_Goal::_wrist_angle_goal_type arg)
   {
     msg_.wrist_angle_goal = std::move(arg);
-    return std::move(msg_);
+    return Init_MoveArm_Goal_spin_angle_goal(msg_);
   }
 
 private:
@@ -95,16 +111,32 @@ namespace action
 namespace builder
 {
 
+class Init_MoveArm_Result_spin_angle_rs
+{
+public:
+  explicit Init_MoveArm_Result_spin_angle_rs(::action_interfaces::action::MoveArm_Result & msg)
+  : msg_(msg)
+  {}
+  ::action_interfaces::action::MoveArm_Result spin_angle_rs(::action_interfaces::action::MoveArm_Result::_spin_angle_rs_type arg)
+  {
+    msg_.spin_angle_rs = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::action_interfaces::action::MoveArm_Result msg_;
+};
+
 class Init_MoveArm_Result_wrist_angle_rs
 {
 public:
   explicit Init_MoveArm_Result_wrist_angle_rs(::action_interfaces::action::MoveArm_Result & msg)
   : msg_(msg)
   {}
-  ::action_interfaces::action::MoveArm_Result wrist_angle_rs(::action_interfaces::action::MoveArm_Result::_wrist_angle_rs_type arg)
+  Init_MoveArm_Result_spin_angle_rs wrist_angle_rs(::action_interfaces::action::MoveArm_Result::_wrist_angle_rs_type arg)
   {
     msg_.wrist_angle_rs = std::move(arg);
-    return std::move(msg_);
+    return Init_MoveArm_Result_spin_angle_rs(msg_);
   }
 
 private:
@@ -169,16 +201,32 @@ namespace action
 namespace builder
 {
 
+class Init_MoveArm_Feedback_spin_angle_fb
+{
+public:
+  explicit Init_MoveArm_Feedback_spin_angle_fb(::action_interfaces::action::MoveArm_Feedback & msg)
+  : msg_(msg)
+  {}
+  ::action_interfaces::action::MoveArm_Feedback spin_angle_fb(::action_interfaces::action::MoveArm_Feedback::_spin_angle_fb_type arg)
+  {
+    msg_.spin_angle_fb = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::action_interfaces::action::MoveArm_Feedback msg_;
+};
+
 class Init_MoveArm_Feedback_wrist_angle_fb
 {
 public:
   explicit Init_MoveArm_Feedback_wrist_angle_fb(::action_interfaces::action::MoveArm_Feedback & msg)
   : msg_(msg)
   {}
-  ::action_interfaces::action::MoveArm_Feedback wrist_angle_fb(::action_interfaces::action::MoveArm_Feedback::_wrist_angle_fb_type arg)
+  Init_MoveArm_Feedback_spin_angle_fb wrist_angle_fb(::action_interfaces::action::MoveArm_Feedback::_wrist_angle_fb_type arg)
   {
     msg_.wrist_angle_fb = std::move(arg);
-    return std::move(msg_);
+    return Init_MoveArm_Feedback_spin_angle_fb(msg_);
   }
 
 private:

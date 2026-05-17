@@ -20,6 +20,7 @@ action_interfaces__action__MoveArm_Goal__init(action_interfaces__action__MoveArm
   // shoulder_angle_goal
   // elbow_angle_goal
   // wrist_angle_goal
+  // spin_angle_goal
   return true;
 }
 
@@ -32,6 +33,7 @@ action_interfaces__action__MoveArm_Goal__fini(action_interfaces__action__MoveArm
   // shoulder_angle_goal
   // elbow_angle_goal
   // wrist_angle_goal
+  // spin_angle_goal
 }
 
 bool
@@ -52,6 +54,10 @@ action_interfaces__action__MoveArm_Goal__are_equal(const action_interfaces__acti
   if (lhs->wrist_angle_goal != rhs->wrist_angle_goal) {
     return false;
   }
+  // spin_angle_goal
+  if (lhs->spin_angle_goal != rhs->spin_angle_goal) {
+    return false;
+  }
   return true;
 }
 
@@ -69,6 +75,8 @@ action_interfaces__action__MoveArm_Goal__copy(
   output->elbow_angle_goal = input->elbow_angle_goal;
   // wrist_angle_goal
   output->wrist_angle_goal = input->wrist_angle_goal;
+  // spin_angle_goal
+  output->spin_angle_goal = input->spin_angle_goal;
   return true;
 }
 
@@ -261,6 +269,7 @@ action_interfaces__action__MoveArm_Result__init(action_interfaces__action__MoveA
   // shoulder_angle_rs
   // elbow_angle_rs
   // wrist_angle_rs
+  // spin_angle_rs
   return true;
 }
 
@@ -273,6 +282,7 @@ action_interfaces__action__MoveArm_Result__fini(action_interfaces__action__MoveA
   // shoulder_angle_rs
   // elbow_angle_rs
   // wrist_angle_rs
+  // spin_angle_rs
 }
 
 bool
@@ -293,6 +303,10 @@ action_interfaces__action__MoveArm_Result__are_equal(const action_interfaces__ac
   if (lhs->wrist_angle_rs != rhs->wrist_angle_rs) {
     return false;
   }
+  // spin_angle_rs
+  if (lhs->spin_angle_rs != rhs->spin_angle_rs) {
+    return false;
+  }
   return true;
 }
 
@@ -310,6 +324,8 @@ action_interfaces__action__MoveArm_Result__copy(
   output->elbow_angle_rs = input->elbow_angle_rs;
   // wrist_angle_rs
   output->wrist_angle_rs = input->wrist_angle_rs;
+  // spin_angle_rs
+  output->spin_angle_rs = input->spin_angle_rs;
   return true;
 }
 
@@ -502,6 +518,7 @@ action_interfaces__action__MoveArm_Feedback__init(action_interfaces__action__Mov
   // shoulder_angle_fb
   // elbow_angle_fb
   // wrist_angle_fb
+  // spin_angle_fb
   return true;
 }
 
@@ -514,6 +531,7 @@ action_interfaces__action__MoveArm_Feedback__fini(action_interfaces__action__Mov
   // shoulder_angle_fb
   // elbow_angle_fb
   // wrist_angle_fb
+  // spin_angle_fb
 }
 
 bool
@@ -534,6 +552,10 @@ action_interfaces__action__MoveArm_Feedback__are_equal(const action_interfaces__
   if (lhs->wrist_angle_fb != rhs->wrist_angle_fb) {
     return false;
   }
+  // spin_angle_fb
+  if (lhs->spin_angle_fb != rhs->spin_angle_fb) {
+    return false;
+  }
   return true;
 }
 
@@ -551,6 +573,8 @@ action_interfaces__action__MoveArm_Feedback__copy(
   output->elbow_angle_fb = input->elbow_angle_fb;
   // wrist_angle_fb
   output->wrist_angle_fb = input->wrist_angle_fb;
+  // spin_angle_fb
+  output->spin_angle_fb = input->spin_angle_fb;
   return true;
 }
 

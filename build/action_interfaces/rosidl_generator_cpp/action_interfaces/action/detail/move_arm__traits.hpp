@@ -43,6 +43,13 @@ inline void to_flow_style_yaml(
   {
     out << "wrist_angle_goal: ";
     rosidl_generator_traits::value_to_yaml(msg.wrist_angle_goal, out);
+    out << ", ";
+  }
+
+  // member: spin_angle_goal
+  {
+    out << "spin_angle_goal: ";
+    rosidl_generator_traits::value_to_yaml(msg.spin_angle_goal, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -78,6 +85,16 @@ inline void to_block_style_yaml(
     }
     out << "wrist_angle_goal: ";
     rosidl_generator_traits::value_to_yaml(msg.wrist_angle_goal, out);
+    out << "\n";
+  }
+
+  // member: spin_angle_goal
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "spin_angle_goal: ";
+    rosidl_generator_traits::value_to_yaml(msg.spin_angle_goal, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -169,6 +186,13 @@ inline void to_flow_style_yaml(
   {
     out << "wrist_angle_rs: ";
     rosidl_generator_traits::value_to_yaml(msg.wrist_angle_rs, out);
+    out << ", ";
+  }
+
+  // member: spin_angle_rs
+  {
+    out << "spin_angle_rs: ";
+    rosidl_generator_traits::value_to_yaml(msg.spin_angle_rs, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -204,6 +228,16 @@ inline void to_block_style_yaml(
     }
     out << "wrist_angle_rs: ";
     rosidl_generator_traits::value_to_yaml(msg.wrist_angle_rs, out);
+    out << "\n";
+  }
+
+  // member: spin_angle_rs
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "spin_angle_rs: ";
+    rosidl_generator_traits::value_to_yaml(msg.spin_angle_rs, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -295,6 +329,13 @@ inline void to_flow_style_yaml(
   {
     out << "wrist_angle_fb: ";
     rosidl_generator_traits::value_to_yaml(msg.wrist_angle_fb, out);
+    out << ", ";
+  }
+
+  // member: spin_angle_fb
+  {
+    out << "spin_angle_fb: ";
+    rosidl_generator_traits::value_to_yaml(msg.spin_angle_fb, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -330,6 +371,16 @@ inline void to_block_style_yaml(
     }
     out << "wrist_angle_fb: ";
     rosidl_generator_traits::value_to_yaml(msg.wrist_angle_fb, out);
+    out << "\n";
+  }
+
+  // member: spin_angle_fb
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "spin_angle_fb: ";
+    rosidl_generator_traits::value_to_yaml(msg.spin_angle_fb, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

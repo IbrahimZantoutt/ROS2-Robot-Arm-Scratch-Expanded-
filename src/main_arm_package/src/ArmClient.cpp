@@ -11,7 +11,7 @@ using GoalHandle = rclcpp_action::ClientGoalHandle<MoveArm>;
 
 class ArmClient: public rclcpp::Node{
     public:
-       ArmClient(float a1, float a2, float a3): Node("arm_client"){
+       ArmClient(float a1, float a2, float a3, float a4): Node("arm_client"){
         RCLCPP_INFO(this->get_logger(), "ArmClient node has been started.");
         client_check_ = this->create_client<action_interfaces::srv::CheckLimits>("check_limits");
         client_action_ = rclcpp_action::create_client<action_interfaces::action::MoveArm>(this, "move_arm");
@@ -19,15 +19,16 @@ class ArmClient: public rclcpp::Node{
         wanted_shoulder_angle_ = a1;
         wanted_elbow_angle_ = a2;
         wanted_wrist_angle_ = a3;
+        wanted_spin_angle_ = a4;
 
         options_ = rclcpp_action::Client<action_interfaces::action::MoveArm>::SendGoalOptions();
         options_.feedback_callback = [this](GoalHandle::SharedPtr, const std::shared_ptr<const action_interfaces::action::MoveArm::Feedback> feedback){
-            RCLCPP_INFO(this->get_logger(), "Current: shoulder:%f, elbow:%f, wrist:%f)", feedback->shoulder_angle_fb, feedback->elbow_angle_fb, feedback->wrist_angle_fb);
+            RCLCPP_INFO(this->get_logger(), "Current: shoulder:%f, elbow:%f, wrist:%f, spin:%f)", feedback->shoulder_angle_fb, feedback->elbow_angle_fb, feedback->wrist_angle_fb, feedback->spin_angle_fb);
         };
         options_.result_callback = [this](const GoalHandle::WrappedResult & result){
             switch(result.code){
                 case rclcpp_action::ResultCode::SUCCEEDED:
-                    RCLCPP_INFO(this->get_logger(), "Goal succeeded with new angles shoulder: %f, elbow: %f , wrist: %f)", result.result->shoulder_angle_rs, result.result->elbow_angle_rs,  result.result->wrist_angle_rs);
+                    RCLCPP_INFO(this->get_logger(), "Goal succeeded with new angles shoulder: %f, elbow: %f , wrist: %f , spin: %f)", result.result->shoulder_angle_rs, result.result->elbow_angle_rs,  result.result->wrist_angle_rs,  result.result->spin_angle_rs);
                     break;
                 case rclcpp_action::ResultCode::ABORTED:
                     RCLCPP_INFO(this->get_logger(), "Goal was aborted");
@@ -53,6 +54,7 @@ class ArmClient: public rclcpp::Node{
         request->shoulder_angle = wanted_shoulder_angle_;
         request->elbow_angle = wanted_elbow_angle_;
         request->wrist_angle = wanted_wrist_angle_;
+        request->spin_angle = wanted_spin_angle_;
 
         while(!client_check_->wait_for_service(std::chrono::seconds(1))){
             if(!rclcpp::ok()){
@@ -66,7 +68,7 @@ class ArmClient: public rclcpp::Node{
             auto response = future.get();
             if(response->is_safe){
                 RCLCPP_INFO(this->get_logger(), "Arm angles are within limits, sending action goal...");
-                this->sendMoveArmGoal(wanted_shoulder_angle_, wanted_elbow_angle_, wanted_wrist_angle_);
+                this->sendMoveArmGoal(wanted_shoulder_angle_, wanted_elbow_angle_, wanted_wrist_angle_, wanted_spin_angle_);
             } else {
                 RCLCPP_WARN(this->get_logger(), "Arm angles are out of bounds, cannot send action goal.");
             }
@@ -74,7 +76,7 @@ class ArmClient: public rclcpp::Node{
         
        }
 
-       void sendMoveArmGoal(float angleSH, float angleEL, float angleWS){
+       void sendMoveArmGoal(float angleSH, float angleEL, float angleWS, float angleSP){
          while(!client_action_->wait_for_action_server(std::chrono::seconds(1))){
             RCLCPP_INFO(this->get_logger(), "Waiting for action server...");
          }
@@ -83,6 +85,7 @@ class ArmClient: public rclcpp::Node{
         goal_msg.shoulder_angle_goal = angleSH;
         goal_msg.elbow_angle_goal = angleEL;
         goal_msg.wrist_angle_goal = angleWS;
+        goal_msg.spin_angle_goal = angleSP;
         client_action_->async_send_goal(goal_msg, options_);
        }
 
@@ -90,6 +93,7 @@ class ArmClient: public rclcpp::Node{
     float wanted_shoulder_angle_;
     float wanted_elbow_angle_;
     float wanted_wrist_angle_;
+    float wanted_spin_angle_;
     rclcpp_action::Client<action_interfaces::action::MoveArm>::SharedPtr client_action_;
     rclcpp::Client<action_interfaces::srv::CheckLimits>::SharedPtr client_check_;
     rclcpp_action::Client<action_interfaces::action::MoveArm>::SendGoalOptions options_;
@@ -97,15 +101,16 @@ class ArmClient: public rclcpp::Node{
 };
 
 int main(int argc, char** argv){
-    if(argc != 4){
-        printf("Usage: ros2 run main_arm_package ArmClient <shoulder_angle> <elbow_angle> <wrist_angle>\n");
+    if(argc != 5){
+        printf("Usage: ros2 run main_arm_package ArmClient <shoulder_angle> <elbow_angle> <wrist_angle> <spin_angle>\n");
         return 1;
     }
     float shoulder = std::stof(argv[1]);
     float elbow = std::stof(argv[2]);
     float wrist = std::stof(argv[3]);
+    float spin = std::stof(argv[4]);
     rclcpp::init(argc, argv);
-    auto arm_client_node = std::make_shared<ArmClient>(shoulder, elbow, wrist);
+    auto arm_client_node = std::make_shared<ArmClient>(shoulder, elbow, wrist, spin);
     rclcpp::spin(arm_client_node);
     rclcpp::shutdown();
     return 0;

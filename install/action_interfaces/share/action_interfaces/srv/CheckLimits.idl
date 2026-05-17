@@ -11,6 +11,8 @@ module action_interfaces {
       float elbow_angle;
 
       float wrist_angle;
+
+      float spin_angle;
     };
     struct CheckLimits_Response {
       boolean is_safe;

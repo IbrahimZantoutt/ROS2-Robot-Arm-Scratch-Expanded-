@@ -11,6 +11,8 @@ module action_interfaces {
       float elbow_angle_cmd;
 
       float wrist_angle_cmd;
+
+      float spin_angle_cmd;
     };
   };
 };
