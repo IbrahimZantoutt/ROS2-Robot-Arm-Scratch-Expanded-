@@ -1,0 +1,38 @@
+[0.143s] Invoking command in '/home/ibrahim/RobotArmExpanded/build/main_arm_package': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/RobotArmExpanded/build/main_arm_package -- -j16 -l16
+[0.283s] [ 25%] Built target ArmClient
+[0.285s] [ 50%] Built target ArmMonitor
+[0.286s] [ 75%] Built target ArmMover
+[0.308s] [ 87%] [32mBuilding CXX object CMakeFiles/ArmController.dir/src/ArmController.cpp.o[0m
+[15.937s] [100%] [32m[1mLinking CXX executable ArmController[0m
+[16.938s] [100%] Built target ArmController
+[16.963s] Invoked command in '/home/ibrahim/RobotArmExpanded/build/main_arm_package' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/RobotArmExpanded/build/main_arm_package -- -j16 -l16
+[16.966s] Invoking command in '/home/ibrahim/RobotArmExpanded/build/main_arm_package': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/RobotArmExpanded/build/main_arm_package
+[16.985s] -- Install configuration: ""
+[16.985s] -- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmController
+[17.002s] -- Set runtime path of "/home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmController" to ""
+[17.002s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmMonitor
+[17.003s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmMover
+[17.003s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmClient
+[17.004s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch
+[17.004s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch/display.launch.py
+[17.005s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch/launch.py
+[17.005s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/urdf
+[17.005s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/urdf/arm.urdf
+[17.006s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/rviz
+[17.006s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/rviz/arm.rviz
+[17.006s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/package_run_dependencies/main_arm_package
+[17.006s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/parent_prefix_path/main_arm_package
+[17.007s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/ament_prefix_path.sh
+[17.007s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/ament_prefix_path.dsv
+[17.007s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/path.sh
+[17.007s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/path.dsv
+[17.007s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.bash
+[17.007s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.sh
+[17.008s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.zsh
+[17.008s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.dsv
+[17.008s] -- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/package.dsv
+[17.008s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/packages/main_arm_package
+[17.008s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/cmake/main_arm_packageConfig.cmake
+[17.008s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/cmake/main_arm_packageConfig-version.cmake
+[17.008s] -- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/package.xml
+[17.013s] Invoked command in '/home/ibrahim/RobotArmExpanded/build/main_arm_package' returned '0': CMAKE_PREFIX_PATH=/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/RobotArmExpanded/build/main_arm_package

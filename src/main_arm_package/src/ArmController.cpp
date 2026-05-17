@@ -66,7 +66,7 @@ class ArmController: public rclcpp::Node{
 
 int main(int argc, char** argv){
     rclcpp::init(argc,argv);
-    auto arm_controller_node = std::make_shared<ArmController>(0.0, 0.0, 0.0);
+    auto arm_controller_node = std::make_shared<ArmController>(-55.0, 120, 65);
     rclcpp::spin(arm_controller_node);
     rclcpp::shutdown();
     return 0;
