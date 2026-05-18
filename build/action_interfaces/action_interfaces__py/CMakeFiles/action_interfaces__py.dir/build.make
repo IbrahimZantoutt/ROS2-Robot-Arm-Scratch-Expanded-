@@ -71,6 +71,7 @@ action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/acti
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_c.c
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_arm_state.py
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_arm_command.py
+action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_grip_command.py
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/srv/_check_limits.py
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/action/_move_arm.py
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/msg/__init__.py
@@ -78,6 +79,7 @@ action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/acti
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/action/__init__.py
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_arm_state_s.c
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_arm_command_s.c
+action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_grip_command_s.c
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/srv/_check_limits_s.c
 action_interfaces__py/CMakeFiles/action_interfaces__py: rosidl_generator_py/action_interfaces/action/_move_arm_s.c
 
@@ -96,6 +98,7 @@ rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport
 rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/action_interfaces/msg/ArmState.idl
 rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/action_interfaces/msg/ArmCommand.idl
+rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/action_interfaces/msg/GripCommand.idl
 rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/action_interfaces/srv/CheckLimits.idl
 rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/action_interfaces/action/MoveArm.idl
 rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/action_msgs/msg/GoalInfo.idl
@@ -120,6 +123,9 @@ rosidl_generator_py/action_interfaces/msg/_arm_state.py: rosidl_generator_py/act
 rosidl_generator_py/action_interfaces/msg/_arm_command.py: rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/action_interfaces/msg/_arm_command.py
 
+rosidl_generator_py/action_interfaces/msg/_grip_command.py: rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/action_interfaces/msg/_grip_command.py
+
 rosidl_generator_py/action_interfaces/srv/_check_limits.py: rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/action_interfaces/srv/_check_limits.py
 
@@ -141,6 +147,9 @@ rosidl_generator_py/action_interfaces/msg/_arm_state_s.c: rosidl_generator_py/ac
 rosidl_generator_py/action_interfaces/msg/_arm_command_s.c: rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/action_interfaces/msg/_arm_command_s.c
 
+rosidl_generator_py/action_interfaces/msg/_grip_command_s.c: rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/action_interfaces/msg/_grip_command_s.c
+
 rosidl_generator_py/action_interfaces/srv/_check_limits_s.c: rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/action_interfaces/srv/_check_limits_s.c
 
@@ -159,6 +168,8 @@ action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_arm_command.py
 action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_arm_command_s.c
 action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_arm_state.py
 action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_arm_state_s.c
+action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_grip_command.py
+action_interfaces__py: rosidl_generator_py/action_interfaces/msg/_grip_command_s.c
 action_interfaces__py: rosidl_generator_py/action_interfaces/srv/__init__.py
 action_interfaces__py: rosidl_generator_py/action_interfaces/srv/_check_limits.py
 action_interfaces__py: rosidl_generator_py/action_interfaces/srv/_check_limits_s.c

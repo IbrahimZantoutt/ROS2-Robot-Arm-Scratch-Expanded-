@@ -9,5 +9,6 @@ action_interfaces/action/_move_arm.py
 action_interfaces/msg/__init__.py
 action_interfaces/msg/_arm_command.py
 action_interfaces/msg/_arm_state.py
+action_interfaces/msg/_grip_command.py
 action_interfaces/srv/__init__.py
 action_interfaces/srv/_check_limits.py

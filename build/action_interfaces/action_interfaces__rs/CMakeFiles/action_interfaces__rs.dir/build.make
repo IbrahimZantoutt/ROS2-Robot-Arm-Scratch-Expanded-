@@ -90,10 +90,12 @@ rosidl_generator_rs/action_interfaces/rust/src/lib.rs: /opt/ros/humble/share/ros
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: /opt/ros/humble/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/msg/ArmState.idl
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/msg/ArmCommand.idl
+rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/msg/GripCommand.idl
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/srv/CheckLimits.idl
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/action/MoveArm.idl
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/msg/ArmState.idl
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/msg/ArmCommand.idl
+rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/msg/GripCommand.idl
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/srv/CheckLimits.idl
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: rosidl_adapter/action_interfaces/action/MoveArm.idl
 rosidl_generator_rs/action_interfaces/rust/src/lib.rs: /opt/ros/humble/share/action_msgs/msg/GoalInfo.idl

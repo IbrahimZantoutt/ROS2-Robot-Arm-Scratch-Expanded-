@@ -246,12 +246,15 @@ CMakeFiles/action_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_ge
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__type_support.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/rosidl_generator_c__visibility_control.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__struct.h
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__type_support.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__struct.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.h
+ /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/grip_command__type_support.h
+ /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/grip_command__struct.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
+ /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/grip_command__functions.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__type_support.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__struct.h
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.h

@@ -31,11 +31,6 @@ pub struct ArmState {
     #[allow(missing_docs)]
     pub spin_angle: f32,
 
-
-    // This member is not documented.
-    #[allow(missing_docs)]
-    pub status: std::string::String,
-
 }
 
 
@@ -56,14 +51,12 @@ impl rosidl_runtime_rs::Message for ArmState {
         elbow_angle: msg.elbow_angle,
         wrist_angle: msg.wrist_angle,
         spin_angle: msg.spin_angle,
-        status: msg.status.as_str().into(),
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       shoulder_angle: msg.shoulder_angle,
       elbow_angle: msg.elbow_angle,
       wrist_angle: msg.wrist_angle,
       spin_angle: msg.spin_angle,
-        status: msg.status.as_str().into(),
       })
     }
   }
@@ -74,7 +67,6 @@ impl rosidl_runtime_rs::Message for ArmState {
       elbow_angle: msg.elbow_angle,
       wrist_angle: msg.wrist_angle,
       spin_angle: msg.spin_angle,
-      status: msg.status.to_string(),
     }
   }
 }
@@ -144,6 +136,51 @@ impl rosidl_runtime_rs::Message for ArmCommand {
       elbow_angle_cmd: msg.elbow_angle_cmd,
       wrist_angle_cmd: msg.wrist_angle_cmd,
       spin_angle_cmd: msg.spin_angle_cmd,
+    }
+  }
+}
+
+
+// Corresponds to action_interfaces__msg__GripCommand
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct GripCommand {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub grip_command: std::string::String,
+
+}
+
+
+
+impl Default for GripCommand {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::msg::rmw::GripCommand::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for GripCommand {
+  type RmwMsg = super::msg::rmw::GripCommand;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        grip_command: msg.grip_command.as_str().into(),
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        grip_command: msg.grip_command.as_str().into(),
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      grip_command: msg.grip_command.to_string(),
     }
   }
 }

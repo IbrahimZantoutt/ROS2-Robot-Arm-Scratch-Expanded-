@@ -4,6 +4,7 @@
 #include "action_interfaces/msg/arm_command.hpp"
 #include "action_interfaces/msg/arm_state.hpp"
 #include "action_interfaces/srv/check_limits.hpp"
+#include "action_interfaces/msg/grip_command.hpp"
 
 
 using MoveArm = action_interfaces::action::MoveArm;
@@ -14,6 +15,8 @@ class ArmClient: public rclcpp::Node{
        ArmClient(float x, float y, float z, char elbow_config): Node("arm_client"){
         RCLCPP_INFO(this->get_logger(), "ArmClient node has been started.");
         client_action_ = rclcpp_action::create_client<action_interfaces::action::MoveArm>(this, "move_arm");
+
+        grip_command_publisher_ = this->create_publisher<action_interfaces::msg::GripCommand>("grip_command", 10);
 
         X_ = x;
         Y_ = y;
@@ -28,6 +31,8 @@ class ArmClient: public rclcpp::Node{
             switch(result.code){
                 case rclcpp_action::ResultCode::SUCCEEDED:
                     RCLCPP_INFO(this->get_logger(), "Goal succeeded with new angles shoulder: %f, elbow: %f , wrist: %f , spin: %f)", result.result->shoulder_angle_rs, result.result->elbow_angle_rs,  result.result->wrist_angle_rs,  result.result->spin_angle_rs);
+                    //grip command example
+                    publishGripCommand(grip_command_);
                     break;
                 case rclcpp_action::ResultCode::ABORTED:
                     RCLCPP_INFO(this->get_logger(), "Goal was aborted");
@@ -67,6 +72,13 @@ class ArmClient: public rclcpp::Node{
             goal_msg.configuration = "elbow_down";
         }
         client_action_->async_send_goal(goal_msg, options_);
+
+       }
+
+       void publishGripCommand(const std::string& command){
+            auto msg = action_interfaces::msg::GripCommand();
+            msg.grip_command = command;
+            grip_command_publisher_->publish(msg);
        }
 
     private:
@@ -74,9 +86,10 @@ class ArmClient: public rclcpp::Node{
     float Y_;
     float Z_;
     char elbow_config_;
+    std::string grip_command_ = "close";
     rclcpp_action::Client<action_interfaces::action::MoveArm>::SharedPtr client_action_;
     rclcpp_action::Client<action_interfaces::action::MoveArm>::SendGoalOptions options_;
-    
+    rclcpp::Publisher<action_interfaces::msg::GripCommand>::SharedPtr grip_command_publisher_;
 };
 
 int main(int argc, char** argv){

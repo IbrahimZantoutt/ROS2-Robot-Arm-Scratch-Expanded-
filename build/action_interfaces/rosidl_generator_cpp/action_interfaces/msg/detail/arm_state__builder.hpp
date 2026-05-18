@@ -21,32 +21,16 @@ namespace msg
 namespace builder
 {
 
-class Init_ArmState_status
-{
-public:
-  explicit Init_ArmState_status(::action_interfaces::msg::ArmState & msg)
-  : msg_(msg)
-  {}
-  ::action_interfaces::msg::ArmState status(::action_interfaces::msg::ArmState::_status_type arg)
-  {
-    msg_.status = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::action_interfaces::msg::ArmState msg_;
-};
-
 class Init_ArmState_spin_angle
 {
 public:
   explicit Init_ArmState_spin_angle(::action_interfaces::msg::ArmState & msg)
   : msg_(msg)
   {}
-  Init_ArmState_status spin_angle(::action_interfaces::msg::ArmState::_spin_angle_type arg)
+  ::action_interfaces::msg::ArmState spin_angle(::action_interfaces::msg::ArmState::_spin_angle_type arg)
   {
     msg_.spin_angle = std::move(arg);
-    return Init_ArmState_status(msg_);
+    return std::move(msg_);
   }
 
 private:

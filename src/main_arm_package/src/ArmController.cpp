@@ -2,6 +2,8 @@
 #include "action_interfaces/msg/arm_state.hpp"
 #include "action_interfaces/msg/arm_command.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
+#include "action_interfaces/msg/grip_command.hpp"
+#include <string>
 
 class ArmController: public rclcpp::Node{
   public:
@@ -11,11 +13,14 @@ class ArmController: public rclcpp::Node{
       joint_state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 10);
       timer_ = this->create_wall_timer(std::chrono::milliseconds(500), std::bind(&ArmController::publishArmState, this));
       arm_command_subscription_ = this->create_subscription<action_interfaces::msg::ArmCommand>("arm_command", 10, std::bind(&ArmController::handleArmCommand, this, std::placeholders::_1));
+      grip_command_subscription_ = this->create_subscription<action_interfaces::msg::GripCommand>("grip_command", 10, std::bind(&ArmController::handleGripCommand, this, std::placeholders::_1));
       shoulder_angle_ = an1;
       elbow_angle_ = an2;
       wrist_angle_ = an3;
       spin_angle_ = an4;
-      
+      f1_pos_ = 0.02;
+      f2_pos_ = -0.02f;
+      grip_status_ = "open";
     }
 
     void setShoulderAngle(float angle){
@@ -38,6 +43,20 @@ class ArmController: public rclcpp::Node{
       spin_angle_ = angle;
     }
 
+    void CloseGrip(){
+      RCLCPP_INFO(this->get_logger(), "Closing grip");
+      f1_pos_ = -0.015f;
+      f2_pos_ = 0.015f;
+      grip_status_ = "closed";
+    }
+
+    void OpenGrip(){
+      RCLCPP_INFO(this->get_logger(), "Opening grip");
+      f1_pos_ = 0.02;
+      f2_pos_ = -0.02f;
+      grip_status_ = "open";
+    }
+
     void publishArmState(){
       auto message = action_interfaces::msg::ArmState();
       message.shoulder_angle = shoulder_angle_;
@@ -48,8 +67,8 @@ class ArmController: public rclcpp::Node{
 
       auto js = sensor_msgs::msg::JointState();
       js.header.stamp = this->get_clock()->now();
-      js.name = {"shoulder_main_joint", "shoulder_arm_joint", "elbow_main_joint", "elbow_arm_joint", "wrist_main_joint", "wrist_arm_joint", "spin_main_joint", "spin_arm_joint"};
-      js.position = {shoulder_angle_ * M_PI / 180.0, 0.0, elbow_angle_ * M_PI / 180.0, 0.0, wrist_angle_ * M_PI / 180.0, 0.0, spin_angle_ * M_PI / 180.0, 0.0};
+      js.name = {"shoulder_main_joint", "shoulder_arm_joint", "elbow_main_joint", "elbow_arm_joint", "wrist_main_joint", "wrist_arm_joint", "spin_main_joint", "spin_arm_joint", "gripper_left_finger_joint", "gripper_right_finger_joint"};
+      js.position = {shoulder_angle_ * M_PI / 180.0, 0.0, elbow_angle_ * M_PI / 180.0, 0.0, wrist_angle_ * M_PI / 180.0, 0.0, spin_angle_ * M_PI / 180.0, 0.0, f1_pos_, f2_pos_};
       joint_state_publisher_->publish(js);
     }
 
@@ -60,14 +79,28 @@ class ArmController: public rclcpp::Node{
       setSpinAngle(msg->spin_angle_cmd);
     }
 
+    void handleGripCommand(const action_interfaces::msg::GripCommand::SharedPtr msg){
+      if(msg->grip_command == "close"){
+        CloseGrip();
+      } else if(msg->grip_command == "open"){
+        OpenGrip();
+      }
+    }
+
     private:
       rclcpp::Publisher<action_interfaces::msg::ArmState>::SharedPtr arm_state_publisher_;
       rclcpp::TimerBase::SharedPtr timer_;
+
       float shoulder_angle_;
       float elbow_angle_;
       float wrist_angle_;
       float spin_angle_;
+      float f1_pos_;
+      float f2_pos_;
+      std::string grip_status_;
+
       rclcpp::Subscription<action_interfaces::msg::ArmCommand>::SharedPtr arm_command_subscription_;
+      rclcpp::Subscription<action_interfaces::msg::GripCommand>::SharedPtr grip_command_subscription_;
 
       rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_publisher_;
 };

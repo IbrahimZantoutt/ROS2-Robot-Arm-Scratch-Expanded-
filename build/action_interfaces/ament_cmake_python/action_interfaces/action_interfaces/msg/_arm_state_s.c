@@ -16,9 +16,6 @@
 #include "action_interfaces/msg/detail/arm_state__struct.h"
 #include "action_interfaces/msg/detail/arm_state__functions.h"
 
-#include "rosidl_runtime_c/string.h"
-#include "rosidl_runtime_c/string_functions.h"
-
 
 ROSIDL_GENERATOR_C_EXPORT
 bool action_interfaces__msg__arm_state__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -89,21 +86,6 @@ bool action_interfaces__msg__arm_state__convert_from_py(PyObject * _pymsg, void 
     ros_message->spin_angle = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // status
-    PyObject * field = PyObject_GetAttrString(_pymsg, "status");
-    if (!field) {
-      return false;
-    }
-    assert(PyUnicode_Check(field));
-    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
-    if (!encoded_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    rosidl_runtime_c__String__assign(&ros_message->status, PyBytes_AS_STRING(encoded_field));
-    Py_DECREF(encoded_field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -164,23 +146,6 @@ PyObject * action_interfaces__msg__arm_state__convert_to_py(void * raw_ros_messa
     field = PyFloat_FromDouble(ros_message->spin_angle);
     {
       int rc = PyObject_SetAttrString(_pymessage, "spin_angle", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // status
-    PyObject * field = NULL;
-    field = PyUnicode_DecodeUTF8(
-      ros_message->status.data,
-      strlen(ros_message->status.data),
-      "replace");
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "status", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

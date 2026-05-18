@@ -4,6 +4,8 @@ msg/ArmCommand.idl
 msg/ArmCommand.msg
 msg/ArmState.idl
 msg/ArmState.msg
+msg/GripCommand.idl
+msg/GripCommand.msg
 srv/CheckLimits.idl
 srv/CheckLimits.srv
 srv/CheckLimits_Request.msg

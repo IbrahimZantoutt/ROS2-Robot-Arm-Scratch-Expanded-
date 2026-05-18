@@ -1,0 +1,33 @@
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:100:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+  100 |       [01;31m[Kstring[m[K grip_status_;
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[Kstdin[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:89:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+   89 |     [01;31m[Kstring[m[K grip_command_ = "close";
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[Kstdin[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:[m[K In constructor ‘[01m[KArmController::ArmController(float, float, float, float)[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:23:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrip_status_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_status[m[K’?
+   23 |       [01;31m[Kgrip_status_[m[K = "open";
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[Ksi_status[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:[m[K In member function ‘[01m[Kvoid ArmController::CloseGrip()[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:50:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrip_status_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_status[m[K’?
+   50 |       [01;31m[Kgrip_status_[m[K = "closed";
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[Ksi_status[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:[m[K In member function ‘[01m[Kvoid ArmController::OpenGrip()[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:57:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrip_status_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_status[m[K’?
+   57 |       [01;31m[Kgrip_status_[m[K = "open";
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[Ksi_status[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:[m[K In lambda function:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:35:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrip_command_[m[K’ was not declared in this scope
+   35 |                     publishGripCommand([01;31m[Kgrip_command_[m[K);
+      |                                        [01;31m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/ArmClient.dir/build.make:76: CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/ArmClient.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/ArmController.dir/build.make:76: CMakeFiles/ArmController.dir/src/ArmController.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/ArmController.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

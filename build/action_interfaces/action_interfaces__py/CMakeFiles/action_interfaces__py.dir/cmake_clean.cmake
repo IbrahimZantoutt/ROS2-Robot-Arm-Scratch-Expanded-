@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/action_interfaces/msg/_arm_command_s.c"
   "../rosidl_generator_py/action_interfaces/msg/_arm_state.py"
   "../rosidl_generator_py/action_interfaces/msg/_arm_state_s.c"
+  "../rosidl_generator_py/action_interfaces/msg/_grip_command.py"
+  "../rosidl_generator_py/action_interfaces/msg/_grip_command_s.c"
   "../rosidl_generator_py/action_interfaces/srv/__init__.py"
   "../rosidl_generator_py/action_interfaces/srv/_check_limits.py"
   "../rosidl_generator_py/action_interfaces/srv/_check_limits_s.c"

@@ -703,8 +703,17 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
-  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/grip_command.hpp \
+  /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__struct.hpp \
+  /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__builder.hpp \
+  /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__traits.hpp \
+  /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__type_support.hpp
 
+
+/home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__traits.hpp:
+
+/home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__builder.hpp:
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp:
 
@@ -1384,6 +1393,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
+/home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__struct.hpp:
+
 /usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/c++/11/atomic:
@@ -1832,6 +1843,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 
 /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
 
+/home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/grip_command.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
 
 /usr/include/c++/11/clocale:
@@ -2075,6 +2088,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 /opt/ros/humble/include/rmw/rmw/time.h:
 
 /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__traits.hpp:
+
+/home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__type_support.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 

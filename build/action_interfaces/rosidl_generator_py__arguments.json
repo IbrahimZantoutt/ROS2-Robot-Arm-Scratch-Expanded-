@@ -5,6 +5,7 @@
   "idl_tuples": [
     "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:msg/ArmState.idl",
     "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:msg/ArmCommand.idl",
+    "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:msg/GripCommand.idl",
     "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:srv/CheckLimits.idl",
     "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:action/MoveArm.idl"
   ],
@@ -33,6 +34,7 @@
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
     "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces/msg/ArmState.idl",
     "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces/msg/ArmCommand.idl",
+    "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces/msg/GripCommand.idl",
     "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces/srv/CheckLimits.idl",
     "/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces/action/MoveArm.idl",
     "/opt/ros/humble/share/action_msgs/msg/GoalInfo.idl",

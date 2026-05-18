@@ -50,13 +50,6 @@ inline void to_flow_style_yaml(
   {
     out << "spin_angle: ";
     rosidl_generator_traits::value_to_yaml(msg.spin_angle, out);
-    out << ", ";
-  }
-
-  // member: status
-  {
-    out << "status: ";
-    rosidl_generator_traits::value_to_yaml(msg.status, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -102,16 +95,6 @@ inline void to_block_style_yaml(
     }
     out << "spin_angle: ";
     rosidl_generator_traits::value_to_yaml(msg.spin_angle, out);
-    out << "\n";
-  }
-
-  // member: status
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "status: ";
-    rosidl_generator_traits::value_to_yaml(msg.status, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -162,11 +145,11 @@ inline const char * name<action_interfaces::msg::ArmState>()
 
 template<>
 struct has_fixed_size<action_interfaces::msg::ArmState>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<action_interfaces::msg::ArmState>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<action_interfaces::msg::ArmState>

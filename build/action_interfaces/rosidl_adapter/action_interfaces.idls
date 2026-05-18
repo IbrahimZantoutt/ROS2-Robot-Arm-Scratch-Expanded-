@@ -1,4 +1,5 @@
 /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:msg/ArmState.idl
 /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:msg/ArmCommand.idl
+/home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:msg/GripCommand.idl
 /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:srv/CheckLimits.idl
 /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_adapter/action_interfaces:action/MoveArm.idl

@@ -76,6 +76,11 @@ CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/de
 CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/arm_command__struct.hpp
 CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/arm_command__traits.hpp
 CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/arm_command__type_support.hpp
+CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/grip_command.hpp
+CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__builder.hpp
+CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__struct.hpp
+CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__traits.hpp
+CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__type_support.hpp
 CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/srv/check_limits.hpp
 CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/srv/detail/check_limits__builder.hpp
 CMakeFiles/action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/srv/detail/check_limits__struct.hpp
@@ -105,6 +110,7 @@ rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp: /opt/ros/humble/share/
 rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp: rosidl_adapter/action_interfaces/msg/ArmState.idl
 rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp: rosidl_adapter/action_interfaces/msg/ArmCommand.idl
+rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp: rosidl_adapter/action_interfaces/msg/GripCommand.idl
 rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp: rosidl_adapter/action_interfaces/srv/CheckLimits.idl
 rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp: rosidl_adapter/action_interfaces/action/MoveArm.idl
 rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp: /opt/ros/humble/share/action_msgs/msg/GoalInfo.idl
@@ -143,6 +149,21 @@ rosidl_generator_cpp/action_interfaces/msg/detail/arm_command__traits.hpp: rosid
 
 rosidl_generator_cpp/action_interfaces/msg/detail/arm_command__type_support.hpp: rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/action_interfaces/msg/detail/arm_command__type_support.hpp
+
+rosidl_generator_cpp/action_interfaces/msg/grip_command.hpp: rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/action_interfaces/msg/grip_command.hpp
+
+rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__builder.hpp: rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__builder.hpp
+
+rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__struct.hpp: rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__struct.hpp
+
+rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__traits.hpp: rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__traits.hpp
+
+rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__type_support.hpp: rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__type_support.hpp
 
 rosidl_generator_cpp/action_interfaces/srv/check_limits.hpp: rosidl_generator_cpp/action_interfaces/msg/arm_state.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/action_interfaces/srv/check_limits.hpp
@@ -190,6 +211,11 @@ action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/arm_st
 action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/arm_state__struct.hpp
 action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/arm_state__traits.hpp
 action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/arm_state__type_support.hpp
+action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__builder.hpp
+action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__struct.hpp
+action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__traits.hpp
+action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/detail/grip_command__type_support.hpp
+action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/msg/grip_command.hpp
 action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/srv/check_limits.hpp
 action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/srv/detail/check_limits__builder.hpp
 action_interfaces__cpp: rosidl_generator_cpp/action_interfaces/srv/detail/check_limits__struct.hpp

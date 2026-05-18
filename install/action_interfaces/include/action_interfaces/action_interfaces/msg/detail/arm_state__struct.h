@@ -17,10 +17,6 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'status'
-#include "rosidl_runtime_c/string.h"
-
 /// Struct defined in msg/ArmState in the package action_interfaces.
 typedef struct action_interfaces__msg__ArmState
 {
@@ -28,7 +24,6 @@ typedef struct action_interfaces__msg__ArmState
   float elbow_angle;
   float wrist_angle;
   float spin_angle;
-  rosidl_runtime_c__String status;
 } action_interfaces__msg__ArmState;
 
 // Struct for a sequence of action_interfaces__msg__ArmState.

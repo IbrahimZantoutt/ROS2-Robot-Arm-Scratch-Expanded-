@@ -245,12 +245,15 @@ CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosi
   rosidl_generator_c/action_interfaces/msg/detail/arm_state__type_support.h \
   rosidl_generator_c/action_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/action_interfaces/msg/detail/arm_state__struct.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.h \
   rosidl_generator_c/action_interfaces/msg/detail/arm_command__type_support.h \
   rosidl_generator_c/action_interfaces/msg/detail/arm_command__struct.h \
   rosidl_generator_c/action_interfaces/msg/detail/arm_command__functions.h \
+  rosidl_generator_c/action_interfaces/msg/detail/grip_command__type_support.h \
+  rosidl_generator_c/action_interfaces/msg/detail/grip_command__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  rosidl_generator_c/action_interfaces/msg/detail/grip_command__functions.h \
   rosidl_generator_c/action_interfaces/srv/detail/check_limits__type_support.h \
   rosidl_generator_c/action_interfaces/srv/detail/check_limits__struct.h \
   rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.h \
@@ -262,6 +265,10 @@ CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosi
 
 
 rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.h:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+
+rosidl_generator_c/action_interfaces/action/detail/move_arm__struct.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -312,6 +319,8 @@ rosidl_generator_c/action_interfaces/srv/detail/check_limits__struct.h:
 /usr/include/python3.10/modsupport.h:
 
 /usr/include/python3.10/cpython/pyctype.h:
+
+rosidl_generator_c/action_interfaces/msg/detail/grip_command__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx.h:
 
@@ -443,8 +452,6 @@ rosidl_generator_c/action_interfaces/srv/detail/check_limits__type_support.h:
 
 /usr/include/python3.10/genobject.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
@@ -458,6 +465,10 @@ rosidl_generator_py/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport
 /usr/include/python3.10/fileobject.h:
 
 /usr/include/asm-generic/int-ll64.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+rosidl_generator_c/action_interfaces/msg/detail/grip_command__functions.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -478,6 +489,14 @@ rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.h:
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h:
+
+/usr/include/python3.10/funcobject.h:
+
+/usr/include/python3.10/objimpl.h:
+
+/usr/include/python3.10/patchlevel.h:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
@@ -502,6 +521,8 @@ rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.h:
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+rosidl_generator_c/action_interfaces/msg/detail/grip_command__type_support.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 
@@ -683,8 +704,6 @@ rosidl_generator_c/action_interfaces/msg/detail/arm_command__struct.h:
 
 /usr/include/python3.10/descrobject.h:
 
-/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
-
 /usr/include/python3.10/genericaliasobject.h:
 
 /usr/include/stdint.h:
@@ -766,13 +785,3 @@ rosidl_generator_c/action_interfaces/msg/detail/arm_state__type_support.h:
 rosidl_generator_c/action_interfaces/srv/detail/check_limits__functions.h:
 
 rosidl_generator_c/action_interfaces/action/detail/move_arm__type_support.h:
-
-rosidl_generator_c/action_interfaces/action/detail/move_arm__struct.h:
-
-/usr/include/python3.10/funcobject.h:
-
-/usr/include/python3.10/objimpl.h:
-
-/usr/include/python3.10/patchlevel.h:
-
-/opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h:

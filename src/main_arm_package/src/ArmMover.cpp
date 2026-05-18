@@ -23,6 +23,7 @@ class ArmMover: public rclcpp::Node{
     public:
         using MoveArm = action_interfaces::action::MoveArm;
         using GoalHandle = rclcpp_action::ServerGoalHandle<MoveArm>;
+
         ArmMover(): Node("arm_mover"){
             RCLCPP_INFO(this->get_logger(), "ArmMover node has been started.");
             arm_command_publisher_ = this->create_publisher<action_interfaces::msg::ArmCommand>("arm_command", 10);
@@ -38,7 +39,6 @@ class ArmMover: public rclcpp::Node{
             );
 
             client_check_ = this->create_client<action_interfaces::srv::CheckLimits>("check_limits");
-
 
         }
 
@@ -195,7 +195,6 @@ class ArmMover: public rclcpp::Node{
         rclcpp::Client<action_interfaces::srv::CheckLimits>::SharedPtr client_check_;
 
         std::mutex angle_mutex_;
-
         float current_angle_shoulder_ = 0.0f;
         float current_angle_elbow_ = 0.0f;
         float current_angle_wrist_ = 0.0f;
@@ -213,6 +212,7 @@ class ArmMover: public rclcpp::Node{
             current_angle_wrist_ = msg->wrist_angle;
             current_angle_spin_ = msg->spin_angle;
         }
+
 };
 
 int main(int argc, char** argv){

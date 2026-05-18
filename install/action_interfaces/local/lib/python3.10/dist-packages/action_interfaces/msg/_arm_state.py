@@ -61,7 +61,6 @@ class ArmState(metaclass=Metaclass_ArmState):
         '_elbow_angle',
         '_wrist_angle',
         '_spin_angle',
-        '_status',
     ]
 
     _fields_and_field_types = {
@@ -69,7 +68,6 @@ class ArmState(metaclass=Metaclass_ArmState):
         'elbow_angle': 'float',
         'wrist_angle': 'float',
         'spin_angle': 'float',
-        'status': 'string',
     }
 
     SLOT_TYPES = (
@@ -77,7 +75,6 @@ class ArmState(metaclass=Metaclass_ArmState):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -88,7 +85,6 @@ class ArmState(metaclass=Metaclass_ArmState):
         self.elbow_angle = kwargs.get('elbow_angle', float())
         self.wrist_angle = kwargs.get('wrist_angle', float())
         self.spin_angle = kwargs.get('spin_angle', float())
-        self.status = kwargs.get('status', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -126,8 +122,6 @@ class ArmState(metaclass=Metaclass_ArmState):
         if self.wrist_angle != other.wrist_angle:
             return False
         if self.spin_angle != other.spin_angle:
-            return False
-        if self.status != other.status:
             return False
         return True
 
@@ -195,16 +189,3 @@ class ArmState(metaclass=Metaclass_ArmState):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'spin_angle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._spin_angle = value
-
-    @builtins.property
-    def status(self):
-        """Message field 'status'."""
-        return self._status
-
-    @status.setter
-    def status(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, str), \
-                "The 'status' field must be of type 'str'"
-        self._status = value

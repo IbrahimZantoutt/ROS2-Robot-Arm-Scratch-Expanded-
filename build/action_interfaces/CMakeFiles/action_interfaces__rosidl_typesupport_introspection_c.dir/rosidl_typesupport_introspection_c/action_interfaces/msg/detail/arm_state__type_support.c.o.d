@@ -56,7 +56,4 @@ CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/rosidl_generator_c__visibility_control.h \
- /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__struct.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+ /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__struct.h

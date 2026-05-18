@@ -16,6 +16,7 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ArmState.msg"
   "msg/ArmCommand.msg"
+  "msg/GripCommand.msg"
   "srv/CheckLimits.srv"
   "action/MoveArm.action"
 )

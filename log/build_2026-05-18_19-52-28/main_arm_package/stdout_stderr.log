@@ -1,0 +1,71 @@
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)
+-- Found action_interfaces: 0.0.0 (/home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake)
+-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ibrahim/RobotArmExpanded/src/main_arm_package/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ibrahim/RobotArmExpanded/build/main_arm_package
+[35m[1mConsolidate compiler generated dependencies of target ArmController[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmClient[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmMonitor[0m
+[35m[1mConsolidate compiler generated dependencies of target ArmMover[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/ArmController.dir/src/ArmController.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/ArmMonitor.dir/src/ArmMonitor.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ArmMover.dir/src/ArmMover.cpp.o[0m
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:100:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+  100 |       [01;31m[Kstring[m[K grip_status_;
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[Kstdin[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:89:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+   89 |     [01;31m[Kstring[m[K grip_command_ = "close";
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[Kstdin[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:[m[K In constructor ‘[01m[KArmController::ArmController(float, float, float, float)[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:23:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrip_status_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_status[m[K’?
+   23 |       [01;31m[Kgrip_status_[m[K = "open";
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[Ksi_status[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:[m[K In member function ‘[01m[Kvoid ArmController::CloseGrip()[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:50:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrip_status_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_status[m[K’?
+   50 |       [01;31m[Kgrip_status_[m[K = "closed";
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[Ksi_status[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:[m[K In member function ‘[01m[Kvoid ArmController::OpenGrip()[m[K’:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmController.cpp:57:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrip_status_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_status[m[K’?
+   57 |       [01;31m[Kgrip_status_[m[K = "open";
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[Ksi_status[m[K
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:[m[K In lambda function:
+[01m[K/home/ibrahim/RobotArmExpanded/src/main_arm_package/src/ArmClient.cpp:35:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrip_command_[m[K’ was not declared in this scope
+   35 |                     publishGripCommand([01;31m[Kgrip_command_[m[K);
+      |                                        [01;31m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/ArmClient.dir/build.make:76: CMakeFiles/ArmClient.dir/src/ArmClient.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/ArmClient.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/ArmController.dir/build.make:76: CMakeFiles/ArmController.dir/src/ArmController.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/ArmController.dir/all] Error 2
+[ 62%] [32m[1mLinking CXX executable ArmMonitor[0m
+[ 62%] Built target ArmMonitor
+[ 75%] [32m[1mLinking CXX executable ArmMover[0m
+[ 75%] Built target ArmMover
+gmake: *** [Makefile:146: all] Error 2

@@ -68,6 +68,7 @@ include CMakeFiles/action_interfaces.dir/progress.make
 
 CMakeFiles/action_interfaces: /home/ibrahim/RobotArmExpanded/src/action_interfaces/msg/ArmState.msg
 CMakeFiles/action_interfaces: /home/ibrahim/RobotArmExpanded/src/action_interfaces/msg/ArmCommand.msg
+CMakeFiles/action_interfaces: /home/ibrahim/RobotArmExpanded/src/action_interfaces/msg/GripCommand.msg
 CMakeFiles/action_interfaces: /home/ibrahim/RobotArmExpanded/src/action_interfaces/srv/CheckLimits.srv
 CMakeFiles/action_interfaces: rosidl_cmake/srv/CheckLimits_Request.msg
 CMakeFiles/action_interfaces: rosidl_cmake/srv/CheckLimits_Response.msg

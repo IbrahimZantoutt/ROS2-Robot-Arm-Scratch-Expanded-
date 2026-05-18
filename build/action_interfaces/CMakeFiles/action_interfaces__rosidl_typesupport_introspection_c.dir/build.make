@@ -79,6 +79,7 @@ rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosid
 rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/action_interfaces/msg/ArmState.idl
 rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/action_interfaces/msg/ArmCommand.idl
+rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/action_interfaces/msg/GripCommand.idl
 rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/action_interfaces/srv/CheckLimits.idl
 rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/action_interfaces/action/MoveArm.idl
 rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/action_msgs/msg/GoalInfo.idl
@@ -94,6 +95,9 @@ rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosid
 rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__rosidl_typesupport_introspection_c.h
 
@@ -105,6 +109,9 @@ rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__type_
 
 rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__type_support.c: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__type_support.c
+
+rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c
 
 rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c
@@ -140,10 +147,24 @@ CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__type_support.c -o CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__type_support.c.s
 
+CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c
+CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o -MF CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o.d -o CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o -c /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c
+
+CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c > CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.i
+
+CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c -o CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.s
+
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o: rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o -MF CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o.d -o CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o -c /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c
 
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.i: cmake_force
@@ -157,7 +178,7 @@ CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o: rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o -MF CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o.d -o CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o -c /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c
 
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.i: cmake_force
@@ -172,6 +193,7 @@ CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
 action_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__type_support.c.o" \
 "CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__type_support.c.o" \
+"CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o" \
 "CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o" \
 "CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o"
 
@@ -180,6 +202,7 @@ action_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 libaction_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__type_support.c.o
 libaction_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__type_support.c.o
+libaction_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c.o
 libaction_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c.o
 libaction_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/action_interfaces/action/detail/move_arm__type_support.c.o
 libaction_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/build.make
@@ -194,7 +217,7 @@ libaction_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib
 libaction_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libaction_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librcutils.so
 libaction_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libaction_interfaces__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libaction_interfaces__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -211,6 +234,8 @@ CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/depend: ros
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_command__type_support.c
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/arm_state__type_support.c
+CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__rosidl_typesupport_introspection_c.h
+CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/action_interfaces/msg/detail/grip_command__type_support.c
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__rosidl_typesupport_introspection_c.h
 CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/action_interfaces/srv/detail/check_limits__type_support.c
 	cd /home/ibrahim/RobotArmExpanded/build/action_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ibrahim/RobotArmExpanded/src/action_interfaces /home/ibrahim/RobotArmExpanded/src/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces /home/ibrahim/RobotArmExpanded/build/action_interfaces/CMakeFiles/action_interfaces__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)

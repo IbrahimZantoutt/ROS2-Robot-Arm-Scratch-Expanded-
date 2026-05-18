@@ -183,8 +183,6 @@ CMakeFiles/action_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppo
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/malloc.h \
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__struct.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/detail/arm_state__functions.h \
  /usr/include/c++/11/stdlib.h \
- /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+ /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/rosidl_generator_c__visibility_control.h

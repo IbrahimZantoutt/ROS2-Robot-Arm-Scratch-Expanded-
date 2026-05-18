@@ -3,6 +3,7 @@
   "non_idl_tuples": [
     "/home/ibrahim/RobotArmExpanded/src/action_interfaces:msg/ArmState.msg",
     "/home/ibrahim/RobotArmExpanded/src/action_interfaces:msg/ArmCommand.msg",
+    "/home/ibrahim/RobotArmExpanded/src/action_interfaces:msg/GripCommand.msg",
     "/home/ibrahim/RobotArmExpanded/src/action_interfaces:srv/CheckLimits.srv",
     "/home/ibrahim/RobotArmExpanded/src/action_interfaces:action/MoveArm.action"
   ]

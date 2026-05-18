@@ -11,10 +11,6 @@
 #include "rcutils/allocator.h"
 
 
-// Include directives for member types
-// Member `status`
-#include "rosidl_runtime_c/string_functions.h"
-
 bool
 action_interfaces__msg__ArmState__init(action_interfaces__msg__ArmState * msg)
 {
@@ -25,11 +21,6 @@ action_interfaces__msg__ArmState__init(action_interfaces__msg__ArmState * msg)
   // elbow_angle
   // wrist_angle
   // spin_angle
-  // status
-  if (!rosidl_runtime_c__String__init(&msg->status)) {
-    action_interfaces__msg__ArmState__fini(msg);
-    return false;
-  }
   return true;
 }
 
@@ -43,8 +34,6 @@ action_interfaces__msg__ArmState__fini(action_interfaces__msg__ArmState * msg)
   // elbow_angle
   // wrist_angle
   // spin_angle
-  // status
-  rosidl_runtime_c__String__fini(&msg->status);
 }
 
 bool
@@ -69,12 +58,6 @@ action_interfaces__msg__ArmState__are_equal(const action_interfaces__msg__ArmSta
   if (lhs->spin_angle != rhs->spin_angle) {
     return false;
   }
-  // status
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->status), &(rhs->status)))
-  {
-    return false;
-  }
   return true;
 }
 
@@ -94,12 +77,6 @@ action_interfaces__msg__ArmState__copy(
   output->wrist_angle = input->wrist_angle;
   // spin_angle
   output->spin_angle = input->spin_angle;
-  // status
-  if (!rosidl_runtime_c__String__copy(
-      &(input->status), &(output->status)))
-  {
-    return false;
-  }
   return true;
 }
 
