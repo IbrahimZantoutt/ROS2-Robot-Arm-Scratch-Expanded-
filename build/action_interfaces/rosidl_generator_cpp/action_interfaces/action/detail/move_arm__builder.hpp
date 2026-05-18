@@ -37,16 +37,32 @@ private:
   ::action_interfaces::action::MoveArm_Goal msg_;
 };
 
+class Init_MoveArm_Goal_target_z
+{
+public:
+  explicit Init_MoveArm_Goal_target_z(::action_interfaces::action::MoveArm_Goal & msg)
+  : msg_(msg)
+  {}
+  Init_MoveArm_Goal_configuration target_z(::action_interfaces::action::MoveArm_Goal::_target_z_type arg)
+  {
+    msg_.target_z = std::move(arg);
+    return Init_MoveArm_Goal_configuration(msg_);
+  }
+
+private:
+  ::action_interfaces::action::MoveArm_Goal msg_;
+};
+
 class Init_MoveArm_Goal_target_y
 {
 public:
   explicit Init_MoveArm_Goal_target_y(::action_interfaces::action::MoveArm_Goal & msg)
   : msg_(msg)
   {}
-  Init_MoveArm_Goal_configuration target_y(::action_interfaces::action::MoveArm_Goal::_target_y_type arg)
+  Init_MoveArm_Goal_target_z target_y(::action_interfaces::action::MoveArm_Goal::_target_y_type arg)
   {
     msg_.target_y = std::move(arg);
-    return Init_MoveArm_Goal_configuration(msg_);
+    return Init_MoveArm_Goal_target_z(msg_);
   }
 
 private:

@@ -26,6 +26,7 @@ typedef struct action_interfaces__action__MoveArm_Goal
 {
   float target_x;
   float target_y;
+  float target_z;
   /// "elbow_up" or "elbow_down"
   rosidl_runtime_c__String configuration;
 } action_interfaces__action__MoveArm_Goal;

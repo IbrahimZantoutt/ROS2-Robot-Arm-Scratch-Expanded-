@@ -59,16 +59,19 @@ class MoveArm_Goal(metaclass=Metaclass_MoveArm_Goal):
     __slots__ = [
         '_target_x',
         '_target_y',
+        '_target_z',
         '_configuration',
     ]
 
     _fields_and_field_types = {
         'target_x': 'float',
         'target_y': 'float',
+        'target_z': 'float',
         'configuration': 'string',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
@@ -80,6 +83,7 @@ class MoveArm_Goal(metaclass=Metaclass_MoveArm_Goal):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.target_x = kwargs.get('target_x', float())
         self.target_y = kwargs.get('target_y', float())
+        self.target_z = kwargs.get('target_z', float())
         self.configuration = kwargs.get('configuration', str())
 
     def __repr__(self):
@@ -114,6 +118,8 @@ class MoveArm_Goal(metaclass=Metaclass_MoveArm_Goal):
         if self.target_x != other.target_x:
             return False
         if self.target_y != other.target_y:
+            return False
+        if self.target_z != other.target_z:
             return False
         if self.configuration != other.configuration:
             return False
@@ -153,6 +159,21 @@ class MoveArm_Goal(metaclass=Metaclass_MoveArm_Goal):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'target_y' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._target_y = value
+
+    @builtins.property
+    def target_z(self):
+        """Message field 'target_z'."""
+        return self._target_z
+
+    @target_z.setter
+    def target_z(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'target_z' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'target_z' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._target_z = value
 
     @builtins.property
     def configuration(self):

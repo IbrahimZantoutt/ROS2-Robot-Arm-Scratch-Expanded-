@@ -11,12 +11,13 @@ using GoalHandle = rclcpp_action::ClientGoalHandle<MoveArm>;
 
 class ArmClient: public rclcpp::Node{
     public:
-       ArmClient(float x, float y): Node("arm_client"){
+       ArmClient(float x, float y, float z): Node("arm_client"){
         RCLCPP_INFO(this->get_logger(), "ArmClient node has been started.");
         client_action_ = rclcpp_action::create_client<action_interfaces::action::MoveArm>(this, "move_arm");
 
         X_ = x;
         Y_ = y;
+        Z_ = z;
 
         options_ = rclcpp_action::Client<action_interfaces::action::MoveArm>::SendGoalOptions();
         options_.feedback_callback = [this](GoalHandle::SharedPtr, const std::shared_ptr<const action_interfaces::action::MoveArm::Feedback> feedback){
@@ -47,10 +48,10 @@ class ArmClient: public rclcpp::Node{
        } 
 
        void callMoveSequence(){
-            this->sendMoveArmGoal(X_, Y_);
+            this->sendMoveArmGoal(X_, Y_, Z_);
         };
 
-       void sendMoveArmGoal(float tarX, float tarY){
+       void sendMoveArmGoal(float tarX, float tarY, float tarZ){
          while(!client_action_->wait_for_action_server(std::chrono::seconds(1))){
             RCLCPP_INFO(this->get_logger(), "Waiting for action server...");
          }
@@ -58,6 +59,7 @@ class ArmClient: public rclcpp::Node{
         auto goal_msg = MoveArm::Goal();
         goal_msg.target_x = tarX;
         goal_msg.target_y = tarY;
+        goal_msg.target_z = tarZ;
         goal_msg.configuration = "elbow_down";
         client_action_->async_send_goal(goal_msg, options_);
        }
@@ -65,19 +67,22 @@ class ArmClient: public rclcpp::Node{
     private:
     float X_;
     float Y_;
+    float Z_;
     rclcpp_action::Client<action_interfaces::action::MoveArm>::SharedPtr client_action_;
     rclcpp_action::Client<action_interfaces::action::MoveArm>::SendGoalOptions options_;
 };
 
 int main(int argc, char** argv){
-    if(argc != 3){
-        printf("Usage: ros2 run main_arm_package ArmClient <target_x> <target_y>\n");
+    if(argc < 3 || argc > 4){
+        printf("Usage: ros2 run main_arm_package ArmClient <target_x> <target_y> [target_z]\n");
+        printf("  target_z defaults to 0.18 (shoulder height) if not specified\n");
         return 1;
     }
     float x = std::stof(argv[1]);
     float y = std::stof(argv[2]);
+    float z = (argc == 4) ? std::stof(argv[3]) : 0.18f;
     rclcpp::init(argc, argv);
-    auto arm_client_node = std::make_shared<ArmClient>(x, y);
+    auto arm_client_node = std::make_shared<ArmClient>(x, y, z);
     rclcpp::spin(arm_client_node);
     rclcpp::shutdown();
     return 0;

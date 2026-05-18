@@ -23,6 +23,7 @@ action_interfaces__action__MoveArm_Goal__init(action_interfaces__action__MoveArm
   }
   // target_x
   // target_y
+  // target_z
   // configuration
   if (!rosidl_runtime_c__String__init(&msg->configuration)) {
     action_interfaces__action__MoveArm_Goal__fini(msg);
@@ -39,6 +40,7 @@ action_interfaces__action__MoveArm_Goal__fini(action_interfaces__action__MoveArm
   }
   // target_x
   // target_y
+  // target_z
   // configuration
   rosidl_runtime_c__String__fini(&msg->configuration);
 }
@@ -55,6 +57,10 @@ action_interfaces__action__MoveArm_Goal__are_equal(const action_interfaces__acti
   }
   // target_y
   if (lhs->target_y != rhs->target_y) {
+    return false;
+  }
+  // target_z
+  if (lhs->target_z != rhs->target_z) {
     return false;
   }
   // configuration
@@ -78,6 +84,8 @@ action_interfaces__action__MoveArm_Goal__copy(
   output->target_x = input->target_x;
   // target_y
   output->target_y = input->target_y;
+  // target_z
+  output->target_z = input->target_z;
   // configuration
   if (!rosidl_runtime_c__String__copy(
       &(input->configuration), &(output->configuration)))

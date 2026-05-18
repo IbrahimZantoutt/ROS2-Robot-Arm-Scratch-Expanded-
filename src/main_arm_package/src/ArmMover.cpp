@@ -43,7 +43,7 @@ class ArmMover: public rclcpp::Node{
         }
 
         rclcpp_action::GoalResponse handleGoal(const rclcpp_action::GoalUUID& uuid,std::shared_ptr<const MoveArm::Goal> goal){
-            RCLCPP_INFO(this->get_logger(), "Received goal request with target x: %f, y: %f", goal->target_x, goal->target_y);
+            RCLCPP_INFO(this->get_logger(), "Received goal request with target x: %f, y: %f, z: %f", goal->target_x, goal->target_y, goal->target_z);
             (void)uuid;
             return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
         }
@@ -62,7 +62,7 @@ class ArmMover: public rclcpp::Node{
             auto result = std::make_shared<MoveArm::Result>();
 
             bool elbow_up = (goal_handle->get_goal()->configuration == "elbow_up");
-            ArmSolution ik_solution = solveIK(goal_handle->get_goal()->target_x, goal_handle->get_goal()->target_y, elbow_up);
+            ArmSolution ik_solution = solveIK(goal_handle->get_goal()->target_x, goal_handle->get_goal()->target_y, goal_handle->get_goal()->target_z, elbow_up);
             if(!ik_solution.valid){
                 RCLCPP_ERROR(this->get_logger(), "Target position is unreachable");
                 goal_handle->abort(result);
@@ -130,14 +130,13 @@ class ArmMover: public rclcpp::Node{
         }
 
 
-        ArmSolution solveIK(double target_x, double target_y, bool elbow_up){
+        ArmSolution solveIK(double target_x, double target_y, double target_z, bool elbow_up){
             double spin = std::atan2(target_y, target_x);
-            
+
             double r = std::sqrt(target_x*target_x + target_y*target_y);
 
-
-            double r_adj = r - L3_;  // wrist points straight at target horizontally
-            double z_adj = 0.0;
+            double r_adj = r - L3_;  // wrist points straight horizontally toward target
+            double z_adj = target_z - z_shoulder_;
 
             double dist2 = r_adj*r_adj + z_adj*z_adj;
             double D = (dist2 - L1_*L1_ - L2_*L2_) / (2*L1_*L2_);
@@ -202,9 +201,10 @@ class ArmMover: public rclcpp::Node{
         float current_angle_wrist_ = 0.0f;
         float current_angle_spin_ = 0.0f;
 
-        float L1_ = 0.39;  // shoulder_arm_joint(0.04) + elbow_main_joint(0.35)
-        float L2_ = 0.355; // elbow_arm_joint(0.035) + wrist_main_joint(0.32)
-        float L3_ = 0.18;  // wrist_arm_joint(0.005) + cylinder tip(0.175)
+        float L1_ = 0.39;       // shoulder_arm_joint(0.04) + elbow_main_joint(0.35)
+        float L2_ = 0.355;      // elbow_arm_joint(0.035) + wrist_main_joint(0.32)
+        float L3_ = 0.18;       // wrist_arm_joint(0.005) + cylinder tip(0.175)
+        float z_shoulder_ = 0.18f; // spin_main(0.06) + spin_arm(0.02) + shoulder_main(0.10)
 
         void handleArmState(const action_interfaces::msg::ArmState::SharedPtr msg){
             std::lock_guard<std::mutex> lock(angle_mutex_);

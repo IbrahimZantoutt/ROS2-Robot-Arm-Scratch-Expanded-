@@ -41,6 +41,7 @@ struct MoveArm_Goal_
     {
       this->target_x = 0.0f;
       this->target_y = 0.0f;
+      this->target_z = 0.0f;
       this->configuration = "";
     }
   }
@@ -53,6 +54,7 @@ struct MoveArm_Goal_
     {
       this->target_x = 0.0f;
       this->target_y = 0.0f;
+      this->target_z = 0.0f;
       this->configuration = "";
     }
   }
@@ -64,6 +66,9 @@ struct MoveArm_Goal_
   using _target_y_type =
     float;
   _target_y_type target_y;
+  using _target_z_type =
+    float;
+  _target_z_type target_z;
   using _configuration_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _configuration_type configuration;
@@ -79,6 +84,12 @@ struct MoveArm_Goal_
     const float & _arg)
   {
     this->target_y = _arg;
+    return *this;
+  }
+  Type & set__target_z(
+    const float & _arg)
+  {
+    this->target_z = _arg;
     return *this;
   }
   Type & set__configuration(
@@ -134,6 +145,9 @@ struct MoveArm_Goal_
       return false;
     }
     if (this->target_y != other.target_y) {
+      return false;
+    }
+    if (this->target_z != other.target_z) {
       return false;
     }
     if (this->configuration != other.configuration) {

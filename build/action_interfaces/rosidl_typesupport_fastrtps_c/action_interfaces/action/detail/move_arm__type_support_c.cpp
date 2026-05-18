@@ -61,6 +61,11 @@ static bool _MoveArm_Goal__cdr_serialize(
     cdr << ros_message->target_y;
   }
 
+  // Field name: target_z
+  {
+    cdr << ros_message->target_z;
+  }
+
   // Field name: configuration
   {
     const rosidl_runtime_c__String * str = &ros_message->configuration;
@@ -95,6 +100,11 @@ static bool _MoveArm_Goal__cdr_deserialize(
   // Field name: target_y
   {
     cdr >> ros_message->target_y;
+  }
+
+  // Field name: target_z
+  {
+    cdr >> ros_message->target_z;
   }
 
   // Field name: configuration
@@ -142,6 +152,12 @@ size_t get_serialized_size_action_interfaces__action__MoveArm_Goal(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name target_z
+  {
+    size_t item_size = sizeof(ros_message->target_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name configuration
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -184,6 +200,14 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Goal(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // member: target_y
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: target_z
   {
     size_t array_size = 1;
 

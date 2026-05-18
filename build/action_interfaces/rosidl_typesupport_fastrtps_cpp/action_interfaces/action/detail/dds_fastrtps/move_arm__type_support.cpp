@@ -36,6 +36,8 @@ cdr_serialize(
   cdr << ros_message.target_x;
   // Member: target_y
   cdr << ros_message.target_y;
+  // Member: target_z
+  cdr << ros_message.target_z;
   // Member: configuration
   cdr << ros_message.configuration;
   return true;
@@ -52,6 +54,9 @@ cdr_deserialize(
 
   // Member: target_y
   cdr >> ros_message.target_y;
+
+  // Member: target_z
+  cdr >> ros_message.target_z;
 
   // Member: configuration
   cdr >> ros_message.configuration;
@@ -81,6 +86,12 @@ get_serialized_size(
   // Member: target_y
   {
     size_t item_size = sizeof(ros_message.target_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: target_z
+  {
+    size_t item_size = sizeof(ros_message.target_z);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -122,6 +133,15 @@ max_serialized_size_MoveArm_Goal(
   }
 
   // Member: target_y
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: target_z
   {
     size_t array_size = 1;
 

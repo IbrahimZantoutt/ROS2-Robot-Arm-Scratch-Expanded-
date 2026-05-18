@@ -2,6 +2,7 @@
 
 float32 target_x
 float32 target_y
+float32 target_z
 string configuration  # "elbow_up" or "elbow_down"
 
 ---

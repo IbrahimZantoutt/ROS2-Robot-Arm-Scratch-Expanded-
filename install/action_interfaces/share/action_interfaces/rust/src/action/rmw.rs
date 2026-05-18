@@ -37,6 +37,11 @@ pub struct MoveArm_Goal {
     #[allow(missing_docs)]
     pub target_y: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub target_z: f32,
+
     /// "elbow_up" or "elbow_down"
     pub configuration: rosidl_runtime_rs::String,
 

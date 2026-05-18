@@ -23,6 +23,11 @@ pub struct MoveArm_Goal {
     #[allow(missing_docs)]
     pub target_y: f32,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub target_z: f32,
+
     /// "elbow_up" or "elbow_down"
     pub configuration: std::string::String,
 
@@ -44,11 +49,13 @@ impl rosidl_runtime_rs::Message for MoveArm_Goal {
       std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
         target_x: msg.target_x,
         target_y: msg.target_y,
+        target_z: msg.target_z,
         configuration: msg.configuration.as_str().into(),
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       target_x: msg.target_x,
       target_y: msg.target_y,
+      target_z: msg.target_z,
         configuration: msg.configuration.as_str().into(),
       })
     }
@@ -58,6 +65,7 @@ impl rosidl_runtime_rs::Message for MoveArm_Goal {
     Self {
       target_x: msg.target_x,
       target_y: msg.target_y,
+      target_z: msg.target_z,
       configuration: msg.configuration.to_string(),
     }
   }

@@ -10,6 +10,8 @@ module action_interfaces {
 
       float target_y;
 
+      float target_z;
+
       @verbatim (language="comment", text=
         "\"elbow_up\" or \"elbow_down\"")
       string configuration;

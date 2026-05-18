@@ -71,6 +71,15 @@ bool action_interfaces__action__move_arm__goal__convert_from_py(PyObject * _pyms
     ros_message->target_y = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // target_z
+    PyObject * field = PyObject_GetAttrString(_pymsg, "target_z");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->target_z = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // configuration
     PyObject * field = PyObject_GetAttrString(_pymsg, "configuration");
     if (!field) {
@@ -124,6 +133,17 @@ PyObject * action_interfaces__action__move_arm__goal__convert_to_py(void * raw_r
     field = PyFloat_FromDouble(ros_message->target_y);
     {
       int rc = PyObject_SetAttrString(_pymessage, "target_y", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // target_z
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->target_z);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "target_z", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
