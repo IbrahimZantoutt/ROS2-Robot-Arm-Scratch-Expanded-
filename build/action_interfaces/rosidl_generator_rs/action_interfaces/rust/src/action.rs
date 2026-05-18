@@ -16,22 +16,15 @@ pub struct MoveArm_Goal {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub shoulder_angle_goal: f32,
+    pub target_x: f32,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub elbow_angle_goal: f32,
+    pub target_y: f32,
 
-
-    // This member is not documented.
-    #[allow(missing_docs)]
-    pub wrist_angle_goal: f32,
-
-
-    // This member is not documented.
-    #[allow(missing_docs)]
-    pub spin_angle_goal: f32,
+    /// "elbow_up" or "elbow_down"
+    pub configuration: std::string::String,
 
 }
 
@@ -49,26 +42,23 @@ impl rosidl_runtime_rs::Message for MoveArm_Goal {
   fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
     match msg_cow {
       std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
-        shoulder_angle_goal: msg.shoulder_angle_goal,
-        elbow_angle_goal: msg.elbow_angle_goal,
-        wrist_angle_goal: msg.wrist_angle_goal,
-        spin_angle_goal: msg.spin_angle_goal,
+        target_x: msg.target_x,
+        target_y: msg.target_y,
+        configuration: msg.configuration.as_str().into(),
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
-      shoulder_angle_goal: msg.shoulder_angle_goal,
-      elbow_angle_goal: msg.elbow_angle_goal,
-      wrist_angle_goal: msg.wrist_angle_goal,
-      spin_angle_goal: msg.spin_angle_goal,
+      target_x: msg.target_x,
+      target_y: msg.target_y,
+        configuration: msg.configuration.as_str().into(),
       })
     }
   }
 
   fn from_rmw_message(msg: Self::RmwMsg) -> Self {
     Self {
-      shoulder_angle_goal: msg.shoulder_angle_goal,
-      elbow_angle_goal: msg.elbow_angle_goal,
-      wrist_angle_goal: msg.wrist_angle_goal,
-      spin_angle_goal: msg.spin_angle_goal,
+      target_x: msg.target_x,
+      target_y: msg.target_y,
+      configuration: msg.configuration.to_string(),
     }
   }
 }

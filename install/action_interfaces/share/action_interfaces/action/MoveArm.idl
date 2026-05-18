@@ -6,13 +6,13 @@
 module action_interfaces {
   module action {
     struct MoveArm_Goal {
-      float shoulder_angle_goal;
+      float target_x;
 
-      float elbow_angle_goal;
+      float target_y;
 
-      float wrist_angle_goal;
-
-      float spin_angle_goal;
+      @verbatim (language="comment", text=
+        "\"elbow_up\" or \"elbow_down\"")
+      string configuration;
     };
     struct MoveArm_Result {
       float shoulder_angle_rs;

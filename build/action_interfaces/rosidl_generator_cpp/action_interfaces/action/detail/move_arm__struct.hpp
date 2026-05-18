@@ -39,63 +39,52 @@ struct MoveArm_Goal_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->shoulder_angle_goal = 0.0f;
-      this->elbow_angle_goal = 0.0f;
-      this->wrist_angle_goal = 0.0f;
-      this->spin_angle_goal = 0.0f;
+      this->target_x = 0.0f;
+      this->target_y = 0.0f;
+      this->configuration = "";
     }
   }
 
   explicit MoveArm_Goal_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : configuration(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->shoulder_angle_goal = 0.0f;
-      this->elbow_angle_goal = 0.0f;
-      this->wrist_angle_goal = 0.0f;
-      this->spin_angle_goal = 0.0f;
+      this->target_x = 0.0f;
+      this->target_y = 0.0f;
+      this->configuration = "";
     }
   }
 
   // field types and members
-  using _shoulder_angle_goal_type =
+  using _target_x_type =
     float;
-  _shoulder_angle_goal_type shoulder_angle_goal;
-  using _elbow_angle_goal_type =
+  _target_x_type target_x;
+  using _target_y_type =
     float;
-  _elbow_angle_goal_type elbow_angle_goal;
-  using _wrist_angle_goal_type =
-    float;
-  _wrist_angle_goal_type wrist_angle_goal;
-  using _spin_angle_goal_type =
-    float;
-  _spin_angle_goal_type spin_angle_goal;
+  _target_y_type target_y;
+  using _configuration_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _configuration_type configuration;
 
   // setters for named parameter idiom
-  Type & set__shoulder_angle_goal(
+  Type & set__target_x(
     const float & _arg)
   {
-    this->shoulder_angle_goal = _arg;
+    this->target_x = _arg;
     return *this;
   }
-  Type & set__elbow_angle_goal(
+  Type & set__target_y(
     const float & _arg)
   {
-    this->elbow_angle_goal = _arg;
+    this->target_y = _arg;
     return *this;
   }
-  Type & set__wrist_angle_goal(
-    const float & _arg)
+  Type & set__configuration(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->wrist_angle_goal = _arg;
-    return *this;
-  }
-  Type & set__spin_angle_goal(
-    const float & _arg)
-  {
-    this->spin_angle_goal = _arg;
+    this->configuration = _arg;
     return *this;
   }
 
@@ -141,16 +130,13 @@ struct MoveArm_Goal_
   // comparison operators
   bool operator==(const MoveArm_Goal_ & other) const
   {
-    if (this->shoulder_angle_goal != other.shoulder_angle_goal) {
+    if (this->target_x != other.target_x) {
       return false;
     }
-    if (this->elbow_angle_goal != other.elbow_angle_goal) {
+    if (this->target_y != other.target_y) {
       return false;
     }
-    if (this->wrist_angle_goal != other.wrist_angle_goal) {
-      return false;
-    }
-    if (this->spin_angle_goal != other.spin_angle_goal) {
+    if (this->configuration != other.configuration) {
       return false;
     }
     return true;

@@ -32,14 +32,12 @@ cdr_serialize(
   const action_interfaces::action::MoveArm_Goal & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: shoulder_angle_goal
-  cdr << ros_message.shoulder_angle_goal;
-  // Member: elbow_angle_goal
-  cdr << ros_message.elbow_angle_goal;
-  // Member: wrist_angle_goal
-  cdr << ros_message.wrist_angle_goal;
-  // Member: spin_angle_goal
-  cdr << ros_message.spin_angle_goal;
+  // Member: target_x
+  cdr << ros_message.target_x;
+  // Member: target_y
+  cdr << ros_message.target_y;
+  // Member: configuration
+  cdr << ros_message.configuration;
   return true;
 }
 
@@ -49,17 +47,14 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   action_interfaces::action::MoveArm_Goal & ros_message)
 {
-  // Member: shoulder_angle_goal
-  cdr >> ros_message.shoulder_angle_goal;
+  // Member: target_x
+  cdr >> ros_message.target_x;
 
-  // Member: elbow_angle_goal
-  cdr >> ros_message.elbow_angle_goal;
+  // Member: target_y
+  cdr >> ros_message.target_y;
 
-  // Member: wrist_angle_goal
-  cdr >> ros_message.wrist_angle_goal;
-
-  // Member: spin_angle_goal
-  cdr >> ros_message.spin_angle_goal;
+  // Member: configuration
+  cdr >> ros_message.configuration;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -77,30 +72,22 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: shoulder_angle_goal
+  // Member: target_x
   {
-    size_t item_size = sizeof(ros_message.shoulder_angle_goal);
+    size_t item_size = sizeof(ros_message.target_x);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: elbow_angle_goal
+  // Member: target_y
   {
-    size_t item_size = sizeof(ros_message.elbow_angle_goal);
+    size_t item_size = sizeof(ros_message.target_y);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: wrist_angle_goal
-  {
-    size_t item_size = sizeof(ros_message.wrist_angle_goal);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: spin_angle_goal
-  {
-    size_t item_size = sizeof(ros_message.spin_angle_goal);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // Member: configuration
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.configuration.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -125,7 +112,7 @@ max_serialized_size_MoveArm_Goal(
   is_plain = true;
 
 
-  // Member: shoulder_angle_goal
+  // Member: target_x
   {
     size_t array_size = 1;
 
@@ -134,7 +121,7 @@ max_serialized_size_MoveArm_Goal(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: elbow_angle_goal
+  // Member: target_y
   {
     size_t array_size = 1;
 
@@ -143,22 +130,17 @@ max_serialized_size_MoveArm_Goal(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: wrist_angle_goal
+  // Member: configuration
   {
     size_t array_size = 1;
 
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: spin_angle_goal
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -169,7 +151,7 @@ max_serialized_size_MoveArm_Goal(
     using DataType = action_interfaces::action::MoveArm_Goal;
     is_plain =
       (
-      offsetof(DataType, spin_angle_goal) +
+      offsetof(DataType, configuration) +
       last_member_size
       ) == ret_val;
   }

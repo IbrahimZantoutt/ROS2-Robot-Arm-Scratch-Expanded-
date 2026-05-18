@@ -11,16 +11,23 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `configuration`
+#include "rosidl_runtime_c/string_functions.h"
+
 bool
 action_interfaces__action__MoveArm_Goal__init(action_interfaces__action__MoveArm_Goal * msg)
 {
   if (!msg) {
     return false;
   }
-  // shoulder_angle_goal
-  // elbow_angle_goal
-  // wrist_angle_goal
-  // spin_angle_goal
+  // target_x
+  // target_y
+  // configuration
+  if (!rosidl_runtime_c__String__init(&msg->configuration)) {
+    action_interfaces__action__MoveArm_Goal__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -30,10 +37,10 @@ action_interfaces__action__MoveArm_Goal__fini(action_interfaces__action__MoveArm
   if (!msg) {
     return;
   }
-  // shoulder_angle_goal
-  // elbow_angle_goal
-  // wrist_angle_goal
-  // spin_angle_goal
+  // target_x
+  // target_y
+  // configuration
+  rosidl_runtime_c__String__fini(&msg->configuration);
 }
 
 bool
@@ -42,20 +49,18 @@ action_interfaces__action__MoveArm_Goal__are_equal(const action_interfaces__acti
   if (!lhs || !rhs) {
     return false;
   }
-  // shoulder_angle_goal
-  if (lhs->shoulder_angle_goal != rhs->shoulder_angle_goal) {
+  // target_x
+  if (lhs->target_x != rhs->target_x) {
     return false;
   }
-  // elbow_angle_goal
-  if (lhs->elbow_angle_goal != rhs->elbow_angle_goal) {
+  // target_y
+  if (lhs->target_y != rhs->target_y) {
     return false;
   }
-  // wrist_angle_goal
-  if (lhs->wrist_angle_goal != rhs->wrist_angle_goal) {
-    return false;
-  }
-  // spin_angle_goal
-  if (lhs->spin_angle_goal != rhs->spin_angle_goal) {
+  // configuration
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->configuration), &(rhs->configuration)))
+  {
     return false;
   }
   return true;
@@ -69,14 +74,16 @@ action_interfaces__action__MoveArm_Goal__copy(
   if (!input || !output) {
     return false;
   }
-  // shoulder_angle_goal
-  output->shoulder_angle_goal = input->shoulder_angle_goal;
-  // elbow_angle_goal
-  output->elbow_angle_goal = input->elbow_angle_goal;
-  // wrist_angle_goal
-  output->wrist_angle_goal = input->wrist_angle_goal;
-  // spin_angle_goal
-  output->spin_angle_goal = input->spin_angle_goal;
+  // target_x
+  output->target_x = input->target_x;
+  // target_y
+  output->target_y = input->target_y;
+  // configuration
+  if (!rosidl_runtime_c__String__copy(
+      &(input->configuration), &(output->configuration)))
+  {
+    return false;
+  }
   return true;
 }
 

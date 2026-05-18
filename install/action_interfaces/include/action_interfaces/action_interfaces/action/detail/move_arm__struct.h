@@ -17,13 +17,17 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'configuration'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in action/MoveArm in the package action_interfaces.
 typedef struct action_interfaces__action__MoveArm_Goal
 {
-  float shoulder_angle_goal;
-  float elbow_angle_goal;
-  float wrist_angle_goal;
-  float spin_angle_goal;
+  float target_x;
+  float target_y;
+  /// "elbow_up" or "elbow_down"
+  rosidl_runtime_c__String configuration;
 } action_interfaces__action__MoveArm_Goal;
 
 // Struct for a sequence of action_interfaces__action__MoveArm_Goal.

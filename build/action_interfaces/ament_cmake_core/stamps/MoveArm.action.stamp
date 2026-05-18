@@ -1,9 +1,8 @@
 
 
-float32 shoulder_angle_goal
-float32 elbow_angle_goal
-float32 wrist_angle_goal
-float32 spin_angle_goal
+float32 target_x
+float32 target_y
+string configuration  # "elbow_up" or "elbow_down"
 
 ---
 

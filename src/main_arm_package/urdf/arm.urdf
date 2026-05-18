@@ -32,7 +32,7 @@
         <child link="spin_link"/>
         <origin xyz="0 0 0.06" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+        <limit lower="-3.14159" upper="3.14159" effort="10" velocity="1"/>
     </joint>
 
     <link name="spin_arm">

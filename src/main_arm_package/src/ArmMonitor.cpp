@@ -8,9 +8,9 @@ class ArmMonitor: public rclcpp::Node{
             RCLCPP_INFO(this->get_logger(), "ArmMonitor node has been started.");
             arm_state_subscription_ = this->create_subscription<action_interfaces::msg::ArmState>("arm_state", 10, std::bind(&ArmMonitor::handleArmState, this, std::placeholders::_1));
             this->declare_parameter("shoulder_threshold", std::vector<double>{-90.0, 90.0});
-            this->declare_parameter("elbow_threshold", std::vector<double>{0.0, 135.0});
+            this->declare_parameter("elbow_threshold", std::vector<double>{-135.0, 135.0});
             this->declare_parameter("wrist_threshold", std::vector<double>{-90.0, 90.0});
-            this->declare_parameter("spin_threshold", std::vector<double>{0.0, 360.0});
+            this->declare_parameter("spin_threshold", std::vector<double>{-180.0, 180.0});
 
             arm_check_server = this->create_service<action_interfaces::srv::CheckLimits>(
                 "check_limits",

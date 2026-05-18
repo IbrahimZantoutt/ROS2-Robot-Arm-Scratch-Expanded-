@@ -21,15 +21,15 @@ namespace action
 namespace builder
 {
 
-class Init_MoveArm_Goal_spin_angle_goal
+class Init_MoveArm_Goal_configuration
 {
 public:
-  explicit Init_MoveArm_Goal_spin_angle_goal(::action_interfaces::action::MoveArm_Goal & msg)
+  explicit Init_MoveArm_Goal_configuration(::action_interfaces::action::MoveArm_Goal & msg)
   : msg_(msg)
   {}
-  ::action_interfaces::action::MoveArm_Goal spin_angle_goal(::action_interfaces::action::MoveArm_Goal::_spin_angle_goal_type arg)
+  ::action_interfaces::action::MoveArm_Goal configuration(::action_interfaces::action::MoveArm_Goal::_configuration_type arg)
   {
-    msg_.spin_angle_goal = std::move(arg);
+    msg_.configuration = std::move(arg);
     return std::move(msg_);
   }
 
@@ -37,48 +37,32 @@ private:
   ::action_interfaces::action::MoveArm_Goal msg_;
 };
 
-class Init_MoveArm_Goal_wrist_angle_goal
+class Init_MoveArm_Goal_target_y
 {
 public:
-  explicit Init_MoveArm_Goal_wrist_angle_goal(::action_interfaces::action::MoveArm_Goal & msg)
+  explicit Init_MoveArm_Goal_target_y(::action_interfaces::action::MoveArm_Goal & msg)
   : msg_(msg)
   {}
-  Init_MoveArm_Goal_spin_angle_goal wrist_angle_goal(::action_interfaces::action::MoveArm_Goal::_wrist_angle_goal_type arg)
+  Init_MoveArm_Goal_configuration target_y(::action_interfaces::action::MoveArm_Goal::_target_y_type arg)
   {
-    msg_.wrist_angle_goal = std::move(arg);
-    return Init_MoveArm_Goal_spin_angle_goal(msg_);
+    msg_.target_y = std::move(arg);
+    return Init_MoveArm_Goal_configuration(msg_);
   }
 
 private:
   ::action_interfaces::action::MoveArm_Goal msg_;
 };
 
-class Init_MoveArm_Goal_elbow_angle_goal
+class Init_MoveArm_Goal_target_x
 {
 public:
-  explicit Init_MoveArm_Goal_elbow_angle_goal(::action_interfaces::action::MoveArm_Goal & msg)
-  : msg_(msg)
-  {}
-  Init_MoveArm_Goal_wrist_angle_goal elbow_angle_goal(::action_interfaces::action::MoveArm_Goal::_elbow_angle_goal_type arg)
-  {
-    msg_.elbow_angle_goal = std::move(arg);
-    return Init_MoveArm_Goal_wrist_angle_goal(msg_);
-  }
-
-private:
-  ::action_interfaces::action::MoveArm_Goal msg_;
-};
-
-class Init_MoveArm_Goal_shoulder_angle_goal
-{
-public:
-  Init_MoveArm_Goal_shoulder_angle_goal()
+  Init_MoveArm_Goal_target_x()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MoveArm_Goal_elbow_angle_goal shoulder_angle_goal(::action_interfaces::action::MoveArm_Goal::_shoulder_angle_goal_type arg)
+  Init_MoveArm_Goal_target_y target_x(::action_interfaces::action::MoveArm_Goal::_target_x_type arg)
   {
-    msg_.shoulder_angle_goal = std::move(arg);
-    return Init_MoveArm_Goal_elbow_angle_goal(msg_);
+    msg_.target_x = std::move(arg);
+    return Init_MoveArm_Goal_target_y(msg_);
   }
 
 private:
@@ -96,7 +80,7 @@ template<>
 inline
 auto build<::action_interfaces::action::MoveArm_Goal>()
 {
-  return action_interfaces::action::builder::Init_MoveArm_Goal_shoulder_angle_goal();
+  return action_interfaces::action::builder::Init_MoveArm_Goal_target_x();
 }
 
 }  // namespace action_interfaces

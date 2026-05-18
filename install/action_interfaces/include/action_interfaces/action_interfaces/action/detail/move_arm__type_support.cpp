@@ -37,16 +37,16 @@ void MoveArm_Goal_fini_function(void * message_memory)
   typed_message->~MoveArm_Goal();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Goal_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Goal_message_member_array[3] = {
   {
-    "shoulder_angle_goal",  // name
+    "target_x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(action_interfaces::action::MoveArm_Goal, shoulder_angle_goal),  // bytes offset in struct
+    offsetof(action_interfaces::action::MoveArm_Goal, target_x),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -56,14 +56,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Goal_
     nullptr  // resize(index) function pointer
   },
   {
-    "elbow_angle_goal",  // name
+    "target_y",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(action_interfaces::action::MoveArm_Goal, elbow_angle_goal),  // bytes offset in struct
+    offsetof(action_interfaces::action::MoveArm_Goal, target_y),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -73,31 +73,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Goal_
     nullptr  // resize(index) function pointer
   },
   {
-    "wrist_angle_goal",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    "configuration",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(action_interfaces::action::MoveArm_Goal, wrist_angle_goal),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "spin_angle_goal",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(action_interfaces::action::MoveArm_Goal, spin_angle_goal),  // bytes offset in struct
+    offsetof(action_interfaces::action::MoveArm_Goal, configuration),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -111,7 +94,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveArm_Goal_
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers MoveArm_Goal_message_members = {
   "action_interfaces::action",  // message namespace
   "MoveArm_Goal",  // message name
-  4,  // number of fields
+  3,  // number of fields
   sizeof(action_interfaces::action::MoveArm_Goal),
   MoveArm_Goal_message_member_array,  // message members
   MoveArm_Goal_init_function,  // function to initialize message memory (memory has to be allocated)

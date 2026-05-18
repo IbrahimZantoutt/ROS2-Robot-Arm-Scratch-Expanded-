@@ -34,6 +34,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // configuration
+#include "rosidl_runtime_c/string_functions.h"  // configuration
 
 // forward declare type support functions
 
@@ -49,24 +51,28 @@ static bool _MoveArm_Goal__cdr_serialize(
     return false;
   }
   const _MoveArm_Goal__ros_msg_type * ros_message = static_cast<const _MoveArm_Goal__ros_msg_type *>(untyped_ros_message);
-  // Field name: shoulder_angle_goal
+  // Field name: target_x
   {
-    cdr << ros_message->shoulder_angle_goal;
+    cdr << ros_message->target_x;
   }
 
-  // Field name: elbow_angle_goal
+  // Field name: target_y
   {
-    cdr << ros_message->elbow_angle_goal;
+    cdr << ros_message->target_y;
   }
 
-  // Field name: wrist_angle_goal
+  // Field name: configuration
   {
-    cdr << ros_message->wrist_angle_goal;
-  }
-
-  // Field name: spin_angle_goal
-  {
-    cdr << ros_message->spin_angle_goal;
+    const rosidl_runtime_c__String * str = &ros_message->configuration;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   return true;
@@ -81,24 +87,30 @@ static bool _MoveArm_Goal__cdr_deserialize(
     return false;
   }
   _MoveArm_Goal__ros_msg_type * ros_message = static_cast<_MoveArm_Goal__ros_msg_type *>(untyped_ros_message);
-  // Field name: shoulder_angle_goal
+  // Field name: target_x
   {
-    cdr >> ros_message->shoulder_angle_goal;
+    cdr >> ros_message->target_x;
   }
 
-  // Field name: elbow_angle_goal
+  // Field name: target_y
   {
-    cdr >> ros_message->elbow_angle_goal;
+    cdr >> ros_message->target_y;
   }
 
-  // Field name: wrist_angle_goal
+  // Field name: configuration
   {
-    cdr >> ros_message->wrist_angle_goal;
-  }
-
-  // Field name: spin_angle_goal
-  {
-    cdr >> ros_message->spin_angle_goal;
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->configuration.data) {
+      rosidl_runtime_c__String__init(&ros_message->configuration);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->configuration,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'configuration'\n");
+      return false;
+    }
   }
 
   return true;
@@ -118,30 +130,22 @@ size_t get_serialized_size_action_interfaces__action__MoveArm_Goal(
   (void)padding;
   (void)wchar_size;
 
-  // field.name shoulder_angle_goal
+  // field.name target_x
   {
-    size_t item_size = sizeof(ros_message->shoulder_angle_goal);
+    size_t item_size = sizeof(ros_message->target_x);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name elbow_angle_goal
+  // field.name target_y
   {
-    size_t item_size = sizeof(ros_message->elbow_angle_goal);
+    size_t item_size = sizeof(ros_message->target_y);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name wrist_angle_goal
-  {
-    size_t item_size = sizeof(ros_message->wrist_angle_goal);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name spin_angle_goal
-  {
-    size_t item_size = sizeof(ros_message->spin_angle_goal);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // field.name configuration
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->configuration.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -171,7 +175,7 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Goal(
   full_bounded = true;
   is_plain = true;
 
-  // member: shoulder_angle_goal
+  // member: target_x
   {
     size_t array_size = 1;
 
@@ -179,7 +183,7 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Goal(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: elbow_angle_goal
+  // member: target_y
   {
     size_t array_size = 1;
 
@@ -187,21 +191,17 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Goal(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: wrist_angle_goal
+  // member: configuration
   {
     size_t array_size = 1;
 
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: spin_angle_goal
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -212,7 +212,7 @@ size_t max_serialized_size_action_interfaces__action__MoveArm_Goal(
     using DataType = action_interfaces__action__MoveArm_Goal;
     is_plain =
       (
-      offsetof(DataType, spin_angle_goal) +
+      offsetof(DataType, configuration) +
       last_member_size
       ) == ret_val;
   }

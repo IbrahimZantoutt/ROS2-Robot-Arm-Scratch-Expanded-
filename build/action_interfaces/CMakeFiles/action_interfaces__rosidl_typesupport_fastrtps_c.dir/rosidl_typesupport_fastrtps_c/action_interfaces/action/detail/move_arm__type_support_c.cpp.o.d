@@ -184,11 +184,13 @@ CMakeFiles/action_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppo
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/malloc.h \
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/action/detail/move_arm__struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/action/detail/move_arm__functions.h \
  /usr/include/c++/11/stdlib.h \
  /home/ibrahim/RobotArmExpanded/build/action_interfaces/rosidl_generator_c/action_interfaces/msg/rosidl_generator_c__visibility_control.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
  /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__functions.h \
  /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__functions.h \

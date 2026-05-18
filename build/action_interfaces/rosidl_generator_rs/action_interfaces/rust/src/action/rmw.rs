@@ -30,22 +30,15 @@ pub struct MoveArm_Goal {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub shoulder_angle_goal: f32,
+    pub target_x: f32,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub elbow_angle_goal: f32,
+    pub target_y: f32,
 
-
-    // This member is not documented.
-    #[allow(missing_docs)]
-    pub wrist_angle_goal: f32,
-
-
-    // This member is not documented.
-    #[allow(missing_docs)]
-    pub spin_angle_goal: f32,
+    /// "elbow_up" or "elbow_down"
+    pub configuration: rosidl_runtime_rs::String,
 
 }
 

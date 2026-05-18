@@ -25,31 +25,24 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: shoulder_angle_goal
+  // member: target_x
   {
-    out << "shoulder_angle_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.shoulder_angle_goal, out);
+    out << "target_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.target_x, out);
     out << ", ";
   }
 
-  // member: elbow_angle_goal
+  // member: target_y
   {
-    out << "elbow_angle_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.elbow_angle_goal, out);
+    out << "target_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.target_y, out);
     out << ", ";
   }
 
-  // member: wrist_angle_goal
+  // member: configuration
   {
-    out << "wrist_angle_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.wrist_angle_goal, out);
-    out << ", ";
-  }
-
-  // member: spin_angle_goal
-  {
-    out << "spin_angle_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.spin_angle_goal, out);
+    out << "configuration: ";
+    rosidl_generator_traits::value_to_yaml(msg.configuration, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -58,43 +51,33 @@ inline void to_block_style_yaml(
   const MoveArm_Goal & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: shoulder_angle_goal
+  // member: target_x
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "shoulder_angle_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.shoulder_angle_goal, out);
+    out << "target_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.target_x, out);
     out << "\n";
   }
 
-  // member: elbow_angle_goal
+  // member: target_y
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "elbow_angle_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.elbow_angle_goal, out);
+    out << "target_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.target_y, out);
     out << "\n";
   }
 
-  // member: wrist_angle_goal
+  // member: configuration
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "wrist_angle_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.wrist_angle_goal, out);
-    out << "\n";
-  }
-
-  // member: spin_angle_goal
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "spin_angle_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.spin_angle_goal, out);
+    out << "configuration: ";
+    rosidl_generator_traits::value_to_yaml(msg.configuration, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -145,11 +128,11 @@ inline const char * name<action_interfaces::action::MoveArm_Goal>()
 
 template<>
 struct has_fixed_size<action_interfaces::action::MoveArm_Goal>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<action_interfaces::action::MoveArm_Goal>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<action_interfaces::action::MoveArm_Goal>
