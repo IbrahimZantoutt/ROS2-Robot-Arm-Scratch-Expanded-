@@ -20,6 +20,7 @@ add_executable(ArmController src/ArmController.cpp)
 add_executable(ArmMonitor src/ArmMonitor.cpp)
 add_executable(ArmMover src/ArmMover.cpp)
 add_executable(ArmClient src/ArmClient.cpp)
+add_executable(TaskPlanner src/TaskPlanner.cpp)
 target_include_directories(ArmController PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
@@ -29,12 +30,14 @@ ament_target_dependencies(ArmController rclcpp action_interfaces sensor_msgs)
 ament_target_dependencies(ArmMonitor rclcpp action_interfaces)
 ament_target_dependencies(ArmMover rclcpp rclcpp_action action_interfaces)
 ament_target_dependencies(ArmClient rclcpp rclcpp_action action_interfaces)
+ament_target_dependencies(TaskPlanner rclcpp rclcpp_action action_interfaces)
 
-install(TARGETS 
+install(TARGETS
 ArmController
 ArmMonitor
 ArmMover
 ArmClient
+TaskPlanner
   DESTINATION lib/${PROJECT_NAME})
 
 #launch files

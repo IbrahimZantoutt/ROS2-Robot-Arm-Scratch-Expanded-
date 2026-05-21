@@ -67,6 +67,7 @@ all: CMakeFiles/ArmController.dir/all
 all: CMakeFiles/ArmMonitor.dir/all
 all: CMakeFiles/ArmMover.dir/all
 all: CMakeFiles/ArmClient.dir/all
+all: CMakeFiles/TaskPlanner.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -80,6 +81,7 @@ clean: CMakeFiles/ArmController.dir/clean
 clean: CMakeFiles/ArmMonitor.dir/clean
 clean: CMakeFiles/ArmMover.dir/clean
 clean: CMakeFiles/ArmClient.dir/clean
+clean: CMakeFiles/TaskPlanner.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -237,6 +239,32 @@ ArmClient: CMakeFiles/ArmClient.dir/rule
 CMakeFiles/ArmClient.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmClient.dir/build.make CMakeFiles/ArmClient.dir/clean
 .PHONY : CMakeFiles/ArmClient.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TaskPlanner.dir
+
+# All Build rule for target.
+CMakeFiles/TaskPlanner.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TaskPlanner.dir/build.make CMakeFiles/TaskPlanner.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TaskPlanner.dir/build.make CMakeFiles/TaskPlanner.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles --progress-num=9,10 "Built target TaskPlanner"
+.PHONY : CMakeFiles/TaskPlanner.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TaskPlanner.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TaskPlanner.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles 0
+.PHONY : CMakeFiles/TaskPlanner.dir/rule
+
+# Convenience name for target.
+TaskPlanner: CMakeFiles/TaskPlanner.dir/rule
+.PHONY : TaskPlanner
+
+# clean rule for target.
+CMakeFiles/TaskPlanner.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TaskPlanner.dir/build.make CMakeFiles/TaskPlanner.dir/clean
+.PHONY : CMakeFiles/TaskPlanner.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

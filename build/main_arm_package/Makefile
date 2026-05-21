@@ -249,6 +249,19 @@ ArmClient/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmClient.dir/build.make CMakeFiles/ArmClient.dir/build
 .PHONY : ArmClient/fast
 
+#=============================================================================
+# Target rules for targets named TaskPlanner
+
+# Build rule for target.
+TaskPlanner: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TaskPlanner
+.PHONY : TaskPlanner
+
+# fast build rule for target.
+TaskPlanner/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TaskPlanner.dir/build.make CMakeFiles/TaskPlanner.dir/build
+.PHONY : TaskPlanner/fast
+
 src/ArmClient.o: src/ArmClient.cpp.o
 .PHONY : src/ArmClient.o
 
@@ -345,6 +358,30 @@ src/ArmMover.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArmMover.dir/build.make CMakeFiles/ArmMover.dir/src/ArmMover.cpp.s
 .PHONY : src/ArmMover.cpp.s
 
+src/TaskPlanner.o: src/TaskPlanner.cpp.o
+.PHONY : src/TaskPlanner.o
+
+# target to build an object file
+src/TaskPlanner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TaskPlanner.dir/build.make CMakeFiles/TaskPlanner.dir/src/TaskPlanner.cpp.o
+.PHONY : src/TaskPlanner.cpp.o
+
+src/TaskPlanner.i: src/TaskPlanner.cpp.i
+.PHONY : src/TaskPlanner.i
+
+# target to preprocess a source file
+src/TaskPlanner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TaskPlanner.dir/build.make CMakeFiles/TaskPlanner.dir/src/TaskPlanner.cpp.i
+.PHONY : src/TaskPlanner.cpp.i
+
+src/TaskPlanner.s: src/TaskPlanner.cpp.s
+.PHONY : src/TaskPlanner.s
+
+# target to generate assembly for a file
+src/TaskPlanner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TaskPlanner.dir/build.make CMakeFiles/TaskPlanner.dir/src/TaskPlanner.cpp.s
+.PHONY : src/TaskPlanner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -364,6 +401,7 @@ help:
 	@echo "... ArmController"
 	@echo "... ArmMonitor"
 	@echo "... ArmMover"
+	@echo "... TaskPlanner"
 	@echo "... src/ArmClient.o"
 	@echo "... src/ArmClient.i"
 	@echo "... src/ArmClient.s"
@@ -376,6 +414,9 @@ help:
 	@echo "... src/ArmMover.o"
 	@echo "... src/ArmMover.i"
 	@echo "... src/ArmMover.s"
+	@echo "... src/TaskPlanner.o"
+	@echo "... src/TaskPlanner.i"
+	@echo "... src/TaskPlanner.s"
 .PHONY : help
 
 

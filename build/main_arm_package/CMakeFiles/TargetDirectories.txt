@@ -4,6 +4,7 @@
 /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/ArmMonitor.dir
 /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/ArmMover.dir
 /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/ArmClient.dir
+/home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/TaskPlanner.dir
 /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/test.dir
 /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/edit_cache.dir
 /home/ibrahim/RobotArmExpanded/build/main_arm_package/CMakeFiles/rebuild_cache.dir

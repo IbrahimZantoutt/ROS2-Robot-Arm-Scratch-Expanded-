@@ -2,6 +2,7 @@
 /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmMonitor
 /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmMover
 /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmClient
+/home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/TaskPlanner
 /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch/display.launch.py
 /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch/launch.py
 /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/urdf/arm.urdf

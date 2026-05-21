@@ -1,0 +1,607 @@
+[0.000000] (-) TimerEvent: {}
+[0.001285] (action_interfaces) JobQueued: {'identifier': 'action_interfaces', 'dependencies': OrderedDict()}
+[0.001370] (main_arm_package) JobQueued: {'identifier': 'main_arm_package', 'dependencies': OrderedDict([('action_interfaces', '/home/ibrahim/RobotArmExpanded/install/action_interfaces')])}
+[0.001674] (action_interfaces) JobStarted: {'identifier': 'action_interfaces'}
+[0.039474] (action_interfaces) JobProgress: {'identifier': 'action_interfaces', 'progress': 'cmake'}
+[0.044335] (action_interfaces) JobProgress: {'identifier': 'action_interfaces', 'progress': 'build'}
+[0.045539] (action_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ibrahim/RobotArmExpanded/build/action_interfaces', '--', '-j16', '-l16'], 'cwd': '/home/ibrahim/RobotArmExpanded/build/action_interfaces', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ibrahim'), ('GIT_ASKPASS', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ibrahim'), ('TERM_PROGRAM_VERSION', '1.120.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-fcdd9fcc-7812-433d-97ab-39e2b12999f5.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install:/home/ibrahim/RobotArm/install:/home/ibrahim/TF2Sample/install:/home/ibrahim/RobotNav/install:/home/ibrahim/RobotMonitor/install:/home/ibrahim/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ibrahim'), ('NAME', 'Ibrahim-laptop'), ('WSL_INTEROP', '/run/WSL/417_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('CLAUDE_CODE_SSE_PORT', '22874'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ibrahim/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ibrahim/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PostgreSQL/18/bin:/mnt/c/Users/zanto/.local/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/zanto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/zanto/AppData/Local/Programs/Ollama:/mnt/c/Users/zanto/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin:/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e1e634bbdf68d93f.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ibrahim/.vscode-server/data/User/workspaceStorage/e80122f58dd8365232b0ea725993d05e/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fffe7d841c.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ibrahim/RobotArmExpanded/build/action_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArm/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotNav/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/ros2_ws/install/action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.099600] (-) TimerEvent: {}
+[0.200366] (-) TimerEvent: {}
+[0.301317] (-) TimerEvent: {}
+[0.401915] (-) TimerEvent: {}
+[0.407389] (action_interfaces) StdoutLine: {'line': b'[  1%] Built target action_interfaces__rs\n'}
+[0.412925] (action_interfaces) StdoutLine: {'line': b'[  3%] Built target action_interfaces__cpp\n'}
+[0.433294] (action_interfaces) StdoutLine: {'line': b'[ 14%] Built target action_interfaces__rosidl_generator_c\n'}
+[0.469410] (action_interfaces) StdoutLine: {'line': b'[ 14%] Built target ament_cmake_python_copy_action_interfaces\n'}
+[0.502303] (-) TimerEvent: {}
+[0.523248] (action_interfaces) StdoutLine: {'line': b'[ 35%] Built target action_interfaces__rosidl_typesupport_cpp\n'}
+[0.523578] (action_interfaces) StdoutLine: {'line': b'[ 35%] Built target action_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.524049] (action_interfaces) StdoutLine: {'line': b'[ 46%] Built target action_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.528148] (action_interfaces) StdoutLine: {'line': b'[ 68%] Built target action_interfaces__rosidl_typesupport_c\n'}
+[0.528523] (action_interfaces) StdoutLine: {'line': b'[ 68%] Built target action_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.529053] (action_interfaces) StdoutLine: {'line': b'[ 79%] Built target action_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.574255] (action_interfaces) StdoutLine: {'line': b'[ 79%] Built target action_interfaces\n'}
+[0.602593] (-) TimerEvent: {}
+[0.623898] (action_interfaces) StdoutLine: {'line': b'[ 81%] Built target action_interfaces__py\n'}
+[0.679947] (action_interfaces) StdoutLine: {'line': b'[ 90%] Built target action_interfaces__rosidl_generator_py\n'}
+[0.702846] (-) TimerEvent: {}
+[0.740373] (action_interfaces) StdoutLine: {'line': b'[ 93%] Built target action_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.742994] (action_interfaces) StdoutLine: {'line': b'[ 98%] Built target action_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.743396] (action_interfaces) StdoutLine: {'line': b'[100%] Built target action_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.803093] (-) TimerEvent: {}
+[0.903778] (-) TimerEvent: {}
+[0.952041] (action_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.953292] (action_interfaces) StdoutLine: {'line': b'writing action_interfaces.egg-info/PKG-INFO\n'}
+[0.954371] (action_interfaces) StdoutLine: {'line': b'writing dependency_links to action_interfaces.egg-info/dependency_links.txt\n'}
+[0.955114] (action_interfaces) StdoutLine: {'line': b'writing top-level names to action_interfaces.egg-info/top_level.txt\n'}
+[0.960248] (action_interfaces) StdoutLine: {'line': b"reading manifest file 'action_interfaces.egg-info/SOURCES.txt'\n"}
+[0.961859] (action_interfaces) StdoutLine: {'line': b"writing manifest file 'action_interfaces.egg-info/SOURCES.txt'\n"}
+[1.003955] (-) TimerEvent: {}
+[1.016358] (action_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_action_interfaces_egg\n'}
+[1.053827] (action_interfaces) CommandEnded: {'returncode': 0}
+[1.065544] (action_interfaces) JobProgress: {'identifier': 'action_interfaces', 'progress': 'install'}
+[1.091826] (action_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ibrahim/RobotArmExpanded/build/action_interfaces'], 'cwd': '/home/ibrahim/RobotArmExpanded/build/action_interfaces', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ibrahim'), ('GIT_ASKPASS', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ibrahim'), ('TERM_PROGRAM_VERSION', '1.120.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-fcdd9fcc-7812-433d-97ab-39e2b12999f5.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install:/home/ibrahim/RobotArm/install:/home/ibrahim/TF2Sample/install:/home/ibrahim/RobotNav/install:/home/ibrahim/RobotMonitor/install:/home/ibrahim/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ibrahim'), ('NAME', 'Ibrahim-laptop'), ('WSL_INTEROP', '/run/WSL/417_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('CLAUDE_CODE_SSE_PORT', '22874'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ibrahim/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ibrahim/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PostgreSQL/18/bin:/mnt/c/Users/zanto/.local/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/zanto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/zanto/AppData/Local/Programs/Ollama:/mnt/c/Users/zanto/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin:/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e1e634bbdf68d93f.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ibrahim/.vscode-server/data/User/workspaceStorage/e80122f58dd8365232b0ea725993d05e/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fffe7d841c.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ibrahim/RobotArmExpanded/build/action_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArm/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotNav/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/ros2_ws/install/action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[1.104175] (-) TimerEvent: {}
+[1.119233] (action_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.120078] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/ament_index/resource_index/rosidl_interfaces/action_interfaces\n'}
+[1.120344] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces\n'}
+[1.120711] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv\n'}
+[1.120968] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail\n'}
+[1.121469] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__type_support.h\n'}
+[1.121588] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__functions.c\n'}
+[1.121895] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__struct.h\n'}
+[1.123130] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__functions.h\n'}
+[1.123434] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/check_limits.h\n'}
+[1.123786] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg\n'}
+[1.123979] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/grip_command.h\n'}
+[1.124256] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.124525] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/arm_command.h\n'}
+[1.125087] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail\n'}
+[1.125466] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__functions.c\n'}
+[1.125859] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__type_support.h\n'}
+[1.126213] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__struct.h\n'}
+[1.126777] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__functions.c\n'}
+[1.126954] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__functions.h\n'}
+[1.127135] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__struct.h\n'}
+[1.127657] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__struct.h\n'}
+[1.127897] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__functions.h\n'}
+[1.128093] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__functions.h\n'}
+[1.128302] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__type_support.h\n'}
+[1.128453] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__functions.c\n'}
+[1.128688] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__type_support.h\n'}
+[1.128784] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/arm_state.h\n'}
+[1.128847] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action\n'}
+[1.128903] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail\n'}
+[1.128966] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__functions.c\n'}
+[1.129034] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__functions.h\n'}
+[1.129089] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__type_support.h\n'}
+[1.129141] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__struct.h\n'}
+[1.129191] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/move_arm.h\n'}
+[1.129377] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/environment/library_path.sh\n'}
+[1.129910] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/environment/library_path.dsv\n'}
+[1.130057] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_generator_c.so\n'}
+[1.131125] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces\n'}
+[1.131322] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv\n'}
+[1.131411] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail\n'}
+[1.131484] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__rosidl_typesupport_fastrtps_c.h\n'}
+[1.131559] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg\n'}
+[1.131634] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.132546] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail\n'}
+[1.132880] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__rosidl_typesupport_fastrtps_c.h\n'}
+[1.133614] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__rosidl_typesupport_fastrtps_c.h\n'}
+[1.133732] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.134115] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action\n'}
+[1.134283] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail\n'}
+[1.134567] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__rosidl_typesupport_fastrtps_c.h\n'}
+[1.135371] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[1.135939] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces\n'}
+[1.136101] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv\n'}
+[1.136545] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail\n'}
+[1.136799] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__type_support.c\n'}
+[1.136929] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__rosidl_typesupport_introspection_c.h\n'}
+[1.137058] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg\n'}
+[1.137170] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail\n'}
+[1.137257] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__rosidl_typesupport_introspection_c.h\n'}
+[1.137781] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__type_support.c\n'}
+[1.137926] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_c.h\n'}
+[1.138024] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__type_support.c\n'}
+[1.138269] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__type_support.c\n'}
+[1.138617] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__rosidl_typesupport_introspection_c.h\n'}
+[1.138783] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.138897] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action\n'}
+[1.138985] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail\n'}
+[1.139081] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__type_support.c\n'}
+[1.139184] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__rosidl_typesupport_introspection_c.h\n'}
+[1.141066] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[1.143612] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_c.so\n'}
+[1.144005] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces\n'}
+[1.144351] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv\n'}
+[1.144611] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail\n'}
+[1.144948] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__type_support.hpp\n'}
+[1.145291] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__struct.hpp\n'}
+[1.145663] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__traits.hpp\n'}
+[1.145949] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__builder.hpp\n'}
+[1.146241] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/check_limits.hpp\n'}
+[1.146734] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg\n'}
+[1.146993] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/arm_command.hpp\n'}
+[1.147428] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/grip_command.hpp\n'}
+[1.147890] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/arm_state.hpp\n'}
+[1.148212] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail\n'}
+[1.148547] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__struct.hpp\n'}
+[1.148811] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__type_support.hpp\n'}
+[1.149174] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__struct.hpp\n'}
+[1.149495] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__type_support.hpp\n'}
+[1.149766] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__traits.hpp\n'}
+[1.150102] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__builder.hpp\n'}
+[1.150502] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__builder.hpp\n'}
+[1.150780] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__type_support.hpp\n'}
+[1.150971] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__builder.hpp\n'}
+[1.151103] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__traits.hpp\n'}
+[1.151333] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__struct.hpp\n'}
+[1.151493] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__traits.hpp\n'}
+[1.151649] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.151843] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action\n'}
+[1.151990] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail\n'}
+[1.152086] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__type_support.hpp\n'}
+[1.152181] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__struct.hpp\n'}
+[1.152317] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__traits.hpp\n'}
+[1.152405] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__builder.hpp\n'}
+[1.152587] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/move_arm.hpp\n'}
+[1.152838] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces\n'}
+[1.153029] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv\n'}
+[1.153477] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail\n'}
+[1.153679] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/dds_fastrtps\n'}
+[1.154061] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.154546] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg\n'}
+[1.154870] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.155157] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail\n'}
+[1.155497] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.155839] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.155933] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/dds_fastrtps\n'}
+[1.156057] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.156177] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action\n'}
+[1.156430] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail\n'}
+[1.156587] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.156655] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/dds_fastrtps\n'}
+[1.156764] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.156933] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces\n'}
+[1.157055] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv\n'}
+[1.157149] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail\n'}
+[1.157262] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.157490] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/srv/detail/check_limits__type_support.cpp\n'}
+[1.157705] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg\n'}
+[1.157939] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail\n'}
+[1.158069] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.158257] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__type_support.cpp\n'}
+[1.158377] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.158663] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.158920] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/grip_command__type_support.cpp\n'}
+[1.159022] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/msg/detail/arm_command__type_support.cpp\n'}
+[1.159120] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action\n'}
+[1.159378] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail\n'}
+[1.159511] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.159849] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/include/action_interfaces/action_interfaces/action/detail/move_arm__type_support.cpp\n'}
+[1.159949] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[1.160600] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_typesupport_cpp.so\n'}
+[1.160721] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/environment/pythonpath.sh\n'}
+[1.161025] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/environment/pythonpath.dsv\n'}
+[1.161331] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces-0.0.0-py3.10.egg-info\n'}
+[1.161762] (action_interfaces) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[1.161974] (action_interfaces) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[1.162276] (action_interfaces) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[1.163057] (action_interfaces) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[1.163733] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces\n'}
+[1.164269] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.164538] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[1.164872] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.165070] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/srv\n'}
+[1.165563] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/srv/_check_limits.py\n'}
+[1.165741] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/srv/__init__.py\n'}
+[1.166023] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/srv/_check_limits_s.c\n'}
+[1.166154] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/_action_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.166275] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/libaction_interfaces__rosidl_generator_py.so\n'}
+[1.166533] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg\n'}
+[1.167031] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg/_arm_state_s.c\n'}
+[1.167171] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg/_grip_command.py\n'}
+[1.167337] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg/_arm_state.py\n'}
+[1.167438] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg/_grip_command_s.c\n'}
+[1.167521] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg/_arm_command_s.c\n'}
+[1.167599] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg/__init__.py\n'}
+[1.167674] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg/_arm_command.py\n'}
+[1.167752] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.168065] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action\n'}
+[1.168331] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action/_move_arm.py\n'}
+[1.168629] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action/_move_arm_s.c\n'}
+[1.168771] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action/__init__.py\n'}
+[1.168943] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/__init__.py\n'}
+[1.169091] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.204326] (-) TimerEvent: {}
+[1.244475] (action_interfaces) StdoutLine: {'line': b"Listing '/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces'...\n"}
+[1.245007] (action_interfaces) StdoutLine: {'line': b"Listing '/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action'...\n"}
+[1.245297] (action_interfaces) StdoutLine: {'line': b"Listing '/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/msg'...\n"}
+[1.245454] (action_interfaces) StdoutLine: {'line': b"Listing '/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/srv'...\n"}
+[1.256500] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.258973] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.260937] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages/action_interfaces/action_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.263278] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/lib/libaction_interfaces__rosidl_generator_py.so\n'}
+[1.263759] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/ament_index/resource_index/rust_packages/action_interfaces\n'}
+[1.264058] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust\n'}
+[1.264346] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src\n'}
+[1.264635] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/action.rs\n'}
+[1.265187] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/msg.rs\n'}
+[1.265335] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/lib.rs\n'}
+[1.265772] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/srv\n'}
+[1.266143] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/srv/rmw.rs\n'}
+[1.266571] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/msg\n'}
+[1.267063] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/msg/rmw.rs\n'}
+[1.267336] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/action\n'}
+[1.267414] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/action/rmw.rs\n'}
+[1.267479] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/src/srv.rs\n'}
+[1.267760] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/build.rs\n'}
+[1.268068] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/rust/Cargo.toml\n'}
+[1.268158] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/msg/ArmState.idl\n'}
+[1.268216] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/msg/ArmCommand.idl\n'}
+[1.268270] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/msg/GripCommand.idl\n'}
+[1.268677] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/srv/CheckLimits.idl\n'}
+[1.268846] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/action/MoveArm.idl\n'}
+[1.269217] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/msg/ArmState.msg\n'}
+[1.269296] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/msg/ArmCommand.msg\n'}
+[1.269358] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/msg/GripCommand.msg\n'}
+[1.269415] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/srv/CheckLimits.srv\n'}
+[1.269470] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/srv/CheckLimits_Request.msg\n'}
+[1.269524] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/srv/CheckLimits_Response.msg\n'}
+[1.269574] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/action/MoveArm.action\n'}
+[1.269623] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/ament_index/resource_index/package_run_dependencies/action_interfaces\n'}
+[1.269675] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/ament_index/resource_index/parent_prefix_path/action_interfaces\n'}
+[1.269726] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/environment/ament_prefix_path.sh\n'}
+[1.269877] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/environment/ament_prefix_path.dsv\n'}
+[1.270077] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/environment/path.sh\n'}
+[1.270357] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/environment/path.dsv\n'}
+[1.270803] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/local_setup.bash\n'}
+[1.271212] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/local_setup.sh\n'}
+[1.271550] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/local_setup.zsh\n'}
+[1.272002] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/local_setup.dsv\n'}
+[1.272178] (action_interfaces) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/package.dsv\n'}
+[1.274018] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/ament_index/resource_index/packages/action_interfaces\n'}
+[1.275539] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_generator_cExport.cmake\n'}
+[1.275999] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.277325] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.277843] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.279614] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.279843] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.280880] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[1.281329] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.282386] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_generator_cppExport.cmake\n'}
+[1.284177] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.284528] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.285905] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.286228] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.287394] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[1.287879] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.289135] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_generator_pyExport.cmake\n'}
+[1.289617] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/export_action_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.289767] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[1.290173] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.290776] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.290990] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.291306] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.291667] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.291752] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.291816] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfacesConfig.cmake\n'}
+[1.291872] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake/action_interfacesConfig-version.cmake\n'}
+[1.291925] (action_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/package.xml\n'}
+[1.300316] (action_interfaces) CommandEnded: {'returncode': 0}
+[1.304984] (-) TimerEvent: {}
+[1.373311] (action_interfaces) JobEnded: {'identifier': 'action_interfaces', 'rc': 0}
+[1.376407] (main_arm_package) JobStarted: {'identifier': 'main_arm_package'}
+[1.405213] (-) TimerEvent: {}
+[1.505808] (-) TimerEvent: {}
+[1.576758] (main_arm_package) JobProgress: {'identifier': 'main_arm_package', 'progress': 'cmake'}
+[1.579126] (main_arm_package) JobProgress: {'identifier': 'main_arm_package', 'progress': 'build'}
+[1.581377] (main_arm_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ibrahim/RobotArmExpanded/build/main_arm_package', '--', '-j16', '-l16'], 'cwd': '/home/ibrahim/RobotArmExpanded/build/main_arm_package', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ibrahim'), ('GIT_ASKPASS', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ibrahim'), ('TERM_PROGRAM_VERSION', '1.120.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-fcdd9fcc-7812-433d-97ab-39e2b12999f5.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install:/home/ibrahim/RobotArm/install:/home/ibrahim/TF2Sample/install:/home/ibrahim/RobotNav/install:/home/ibrahim/RobotMonitor/install:/home/ibrahim/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ibrahim'), ('NAME', 'Ibrahim-laptop'), ('WSL_INTEROP', '/run/WSL/417_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('CLAUDE_CODE_SSE_PORT', '22874'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ibrahim/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ibrahim/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PostgreSQL/18/bin:/mnt/c/Users/zanto/.local/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/zanto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/zanto/AppData/Local/Programs/Ollama:/mnt/c/Users/zanto/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin:/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e1e634bbdf68d93f.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ibrahim/.vscode-server/data/User/workspaceStorage/e80122f58dd8365232b0ea725993d05e/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fffe7d841c.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ibrahim/RobotArmExpanded/build/main_arm_package'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArm/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotNav/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/ros2_ws/install/action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[1.605962] (-) TimerEvent: {}
+[1.706507] (-) TimerEvent: {}
+[1.716091] (main_arm_package) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.806648] (-) TimerEvent: {}
+[1.907073] (-) TimerEvent: {}
+[2.007477] (-) TimerEvent: {}
+[2.013097] (main_arm_package) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.107577] (-) TimerEvent: {}
+[2.208080] (-) TimerEvent: {}
+[2.308817] (-) TimerEvent: {}
+[2.372414] (main_arm_package) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.380105] (main_arm_package) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.397371] (main_arm_package) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.408958] (-) TimerEvent: {}
+[2.428187] (main_arm_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.458522] (main_arm_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.509121] (-) TimerEvent: {}
+[2.539975] (main_arm_package) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.545721] (main_arm_package) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.609384] (-) TimerEvent: {}
+[2.710023] (-) TimerEvent: {}
+[2.810716] (-) TimerEvent: {}
+[2.911303] (-) TimerEvent: {}
+[3.011851] (-) TimerEvent: {}
+[3.112574] (-) TimerEvent: {}
+[3.213313] (-) TimerEvent: {}
+[3.313978] (-) TimerEvent: {}
+[3.414771] (-) TimerEvent: {}
+[3.515415] (-) TimerEvent: {}
+[3.616035] (-) TimerEvent: {}
+[3.716570] (-) TimerEvent: {}
+[3.817074] (-) TimerEvent: {}
+[3.917620] (-) TimerEvent: {}
+[4.018075] (-) TimerEvent: {}
+[4.118624] (-) TimerEvent: {}
+[4.219169] (-) TimerEvent: {}
+[4.319727] (-) TimerEvent: {}
+[4.420255] (-) TimerEvent: {}
+[4.520932] (-) TimerEvent: {}
+[4.621727] (-) TimerEvent: {}
+[4.722477] (-) TimerEvent: {}
+[4.822890] (-) TimerEvent: {}
+[4.923364] (-) TimerEvent: {}
+[5.023874] (-) TimerEvent: {}
+[5.124336] (-) TimerEvent: {}
+[5.224828] (-) TimerEvent: {}
+[5.325366] (-) TimerEvent: {}
+[5.426038] (-) TimerEvent: {}
+[5.526851] (-) TimerEvent: {}
+[5.627311] (-) TimerEvent: {}
+[5.727965] (-) TimerEvent: {}
+[5.828757] (-) TimerEvent: {}
+[5.929511] (-) TimerEvent: {}
+[6.030131] (-) TimerEvent: {}
+[6.130688] (-) TimerEvent: {}
+[6.231372] (-) TimerEvent: {}
+[6.332036] (-) TimerEvent: {}
+[6.432523] (-) TimerEvent: {}
+[6.533020] (-) TimerEvent: {}
+[6.633703] (-) TimerEvent: {}
+[6.734385] (-) TimerEvent: {}
+[6.835028] (-) TimerEvent: {}
+[6.935727] (-) TimerEvent: {}
+[7.036333] (-) TimerEvent: {}
+[7.136835] (-) TimerEvent: {}
+[7.237308] (-) TimerEvent: {}
+[7.337926] (-) TimerEvent: {}
+[7.438644] (-) TimerEvent: {}
+[7.539387] (-) TimerEvent: {}
+[7.640025] (-) TimerEvent: {}
+[7.740652] (-) TimerEvent: {}
+[7.841305] (-) TimerEvent: {}
+[7.941939] (-) TimerEvent: {}
+[8.042694] (-) TimerEvent: {}
+[8.143345] (-) TimerEvent: {}
+[8.243972] (-) TimerEvent: {}
+[8.344620] (-) TimerEvent: {}
+[8.445082] (-) TimerEvent: {}
+[8.545542] (-) TimerEvent: {}
+[8.645999] (-) TimerEvent: {}
+[8.746526] (-) TimerEvent: {}
+[8.847059] (-) TimerEvent: {}
+[8.947514] (-) TimerEvent: {}
+[9.047963] (-) TimerEvent: {}
+[9.148428] (-) TimerEvent: {}
+[9.248861] (-) TimerEvent: {}
+[9.349368] (-) TimerEvent: {}
+[9.449928] (-) TimerEvent: {}
+[9.550568] (-) TimerEvent: {}
+[9.651188] (-) TimerEvent: {}
+[9.751798] (-) TimerEvent: {}
+[9.852454] (-) TimerEvent: {}
+[9.953107] (-) TimerEvent: {}
+[10.053807] (-) TimerEvent: {}
+[10.154460] (-) TimerEvent: {}
+[10.255110] (-) TimerEvent: {}
+[10.355737] (-) TimerEvent: {}
+[10.456350] (-) TimerEvent: {}
+[10.556943] (-) TimerEvent: {}
+[10.657524] (-) TimerEvent: {}
+[10.758269] (-) TimerEvent: {}
+[10.858994] (-) TimerEvent: {}
+[10.959606] (-) TimerEvent: {}
+[11.060288] (-) TimerEvent: {}
+[11.160948] (-) TimerEvent: {}
+[11.261558] (-) TimerEvent: {}
+[11.362147] (-) TimerEvent: {}
+[11.462801] (-) TimerEvent: {}
+[11.563508] (-) TimerEvent: {}
+[11.664222] (-) TimerEvent: {}
+[11.765055] (-) TimerEvent: {}
+[11.865702] (-) TimerEvent: {}
+[11.966334] (-) TimerEvent: {}
+[12.067087] (-) TimerEvent: {}
+[12.167713] (-) TimerEvent: {}
+[12.268233] (-) TimerEvent: {}
+[12.368705] (-) TimerEvent: {}
+[12.469223] (-) TimerEvent: {}
+[12.569720] (-) TimerEvent: {}
+[12.670290] (-) TimerEvent: {}
+[12.770940] (-) TimerEvent: {}
+[12.871573] (-) TimerEvent: {}
+[12.972188] (-) TimerEvent: {}
+[13.072778] (-) TimerEvent: {}
+[13.173351] (-) TimerEvent: {}
+[13.273932] (-) TimerEvent: {}
+[13.374512] (-) TimerEvent: {}
+[13.475130] (-) TimerEvent: {}
+[13.575668] (-) TimerEvent: {}
+[13.676287] (-) TimerEvent: {}
+[13.776918] (-) TimerEvent: {}
+[13.815249] (main_arm_package) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[13.877155] (-) TimerEvent: {}
+[13.939193] (main_arm_package) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[13.977424] (-) TimerEvent: {}
+[14.010918] (main_arm_package) StdoutLine: {'line': b'-- Found action_interfaces: 0.0.0 (/home/ibrahim/RobotArmExpanded/install/action_interfaces/share/action_interfaces/cmake)\n'}
+[14.034772] (main_arm_package) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[14.077623] (-) TimerEvent: {}
+[14.106195] (main_arm_package) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[14.177803] (-) TimerEvent: {}
+[14.250910] (main_arm_package) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[14.251527] (main_arm_package) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ibrahim/RobotArmExpanded/src/main_arm_package/include>\n'}
+[14.251687] (main_arm_package) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[14.252838] (main_arm_package) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[14.254781] (main_arm_package) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[14.256219] (main_arm_package) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[14.259061] (main_arm_package) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[14.259358] (main_arm_package) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[14.260445] (main_arm_package) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[14.264984] (main_arm_package) StdoutLine: {'line': b'-- Configuring done\n'}
+[14.277918] (-) TimerEvent: {}
+[14.348510] (main_arm_package) StdoutLine: {'line': b'-- Generating done\n'}
+[14.369812] (main_arm_package) StdoutLine: {'line': b'-- Build files have been written to: /home/ibrahim/RobotArmExpanded/build/main_arm_package\n'}
+[14.378084] (-) TimerEvent: {}
+[14.448504] (main_arm_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ArmMover\x1b[0m\n'}
+[14.449387] (main_arm_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ArmMonitor\x1b[0m\n'}
+[14.449897] (main_arm_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ArmController\x1b[0m\n'}
+[14.450647] (main_arm_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ArmClient\x1b[0m\n'}
+[14.473637] (main_arm_package) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/TaskPlanner.dir/src/TaskPlanner.cpp.o\x1b[0m\n'}
+[14.478226] (-) TimerEvent: {}
+[14.563779] (main_arm_package) StdoutLine: {'line': b'[ 30%] Built target ArmClient\n'}
+[14.564407] (main_arm_package) StdoutLine: {'line': b'[ 50%] Built target ArmMover\n'}
+[14.572331] (main_arm_package) StdoutLine: {'line': b'[ 70%] Built target ArmMonitor\n'}
+[14.575186] (main_arm_package) StdoutLine: {'line': b'[ 90%] Built target ArmController\n'}
+[14.578356] (-) TimerEvent: {}
+[14.678914] (-) TimerEvent: {}
+[14.779535] (-) TimerEvent: {}
+[14.880150] (-) TimerEvent: {}
+[14.980626] (-) TimerEvent: {}
+[15.081260] (-) TimerEvent: {}
+[15.181859] (-) TimerEvent: {}
+[15.282502] (-) TimerEvent: {}
+[15.382961] (-) TimerEvent: {}
+[15.483473] (-) TimerEvent: {}
+[15.584060] (-) TimerEvent: {}
+[15.684757] (-) TimerEvent: {}
+[15.785432] (-) TimerEvent: {}
+[15.886107] (-) TimerEvent: {}
+[15.986928] (-) TimerEvent: {}
+[16.087687] (-) TimerEvent: {}
+[16.188287] (-) TimerEvent: {}
+[16.288876] (-) TimerEvent: {}
+[16.389427] (-) TimerEvent: {}
+[16.489986] (-) TimerEvent: {}
+[16.590567] (-) TimerEvent: {}
+[16.691187] (-) TimerEvent: {}
+[16.791589] (-) TimerEvent: {}
+[16.892121] (-) TimerEvent: {}
+[16.992708] (-) TimerEvent: {}
+[17.093174] (-) TimerEvent: {}
+[17.193684] (-) TimerEvent: {}
+[17.294201] (-) TimerEvent: {}
+[17.394784] (-) TimerEvent: {}
+[17.495269] (-) TimerEvent: {}
+[17.595788] (-) TimerEvent: {}
+[17.696411] (-) TimerEvent: {}
+[17.797070] (-) TimerEvent: {}
+[17.897883] (-) TimerEvent: {}
+[17.998563] (-) TimerEvent: {}
+[18.099143] (-) TimerEvent: {}
+[18.199812] (-) TimerEvent: {}
+[18.300387] (-) TimerEvent: {}
+[18.400857] (-) TimerEvent: {}
+[18.501388] (-) TimerEvent: {}
+[18.601928] (-) TimerEvent: {}
+[18.702492] (-) TimerEvent: {}
+[18.803093] (-) TimerEvent: {}
+[18.903606] (-) TimerEvent: {}
+[19.004122] (-) TimerEvent: {}
+[19.104802] (-) TimerEvent: {}
+[19.205297] (-) TimerEvent: {}
+[19.305876] (-) TimerEvent: {}
+[19.406387] (-) TimerEvent: {}
+[19.506961] (-) TimerEvent: {}
+[19.607544] (-) TimerEvent: {}
+[19.708109] (-) TimerEvent: {}
+[19.808681] (-) TimerEvent: {}
+[19.909250] (-) TimerEvent: {}
+[20.009808] (-) TimerEvent: {}
+[20.110344] (-) TimerEvent: {}
+[20.211044] (-) TimerEvent: {}
+[20.311630] (-) TimerEvent: {}
+[20.412267] (-) TimerEvent: {}
+[20.512866] (-) TimerEvent: {}
+[20.613483] (-) TimerEvent: {}
+[20.714197] (-) TimerEvent: {}
+[20.814979] (-) TimerEvent: {}
+[20.915566] (-) TimerEvent: {}
+[21.016135] (-) TimerEvent: {}
+[21.116894] (-) TimerEvent: {}
+[21.217399] (-) TimerEvent: {}
+[21.317976] (-) TimerEvent: {}
+[21.418512] (-) TimerEvent: {}
+[21.519028] (-) TimerEvent: {}
+[21.619558] (-) TimerEvent: {}
+[21.720130] (-) TimerEvent: {}
+[21.820769] (-) TimerEvent: {}
+[21.921213] (-) TimerEvent: {}
+[22.021671] (-) TimerEvent: {}
+[22.122186] (-) TimerEvent: {}
+[22.222792] (-) TimerEvent: {}
+[22.323370] (-) TimerEvent: {}
+[22.423990] (-) TimerEvent: {}
+[22.524506] (-) TimerEvent: {}
+[22.625237] (-) TimerEvent: {}
+[22.725919] (-) TimerEvent: {}
+[22.826581] (-) TimerEvent: {}
+[22.927203] (-) TimerEvent: {}
+[23.027651] (-) TimerEvent: {}
+[23.128092] (-) TimerEvent: {}
+[23.228544] (-) TimerEvent: {}
+[23.329051] (-) TimerEvent: {}
+[23.429506] (-) TimerEvent: {}
+[23.529873] (-) TimerEvent: {}
+[23.630381] (-) TimerEvent: {}
+[23.730919] (-) TimerEvent: {}
+[23.831331] (-) TimerEvent: {}
+[23.931750] (-) TimerEvent: {}
+[24.032247] (-) TimerEvent: {}
+[24.132770] (-) TimerEvent: {}
+[24.233432] (-) TimerEvent: {}
+[24.334147] (-) TimerEvent: {}
+[24.347984] (main_arm_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable TaskPlanner\x1b[0m\n'}
+[24.434255] (-) TimerEvent: {}
+[24.534812] (-) TimerEvent: {}
+[24.635367] (-) TimerEvent: {}
+[24.735923] (-) TimerEvent: {}
+[24.836493] (-) TimerEvent: {}
+[24.936963] (-) TimerEvent: {}
+[25.027529] (main_arm_package) StdoutLine: {'line': b'[100%] Built target TaskPlanner\n'}
+[25.037093] (-) TimerEvent: {}
+[25.051898] (main_arm_package) CommandEnded: {'returncode': 0}
+[25.053313] (main_arm_package) JobProgress: {'identifier': 'main_arm_package', 'progress': 'install'}
+[25.055229] (main_arm_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ibrahim/RobotArmExpanded/build/main_arm_package'], 'cwd': '/home/ibrahim/RobotArmExpanded/build/main_arm_package', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ibrahim'), ('GIT_ASKPASS', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces/lib:/home/ibrahim/RobotArm/install/action_interfaces/lib:/home/ibrahim/RobotNav/install/action_interfaces/lib:/home/ibrahim/ros2_ws/install/action_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ibrahim'), ('TERM_PROGRAM_VERSION', '1.120.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-fcdd9fcc-7812-433d-97ab-39e2b12999f5.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install:/home/ibrahim/RobotArm/install:/home/ibrahim/TF2Sample/install:/home/ibrahim/RobotNav/install:/home/ibrahim/RobotMonitor/install:/home/ibrahim/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ibrahim'), ('NAME', 'Ibrahim-laptop'), ('WSL_INTEROP', '/run/WSL/417_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('CLAUDE_CODE_SSE_PORT', '22874'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ibrahim/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ibrahim/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/ibrahim/.vscode-server/bin/0958016b2af9f09bb4257e0df4a95e2f90590f9f/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PostgreSQL/18/bin:/mnt/c/Users/zanto/.local/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/zanto/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/zanto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/zanto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/zanto/AppData/Local/Programs/Ollama:/mnt/c/Users/zanto/AppData/Roaming/npm:/mnt/c/msys64/ucrt64/bin:/snap/bin:/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ibrahim/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e1e634bbdf68d93f.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ibrahim/.vscode-server/data/User/workspaceStorage/e80122f58dd8365232b0ea725993d05e/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fffe7d841c.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ibrahim/RobotArmExpanded/build/main_arm_package'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotArm/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/RobotNav/install/action_interfaces/local/lib/python3.10/dist-packages:/home/ibrahim/ros2_ws/install/action_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ibrahim/RobotArmExpanded/install/action_interfaces:/home/ibrahim/RobotArmExpanded/install/main_arm_package:/home/ibrahim/TF2Sample/install/tf2sim:/home/ibrahim/RobotNav/install/main_robot_nodes:/home/ibrahim/RobotNav/install/action_interfaces:/home/ibrahim/RobotMonitor/install/Robot3Node_Package:/home/ibrahim/ros2_ws/install/my_first_package:/home/ibrahim/ros2_ws/install/action_interfaces:/home/ibrahim/RobotArm/install/main_arm_package:/home/ibrahim/RobotArm/install/action_interfaces:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[25.069791] (main_arm_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[25.072675] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmController\n'}
+[25.074995] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmMonitor\n'}
+[25.079531] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmMover\n'}
+[25.089018] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/ArmClient\n'}
+[25.089690] (main_arm_package) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/TaskPlanner\n'}
+[25.096310] (main_arm_package) StdoutLine: {'line': b'-- Set runtime path of "/home/ibrahim/RobotArmExpanded/install/main_arm_package/lib/main_arm_package/TaskPlanner" to ""\n'}
+[25.096787] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch\n'}
+[25.097188] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch/display.launch.py\n'}
+[25.097464] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/launch/launch.py\n'}
+[25.097598] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/urdf\n'}
+[25.098005] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/urdf/arm.urdf\n'}
+[25.098148] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/rviz\n'}
+[25.098220] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/rviz/arm.rviz\n'}
+[25.098276] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/package_run_dependencies/main_arm_package\n'}
+[25.098346] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/parent_prefix_path/main_arm_package\n'}
+[25.098407] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/ament_prefix_path.sh\n'}
+[25.098490] (main_arm_package) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/ament_prefix_path.dsv\n'}
+[25.098823] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/path.sh\n'}
+[25.099119] (main_arm_package) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/environment/path.dsv\n'}
+[25.099419] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.bash\n'}
+[25.099761] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.sh\n'}
+[25.099844] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.zsh\n'}
+[25.099906] (main_arm_package) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/local_setup.dsv\n'}
+[25.100201] (main_arm_package) StdoutLine: {'line': b'-- Installing: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/package.dsv\n'}
+[25.100819] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/ament_index/resource_index/packages/main_arm_package\n'}
+[25.101121] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/cmake/main_arm_packageConfig.cmake\n'}
+[25.101361] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/cmake/main_arm_packageConfig-version.cmake\n'}
+[25.101459] (main_arm_package) StdoutLine: {'line': b'-- Up-to-date: /home/ibrahim/RobotArmExpanded/install/main_arm_package/share/main_arm_package/package.xml\n'}
+[25.104838] (main_arm_package) CommandEnded: {'returncode': 0}
+[25.125762] (main_arm_package) JobEnded: {'identifier': 'main_arm_package', 'rc': 0}
+[25.127508] (-) EventReactorShutdown: {}
