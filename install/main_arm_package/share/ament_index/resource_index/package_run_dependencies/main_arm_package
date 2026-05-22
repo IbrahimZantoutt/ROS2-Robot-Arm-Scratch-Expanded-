@@ -1,1 +1,1 @@
-rclcpp;rclcpp_action;action_interfaces;ament_lint_auto;ament_lint_common
+rclcpp;rclcpp_action;action_interfaces;sensor_msgs;std_msgs;gazebo_ros;gazebo_ros2_control;controller_manager;joint_state_broadcaster;joint_group_position_controller;robot_state_publisher;xacro;ament_lint_auto;ament_lint_common

@@ -14,6 +14,7 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(action_interfaces REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 
 
 add_executable(ArmController src/ArmController.cpp)
@@ -26,7 +27,7 @@ target_include_directories(ArmController PUBLIC
   $<INSTALL_INTERFACE:include>)
 target_compile_features(ArmController PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 
-ament_target_dependencies(ArmController rclcpp action_interfaces sensor_msgs)
+ament_target_dependencies(ArmController rclcpp action_interfaces sensor_msgs std_msgs)
 ament_target_dependencies(ArmMonitor rclcpp action_interfaces)
 ament_target_dependencies(ArmMover rclcpp rclcpp_action action_interfaces)
 ament_target_dependencies(ArmClient rclcpp rclcpp_action action_interfaces)
@@ -52,9 +53,13 @@ install(DIRECTORY urdf
 install(DIRECTORY rviz
   DESTINATION share/${PROJECT_NAME})
 
-# gazebo world files
-# install(DIRECTORY worlds
-#   DESTINATION share/${PROJECT_NAME})
+#controller config
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME})
+
+
+install(DIRECTORY worlds
+  DESTINATION share/${PROJECT_NAME})
 
 
 if(BUILD_TESTING)
