@@ -44,9 +44,9 @@ public:
             RCLCPP_INFO(this->get_logger(), "Waiting for action server...");
         }
 
-        // Example task: pick at (0.5, 0.0, 0.2), drop at (0.3, 0.3, 0.1)
+        // Pick box1 at world (0.8, 0, 0.265); drop on box3 at world (-0.8, 0, top=0.25)
         publishGripCommand("open");
-        callMoveSequence(0.5f, 0.0f, 0.1f, -0.5f, -0.3f, 0.1f);
+        callMoveSequence(0.8f, 0.0f, 0.265f, -0.8f, 0.0f, 0.28f);
     }
 
     void callMoveSequence(float px, float py, float pz, float dx, float dy, float dz) {

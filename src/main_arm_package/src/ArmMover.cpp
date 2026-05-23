@@ -202,8 +202,8 @@ class ArmMover: public rclcpp::Node{
 
         float L1_ = 0.39;       // shoulder_arm_joint(0.04) + elbow_main_joint(0.35)
         float L2_ = 0.355;      // elbow_arm_joint(0.035) + wrist_main_joint(0.32)
-        float L3_ = 0.18;       // wrist_arm_joint(0.005) + cylinder tip(0.175)
-        float z_shoulder_ = 0.18f; // spin_main(0.06) + spin_arm(0.02) + shoulder_main(0.10)
+        float L3_ = 0.115;      // wrist_arm_joint(0.025) + gripper_base_joint(0.01) + finger_joint(0.045) + finger_center(0.035)
+        float z_shoulder_ = 0.23f; // world_joint(0.05) + spin_main(0.06) + spin_arm(0.02) + shoulder_main(0.10)
 
         void handleArmState(const action_interfaces::msg::ArmState::SharedPtr msg){
             std::lock_guard<std::mutex> lock(angle_mutex_);
