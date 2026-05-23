@@ -74,7 +74,12 @@ class ArmController: public rclcpp::Node{
         rclcpp::sleep_for(std::chrono::milliseconds(20));
       }
       if(left_contact_ && right_contact_){
-        RCLCPP_INFO(this->get_logger(), "Contact on both fingers — grip stopped at f1=%.3f f2=%.3f", f1_pos_, f2_pos_);
+        // squeeze 4mm past contact point so the controller constantly presses against the box,
+        // generating the normal force needed for friction to carry it during arm movement
+        f1_pos_ = std::max(f1_pos_ - 0.004f, -0.04f);
+        f2_pos_ = std::max(f2_pos_ - 0.004f, -0.04f);
+        publishArmState();
+        RCLCPP_INFO(this->get_logger(), "Grip locked at f1=%.3f f2=%.3f", f1_pos_, f2_pos_);
       }
       grip_status_ = "closed";
     }
