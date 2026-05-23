@@ -15,6 +15,7 @@ find_package(rclcpp_action REQUIRED)
 find_package(action_interfaces REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(gazebo_msgs REQUIRED)
 
 
 add_executable(ArmController src/ArmController.cpp)
@@ -27,7 +28,7 @@ target_include_directories(ArmController PUBLIC
   $<INSTALL_INTERFACE:include>)
 target_compile_features(ArmController PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 
-ament_target_dependencies(ArmController rclcpp action_interfaces sensor_msgs std_msgs)
+ament_target_dependencies(ArmController rclcpp action_interfaces sensor_msgs std_msgs gazebo_msgs)
 ament_target_dependencies(ArmMonitor rclcpp action_interfaces)
 ament_target_dependencies(ArmMover rclcpp rclcpp_action action_interfaces)
 ament_target_dependencies(ArmClient rclcpp rclcpp_action action_interfaces)

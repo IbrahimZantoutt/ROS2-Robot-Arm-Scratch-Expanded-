@@ -167,7 +167,7 @@
         <child link="elbow_link"/>
         <origin xyz="0 0 0.35" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
-        <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+        <limit lower="-2.356" upper="2.356" effort="10" velocity="1"/>
         <dynamics damping="0.5" friction="0.1"/>
     </joint>
 
@@ -224,7 +224,7 @@
         <child link="wrist_link"/>
         <origin xyz="0 0 0.32" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
-        <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+        <limit lower="-2.094" upper="2.094" effort="10" velocity="1"/>
         <dynamics damping="0.5" friction="0.1"/>
     </joint>
 
@@ -364,16 +364,16 @@
         </joint>
         <joint name="elbow_main_joint">
             <command_interface name="position">
-                <param name="min">-1.57</param>
-                <param name="max">1.57</param>
+                <param name="min">-2.356</param>
+                <param name="max">2.356</param>
             </command_interface>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
         </joint>
         <joint name="wrist_main_joint">
             <command_interface name="position">
-                <param name="min">-1.57</param>
-                <param name="max">1.57</param>
+                <param name="min">-2.094</param>
+                <param name="max">2.094</param>
             </command_interface>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
@@ -409,6 +409,46 @@
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
             <parameters>$(find main_arm_package)/config/controllers.yaml</parameters>
         </plugin>
+    </gazebo>
+
+    <gazebo reference="gripper_left_finger">
+        <mu1>5.0</mu1>
+        <mu2>5.0</mu2>
+        <kp>1e6</kp>
+        <kd>100.0</kd>
+        <sensor name="left_finger_contact" type="contact">
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <contact>
+                <collision>gripper_left_finger_collision</collision>
+            </contact>
+            <plugin name="left_finger_bumper" filename="libgazebo_ros_bumper.so">
+                <ros>
+                    <remapping>bumper_states:=gripper_left_contact</remapping>
+                </ros>
+                <frame_name>world</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="gripper_right_finger">
+        <mu1>5.0</mu1>
+        <mu2>5.0</mu2>
+        <kp>1e6</kp>
+        <kd>100.0</kd>
+        <sensor name="right_finger_contact" type="contact">
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <contact>
+                <collision>gripper_right_finger_collision</collision>
+            </contact>
+            <plugin name="right_finger_bumper" filename="libgazebo_ros_bumper.so">
+                <ros>
+                    <remapping>bumper_states:=gripper_right_contact</remapping>
+                </ros>
+                <frame_name>world</frame_name>
+            </plugin>
+        </sensor>
     </gazebo>
 
 </robot>

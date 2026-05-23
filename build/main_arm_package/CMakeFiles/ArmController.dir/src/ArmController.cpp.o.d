@@ -652,4 +652,16 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64_multi_array__type_support.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/contacts_state.hpp \
+ /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__struct.hpp \
+ /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+ /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__builder.hpp \
+ /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__traits.hpp \
+ /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__traits.hpp \
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+ /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__type_support.hpp \
+ /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/rosidl_generator_cpp__visibility_control.hpp

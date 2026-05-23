@@ -718,8 +718,26 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64_multi_array__type_support.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/contacts_state.hpp \
+  /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__struct.hpp \
+  /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+  /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__builder.hpp \
+  /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__traits.hpp \
+  /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__type_support.hpp \
+  /opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp:
+
+/opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__struct.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -1147,6 +1165,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 
 /opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_deleter.hpp:
 
+/opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/contacts_state.hpp:
+
 /usr/include/c++/11/bits/unordered_map.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
@@ -1257,6 +1277,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
 
+/opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__builder.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
 
 /usr/include/c++/11/ext/type_traits.h:
@@ -1279,6 +1301,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/intra_process_buffer_type.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
@@ -1297,11 +1321,15 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
+/opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__traits.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/get_parameters.hpp:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
 
 /usr/include/c++/11/iosfwd:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp:
 
 /usr/include/c++/11/initializer_list:
 
@@ -1352,6 +1380,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -1739,6 +1769,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 
 /opt/ros/humble/include/rcutils/rcutils/error_handling.h:
 
+/opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__type_support.hpp:
+
 /usr/include/c++/11/stdlib.h:
 
 /opt/ros/humble/include/rmw/rmw/impl/cpp/demangle.hpp:
@@ -1830,6 +1862,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 /opt/ros/humble/include/rcl/rcl/wait.h:
 
 /opt/ros/humble/include/rcl/rcl/client.h:
+
+/opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__traits.hpp:
 
 /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
@@ -2006,6 +2040,8 @@ CMakeFiles/ArmController.dir/src/ArmController.cpp.o: /home/ibrahim/RobotArmExpa
 /usr/include/c++/11/bits/locale_facets_nonio.tcc:
 
 /usr/include/c++/11/bits/locale_conv.h:
+
+/opt/ros/humble/include/gazebo_msgs/gazebo_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
 

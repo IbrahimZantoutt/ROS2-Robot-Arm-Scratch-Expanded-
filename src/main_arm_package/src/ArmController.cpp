@@ -4,6 +4,8 @@
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "action_interfaces/msg/grip_command.hpp"
 #include "std_msgs/msg/float64_multi_array.hpp"
+#include "gazebo_msgs/msg/contacts_state.hpp"
+#include <atomic>
 #include <string>
 
 class ArmController: public rclcpp::Node{
@@ -18,6 +20,20 @@ class ArmController: public rclcpp::Node{
       timer_ = this->create_wall_timer(std::chrono::milliseconds(50), std::bind(&ArmController::publishArmState, this));
       arm_command_subscription_ = this->create_subscription<action_interfaces::msg::ArmCommand>("arm_command", 10, std::bind(&ArmController::handleArmCommand, this, std::placeholders::_1));
       grip_command_subscription_ = this->create_subscription<action_interfaces::msg::GripCommand>("grip_command", 10, std::bind(&ArmController::handleGripCommand, this, std::placeholders::_1));
+
+      contact_cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+      auto contact_opts = rclcpp::SubscriptionOptions();
+      contact_opts.callback_group = contact_cb_group_;
+      left_contact_sub_ = this->create_subscription<gazebo_msgs::msg::ContactsState>(
+          "/gripper_left_contact", 10,
+          std::bind(&ArmController::handleLeftContact, this, std::placeholders::_1),
+          contact_opts);
+      right_contact_sub_ = this->create_subscription<gazebo_msgs::msg::ContactsState>(
+          "/gripper_right_contact", 10,
+          std::bind(&ArmController::handleRightContact, this, std::placeholders::_1),
+          contact_opts);
+
+          
       shoulder_angle_ = an1;
       elbow_angle_ = an2;
       wrist_angle_ = an3;
@@ -49,15 +65,28 @@ class ArmController: public rclcpp::Node{
 
     void CloseGrip(){
       RCLCPP_INFO(this->get_logger(), "Closing grip");
-      f1_pos_ = -0.015f;   // left finger moves in -y (toward center)
-      f2_pos_ = -0.015f;   // right finger axis is -y, so -0.015 also moves toward center
+      left_contact_ = false;
+      right_contact_ = false;
+      while((f1_pos_ > -0.015f || f2_pos_ > -0.015f) && !(left_contact_ && right_contact_)){
+        f1_pos_ -= 0.001f;
+        f2_pos_ -= 0.001f;
+        publishArmState();
+        rclcpp::sleep_for(std::chrono::milliseconds(20));
+      }
+      if(left_contact_ && right_contact_){
+        RCLCPP_INFO(this->get_logger(), "Contact on both fingers — grip stopped at f1=%.3f f2=%.3f", f1_pos_, f2_pos_);
+      }
       grip_status_ = "closed";
     }
 
     void OpenGrip(){
       RCLCPP_INFO(this->get_logger(), "Opening grip");
-      f1_pos_ = 0.0f;
-      f2_pos_ = 0.0f;
+      while(f1_pos_ > 0.0f || f2_pos_ > 0.0f){
+        f1_pos_ += 0.001f;   // left finger moves in -y, so +0.001 moves back toward open
+        f2_pos_ += 0.001f;   // right finger axis is -y, so +0.001 also moves back toward open
+        publishArmState();   // publish intermediate states for smoother animation
+        rclcpp::sleep_for(std::chrono::milliseconds(20)); // small delay for animation effect
+      }
       grip_status_ = "open";
     }
 
@@ -104,6 +133,14 @@ class ArmController: public rclcpp::Node{
       }
     }
 
+    void handleLeftContact(const gazebo_msgs::msg::ContactsState::SharedPtr msg){
+      left_contact_ = !msg->states.empty();
+    }
+
+    void handleRightContact(const gazebo_msgs::msg::ContactsState::SharedPtr msg){
+      right_contact_ = !msg->states.empty();
+    }
+
     private:
       rclcpp::Publisher<action_interfaces::msg::ArmState>::SharedPtr arm_state_publisher_;
       rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_publisher_;
@@ -120,13 +157,21 @@ class ArmController: public rclcpp::Node{
 
       rclcpp::Subscription<action_interfaces::msg::ArmCommand>::SharedPtr arm_command_subscription_;
       rclcpp::Subscription<action_interfaces::msg::GripCommand>::SharedPtr grip_command_subscription_;
+
+      rclcpp::CallbackGroup::SharedPtr contact_cb_group_;
+      rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr left_contact_sub_;
+      rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr right_contact_sub_;
+      std::atomic<bool> left_contact_{false};
+      std::atomic<bool> right_contact_{false};
 };
 
 
 int main(int argc, char** argv){
     rclcpp::init(argc,argv);
     auto arm_controller_node = std::make_shared<ArmController>(0, 0, 0, 0);
-    rclcpp::spin(arm_controller_node);
+    rclcpp::executors::MultiThreadedExecutor executor;
+    executor.add_node(arm_controller_node);
+    executor.spin();
     rclcpp::shutdown();
     return 0;
 }
